@@ -99,6 +99,7 @@ body {
 	align-items: center;
 	justify-content: space-between;
 	padding: 21px 40px;
+	overflow-x: hidden;
 }
 
 .header__top-inner {
@@ -403,6 +404,7 @@ body {
 	display: flex;
 	align-items: center;
 	justify-content: space-between;
+	border-radius: 15px;
 	padding: 75px 70px 55px;
 }
 
@@ -898,17 +900,29 @@ body {
 	line-height: 150%; /* 18px */
 	text-align: center;
 }
-
+.main {
+	overflow: hidden;
+}
 @media (max-width: 1500px) {
 	.header__top-inner {
 		gap: 30px;
 	}
+}
+.header {
+	overflow-x: hidden;
 }
 .header__top-mobile,
 .header__languages-mobile {
 	display: none;
 }
 @media (max-width: 1400px) {
+	.results__item-num {
+		font-size: 60px;
+	}
+	.results__item-text,
+	.how__text {
+		font-size: 14px;
+	}
 	.header__languages,
 	.header__search {
 		display: none;
@@ -1024,9 +1038,38 @@ body {
 	.header__language {
 		display: none;
 	}
+	.main__items-wrapper {
+		padding: 40px 0 40px;
+	}
+	.upcoming,
+	.feedbacks {
+		padding: 40px 0 40px;
+	}
+	.how {
+		padding-top: 0;
+	}
+	.feedbacks{
+		padding-top: 20px;
+		margin-top: 40px;
+	}
 }
 
 @media (max-width: 1350px) {
+	.feedbacks__text,
+	.feedbacks__position,
+	.feedbacks__description{
+		font-size: 16px;
+	}
+	.feedbacks__name{
+		font-size: 20px;
+	}
+	.upcoming__img {
+		max-width: 200px;
+		height: 180px;
+	}
+	.upcoming__item {
+		max-width: 200px;
+	}
 	.header__top {
 		padding: 21px 15px;
 	}
@@ -1041,22 +1084,88 @@ body {
 		height: 80px;
 		width: 80px;
 	}
+
+	.upcoming__subtitle {
+		font-size: 16px;
+	}
 }
 @media (max-width: 968px) {
+	.how__btn{
+		font-size: 12px;
+		padding: 10px 22px;
+	}
+	.how__btn::after{
+		scale: 0.8;
+		top: 4px;
+	}
+	.how__img {
+		scale: 0.6;
+	}
 	.main__items {
 		grid-gap: 20px;
 	}
-	.main__items-wrapper {
-		padding: 40px 0 100px;
+	.title,
+	.how__title {
+		font-size: 28px;
+	}
+	.upcoming__btn {
+		font-size: 16px;
+		padding: 8px 20px;
+	}
+	.feedbacks__text{
+		margin-bottom: 15px;
+	}
+	.feedbacks__text,
+	.feedbacks__position,
+	.feedbacks__description{
+		font-size: 10px;
+	}
+	.feedbacks__name{
+		font-size: 18px;
+	}
+	.feedbacks__item{
+		gap: 20px;
+	}
+	.feedbacks__img{
+		width: 200px;
+		height: 180px;
 	}
 }
 @media (max-width: 830px) {
+	.upcoming__items {
+		display: grid;
+		grid-template-columns: 1fr 1fr;
+		justify-items: center;
+		grid-gap: 15px;
+	}
 	.main__items {
 		grid-template-columns: 1fr 1fr;
 	}
 }
 
 @media (max-width: 768px) {
+	.slick-dots > li > button {
+		width: 4px;
+		height: 4px;
+		padding: 3px;
+	}
+	.slick-dots{
+		margin-top: 25px;
+	}
+	.slick-arrow{
+		width: 35px;
+		height: 35px;
+		top: -30px;
+	}
+	.slick-prev {
+		right: 45px;
+	}
+	.feedbacks__img{
+		align-self: start;
+	}
+	.feedbacks__item{
+		flex-direction: column;
+	}
 	.header__title {
 		font-size: 42px;
 		padding-top: 65px;
@@ -1071,9 +1180,40 @@ body {
 		width: 150px;
 		height: 40px;
 	}
+
+	.results__item-num {
+		font-size: 50px;
+	}
+	.results__item-text {
+		font-size: 12px;
+	}
+	.results {
+		padding: 35px 0;
+	}
+	.how__img{
+		display: none;
+	}
+	.how__inner{
+		padding: 60px 20px;
+	}
 }
 
 @media (max-width: 565px) {
+	.title,
+	.how__title {
+		font-size: 22px;
+	}
+	.upcoming__btn {
+		font-size: 12px;
+		padding: 6px 10px;
+	}
+	.upcoming__top {
+		margin-bottom: 25px;
+	}
+	.results__items {
+		flex-direction: column;
+		gap: 25px;
+	}
 	.main__item {
 		width: 200px;
 		padding: 30px 30px 30px;
@@ -1082,8 +1222,8 @@ body {
 		height: 80px;
 		width: 80px;
 	}
-	.main__item-text
-	{
+	.main__item-text,
+	.how__text {
 		font-size: 14px;
 	}
 	.header__top-mobile {
@@ -1092,7 +1232,27 @@ body {
 }
 
 @media (max-width: 450px) {
-	.main__items{
+	.upcoming__btn {
+		white-space: nowrap;
+	}
+	.upcoming__items {
+		grid-template-columns: 1fr;
+	}
+	.upcoming__item,
+	.upcoming__subtitle {
+		min-width: 100% !important;
+	}
+	.upcoming__img {
+		min-width: 70%;
+		min-height: 70%;
+	}
+	.upcoming__item:nth-child(1)::after,
+	.upcoming__item:nth-child(2)::after,
+	.upcoming__item:nth-child(3)::after,
+	.upcoming__item:nth-child(4)::after {
+		top: 0;
+	}
+	.main__items {
 		grid-gap: 10px;
 	}
 	.main__item {

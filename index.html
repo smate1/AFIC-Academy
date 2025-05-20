@@ -22,42 +22,15 @@
 </head>
 
 <body>
-  <header class="header" id="header">
-    <div class="header__top-mobile">
-      <div class="header__top-inner header__top-inner--mobile">
-        <label class="header__mobile-label" for="">
-          <input class="header__mobile-input" type="text" placeholder="Search">
-          <img src="./images/search.svg" alt="">
-        </label>      
-        <nav class="header__nav header__nav-mobile">
-          <ul>
-            <li><a href="#about">About us</a></li>
-            <li><a href="#courses">Services</a></li>
-            <li><a href="#contact">Marketplace</a></li>
-            <li><a href="#contact">NEWS</a></li>
-            <li><a href="#contact">Contacts</a></li>
-          </ul>
-        </nav>
-      </div>
-      <div class="header__languages header__languages-mobile">
-        <a href="#" class="active">EN</a>
-        <a href="#">RU</a>
-        <a href="#">KZ</a>
-      </div>
-    </div>
-  <div class="overlay"></div>
-    <div class="header__top">
-      <button class="burger" id="burger">
-        <span></span>
-        <span></span>
-        <span></span>
-      </button>
-      <div class="container header__container">
-        <div class="header__top-inner">
-          <div class="header__logo">
-            <a href="index.html"><img src="./images/logo.svg" alt="AFIC Academy"></a>
-          </div>
-          <nav class="header__nav">
+  <main class="main">
+    <header class="header" id="header">
+      <div class="header__top-mobile">
+        <div class="header__top-inner header__top-inner--mobile">
+          <label class="header__mobile-label" for="">
+            <input class="header__mobile-input" type="text" placeholder="Search">
+            <img src="./images/search.svg" alt="">
+          </label>
+          <nav class="header__nav header__nav-mobile">
             <ul>
               <li><a href="#about">About us</a></li>
               <li><a href="#courses">Services</a></li>
@@ -66,134 +39,163 @@
               <li><a href="#contact">Contacts</a></li>
             </ul>
           </nav>
-          <a class="header__search" href="#">
-            <img src="./images/search.svg" alt="">
+        </div>
+        <div class="header__languages header__languages-mobile">
+          <a href="#" class="active">EN</a>
+          <a href="#">RU</a>
+          <a href="#">KZ</a>
+        </div>
+      </div>
+      <div class="overlay"></div>
+      <div class="header__top">
+        <button class="burger" id="burger">
+          <span></span>
+          <span></span>
+          <span></span>
+        </button>
+        <div class="container header__container">
+          <div class="header__top-inner">
+            <div class="header__logo">
+              <a href="index.html"><img src="./images/logo.svg" alt="AFIC Academy"></a>
+            </div>
+            <nav class="header__nav">
+              <ul>
+                <li><a href="#about">About us</a></li>
+                <li><a href="#courses">Services</a></li>
+                <li><a href="#contact">Marketplace</a></li>
+                <li><a href="#contact">NEWS</a></li>
+                <li><a href="#contact">Contacts</a></li>
+              </ul>
+            </nav>
+            <a class="header__search" href="#">
+              <img src="./images/search.svg" alt="">
+            </a>
+          </div>
+        </div>
+        <div class="header__languages">
+          <a href="#" class="active">EN</a>
+          <a href="#">RU</a>
+          <a href="#">KZ</a>
+        </div>
+      </div>
+      <div class="header__content">
+        <div class="container">
+          <h1 class="header__title">
+            AIFC Academy
+          </h1>
+          <p class="header__text">
+            AIFC Academy is an educational hub of the AIFC, offering specialised training programmes and courses in
+            finance, project
+            management and law. We are creating an international platform for the development of professional skills and
+            competencies, attracting the attention and participation of both national and international experts.
+          </p>
+        </div>
+      </div>
+    </header>
+    <div class="main__items-wrapper">
+      <div class="container">
+        <div class="main__items">
+          <div class="main__item">
+            <img class="main__item-img" src="./images/main-item-1.svg" alt="">
+            <p class="main__item-text">
+              Tranings
+            </p>
+          </div>
+          <div class="main__item">
+            <img class="main__item-img" src="./images/main-item-2.svg" alt="">
+            <p class="main__item-text">
+              Corporate Solutions
+            </p>
+          </div>
+          <div class="main__item">
+            <img class="main__item-img" src="./images/main-item-3.svg" alt="">
+            <p class="main__item-text">
+              Higher Education
+            </p>
+          </div>
+          <div class="main__item">
+            <img class="main__item-img" src="./images/main-item-4.svg" alt="">
+            <p class="main__item-text">
+              Professional
+              certifications
+            </p>
+          </div>
+          <div class="main__item">
+            <img class="main__item-img" src="./images/main-item-5.svg" alt="">
+            <p class="main__item-text">
+              social projects
+            </p>
+          </div>
+          <div class="main__item">
+            <img class="main__item-img" src="./images/main-item-6.svg" alt="">
+            <p class="main__item-text">
+              Events
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="results">
+      <div class="container">
+        <div class="results__items">
+          <div class="results__item">
+            <div class="results__item-num" data-target="8000">0</div>
+            <p class="results__item-text">Retrained professionals</p>
+          </div>
+          <div class="results__item">
+            <div class="results__item-num" data-target="3000">0</div>
+            <p class="results__item-text">Event participants</p>
+          </div>
+          <div class="results__item">
+            <div class="results__item-num" data-target="30">0</div>
+            <p class="results__item-text">Educational programmes</p>
+          </div>
+        </div>
+      </div>
+    </div>
+    <section class="upcoming">
+      <div class="container">
+        <div class="upcoming__top">
+          <h2 class="upcoming__title title">Upcoming events</h2>
+          <a href="#" class="upcoming__btn">learn more</a>
+        </div>
+        <div class="upcoming__items">
+          <a href="#" class="upcoming__item">
+            <div class="upcoming__img-wrapper"><img class="upcoming__img" src="./images/upcoming-1.png" alt=""></div>
+            <div class="upcoming__price">250 000 ₸</div>
+            <div class="upcoming__date">22 October 2024</div>
+            <div class="upcoming__subtitle">
+              English Contract Law
+            </div>
+          </a>
+          <a href="#" class="upcoming__item">
+            <div class="upcoming__img-wrapper"><img class="upcoming__img" src="./images/upcoming-2.png" alt=""></div>
+            <div class="upcoming__price">250 000 ₸</div>
+            <div class="upcoming__date">22 October 2024</div>
+            <div class="upcoming__subtitle">
+              AI Governance: Legal Challenges and Ethical Standards for Using AI
+            </div>
+          </a>
+          <a href="#" class="upcoming__item">
+            <div class="upcoming__img-wrapper"><img class="upcoming__img" src="./images/upcoming-3.png" alt=""></div>
+            <div class="upcoming__price">250 000 ₸</div>
+            <div class="upcoming__date">22 October 2024</div>
+            <div class="upcoming__subtitle">
+              English Contract Law
+            </div>
+          </a>
+          <a href="#" class="upcoming__item">
+            <div class="upcoming__img-wrapper"><img class="upcoming__img" src="./images/upcoming-1.png" alt=""></div>
+            <div class="upcoming__price">250 000 ₸</div>
+            <div class="upcoming__date">22 October 2024</div>
+            <div class="upcoming__subtitle">
+              Familiarisation with the principles and practices of Islamic banking and finance
+            </div>
           </a>
         </div>
       </div>
-      <div class="header__languages">
-        <a href="#" class="active">EN</a>
-        <a href="#">RU</a>
-        <a href="#">KZ</a>
-      </div>
-    </div>
-    <div class="header__content">
-      <div class="container">
-        <h1 class="header__title">
-          AIFC Academy
-        </h1>
-        <p class="header__text">
-          AIFC Academy is an educational hub of the AIFC, offering specialised training programmes and courses in
-          finance, project
-          management and law. We are creating an international platform for the development of professional skills and
-          competencies, attracting the attention and participation of both national and international experts.
-        </p>
-      </div>
-    </div>
-  </header> 
-  <div class="main__items-wrapper">
-    <div class="container">
-      <div class="main__items">
-        <div class="main__item">
-          <img class="main__item-img" src="./images/main-item-1.svg" alt="">
-          <p class="main__item-text">
-            Tranings
-          </p>
-        </div>
-        <div class="main__item">
-          <img class="main__item-img" src="./images/main-item-2.svg" alt="">
-          <p class="main__item-text">
-            Corporate Solutions
-          </p>
-        </div>
-        <div class="main__item">
-          <img class="main__item-img" src="./images/main-item-3.svg" alt="">
-          <p class="main__item-text">
-            Higher Education
-          </p>
-        </div>
-        <div class="main__item">
-          <img class="main__item-img" src="./images/main-item-4.svg" alt="">
-          <p class="main__item-text">
-            Professional
-            certifications
-          </p>
-        </div>
-        <div class="main__item">
-          <img class="main__item-img" src="./images/main-item-5.svg" alt="">
-          <p class="main__item-text">
-            social projects
-          </p>
-        </div>
-        <div class="main__item">
-          <img class="main__item-img" src="./images/main-item-6.svg" alt="">
-          <p class="main__item-text">
-            Events
-          </p>
-        </div>
-      </div>
-    </div>
-  </div> <!--
-  <div class="results">
-    <div class="container">
-      <div class="results__items">
-        <div class="results__item">
-          <div class="results__item-num" data-target="8000">0</div>
-          <p class="results__item-text">Retrained professionals</p>
-        </div>
-        <div class="results__item">
-          <div class="results__item-num" data-target="3000">0</div>
-          <p class="results__item-text">Event participants</p>
-        </div>
-        <div class="results__item">
-          <div class="results__item-num" data-target="30">0</div>
-          <p class="results__item-text">Educational programmes</p>
-        </div>
-      </div>
-    </div>
-  </div>
-  <section class="upcoming">
-    <div class="container">
-      <div class="upcoming__top">
-        <h2 class="upcoming__title title">Upcoming events</h2>
-        <a href="#" class="upcoming__btn">learn more</a>
-      </div>
-      <div class="upcoming__items">
-        <a href="#" class="upcoming__item">
-          <div class="upcoming__img-wrapper"><img class="upcoming__img" src="./images/upcoming-1.png" alt=""></div>
-          <div class="upcoming__price">250 000 ₸</div>
-          <div class="upcoming__date">22 October 2024</div>
-          <div class="upcoming__subtitle">
-            English Contract Law
-          </div>
-        </a>
-        <a href="#" class="upcoming__item">
-          <div class="upcoming__img-wrapper"><img class="upcoming__img" src="./images/upcoming-2.png" alt=""></div>
-          <div class="upcoming__price">250 000 ₸</div>
-          <div class="upcoming__date">22 October 2024</div>
-          <div class="upcoming__subtitle">
-            AI Governance: Legal Challenges and Ethical Standards for Using AI
-          </div>
-        </a>
-        <a href="#" class="upcoming__item">
-          <div class="upcoming__img-wrapper"><img class="upcoming__img" src="./images/upcoming-3.png" alt=""></div>
-          <div class="upcoming__price">250 000 ₸</div>
-          <div class="upcoming__date">22 October 2024</div>
-          <div class="upcoming__subtitle">
-            English Contract Law
-          </div>
-        </a>
-        <a href="#" class="upcoming__item">
-          <div class="upcoming__img-wrapper"><img class="upcoming__img" src="./images/upcoming-1.png" alt=""></div>
-          <div class="upcoming__price">250 000 ₸</div>
-          <div class="upcoming__date">22 October 2024</div>
-          <div class="upcoming__subtitle">
-            Familiarisation with the principles and practices of Islamic banking and finance
-          </div>
-        </a>
-      </div>
-    </div>
-  </section>
+    </section>
   <div class="how">
     <div class="container">
       <div class="how__inner">
@@ -207,7 +209,7 @@
         <img class="how__img" src="./images/how.svg" alt="">
       </div>
     </div>
-  </div>
+  </div> 
   <section class="feedbacks">
     <div class="container">
       <h2 class="feedbacks__title title">
@@ -308,7 +310,7 @@
         </div>
       </div>
     </div>
-  </section>
+  </section> <!--
   <section class="feedbacks">
     <div class="container">
       <h2 class="feedbacks__title title">
@@ -772,7 +774,8 @@
         </p>
       </div>
     </div>
-  </footer> -->
+  </footer>
+    </main> -->
 
 
 
@@ -789,10 +792,10 @@
 
 
 
-  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
-  <script src="js/slick.min.js"></script>
-  <script src="js/jquery.fancybox.min.js"></script>
-  <script src="js/main.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <script src="js/slick.min.js"></script>
+    <script src="js/jquery.fancybox.min.js"></script>
+    <script src="js/main.js"></script>
 </body>
 
 </html>
