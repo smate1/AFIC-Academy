@@ -18,6 +18,16 @@ document.querySelectorAll('.accordion__header').forEach(header => {
 		}
 	})
 })
+
+
+
+
+document
+	.getElementById('professional-btn')
+	.addEventListener('click', function () {
+		this.classList.toggle('active')
+	})
+
 document.querySelectorAll('.tab-button').forEach(button => {
 	button.addEventListener('click', () => {
 		if (button.classList.contains('buy')) {
