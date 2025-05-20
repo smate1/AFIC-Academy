@@ -191,6 +191,34 @@ body {
 .main__items-wrapper {
 	padding: 80px 0 190px;
 }
+.main__items-wrapper--page {
+	padding: 80px 0;
+}
+.main__items-page {
+	grid-template-columns: repeat(6, 1fr);
+	justify-items: center;
+	grid-gap: 9px;
+}
+
+.main__item-page {
+	max-width: 195px;
+	height: 185px;
+	padding: 30px 30px 60px !important;
+}
+.main__item-img {
+	width: 65px;
+	height: 65px;
+}
+.main__item-text-page {
+	color: #fff;
+	text-align: center;
+	font-family: Geologica;
+	font-size: 16px;
+	font-style: normal;
+	font-weight: 500;
+	line-height: 150%; /* 24px */
+	text-transform: uppercase;
+}
 .main__item {
 	width: 350px;
 	padding: 70px 65px 60px;
@@ -923,6 +951,7 @@ body {
 	display: none;
 }
 @media (max-width: 1400px) {
+	
 	.news {
 		position: relative;
 	}
@@ -1086,6 +1115,19 @@ body {
 }
 
 @media (max-width: 1350px) {
+	.main__item-img {
+		display: block;
+		margin: 0 auto 22px;
+	}
+	.main__item-text {
+		color: #fff;
+		text-align: center;
+		font-family: Geologica;
+		font-size: 17px;
+		font-weight: 500;
+		line-height: 150%; /* 27px */
+		text-transform: uppercase;
+	}
 	.news__item {
 		height: 100px !important;
 		margin-left: 70px;
@@ -1132,9 +1174,33 @@ body {
 		width: 250px;
 		padding: 30px 30px 30px;
 	}
+	.main__item-img--page{
+		width: 60px !important;
+		height: 60px !important;
+	}
 	.main__item-img {
 		height: 80px;
 		width: 80px;
+	}
+
+	.main__items-page{
+		grid-template-columns: repeat(3, 1fr);
+		justify-items: center;
+		grid-gap: 9px;
+	}
+	
+	.main__item-img {
+		display: block;
+		margin: 0 auto 22px;
+	}
+	.main__item-text {
+		color: #fff;
+		text-align: center;
+		font-family: Geologica;
+		font-size: 17px;
+		font-weight: 500;
+		line-height: 150%; /* 27px */
+		text-transform: uppercase;
 	}
 
 	.upcoming__subtitle {
@@ -1254,7 +1320,7 @@ body {
 		grid-template-columns: 1fr 1fr 1fr;
 		gap: 30px;
 	}
-	.footer__inner{
+	.footer__inner {
 		margin-bottom: 40px;
 	}
 	.footer__input {
@@ -1341,6 +1407,9 @@ body {
 }
 
 @media (max-width: 565px) {
+	.main__item-page {
+		padding: 30px 20px 30px !important;
+	}
 	.subscription__title {
 		font-size: 18px;
 	}
