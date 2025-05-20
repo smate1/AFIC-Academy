@@ -78,15 +78,15 @@
           <a href="#">KZ</a>
         </div>
       </div>
-      <div class="header__market-content">
-        <img class="marketplace-bg" src="./images/marketplace-bg.png" alt="" loading="lazy">
+      <div class="header__market-content header__certification-content">
+        <img class="certification-bg" src="./images/certification-bg.png" alt="" loading="lazy">
         <div class="container">
           <div class="header__content-links">
             <a class="header__content-link" href="./index.html">
               <span>Home</span> /
             </a>
-            <a class="header__content-link" href="./marketplace.html">
-              <span>Marketplace</span> /
+            <a class="header__content-link" href="./certification.html">
+              <span>Professional certification</span> /
             </a>
           </div>
           <h1 class="header__market-title">
@@ -98,10 +98,20 @@
         </div>
       </div>
     </header>
+    <div class="accordion-tabs">
+      <div class="container">
+        <div class="accordion-tabs-inner">
+          <button data-index="0" class="tab-button active">Программа тренинга</button>
+          <button data-index="1" class="tab-button">Что входит в стоимость тренинга</button>
+          <button data-index="2" class="tab-button">О тренере</button>
+          <button class="tab-button buy">Купить</button>
+        </div>
+      </div>
+    </div>        
     <section class="info">
       <div class="container">
         <div class="info__inner">
-          <img class="info__img" src="./images/info.png" alt="" loading="lazy">
+          <img class="info__img" src="./images/info.png" alt="">
           <div class="info__content">
 
             <ul class="info__content-list">
@@ -212,7 +222,7 @@
         </h3>
         <div class="questions__inner">
           <div class="questions__left">
-            <img class="questions__img" src="./images/person.png" alt="" loading="lazy">
+            <img class="questions__img" src="./images/person.png" alt="">
             <div class="questions__content">
               <h5 class="questions__name">
                 Balzhan
@@ -231,17 +241,17 @@
               </div>
             </div>
           </div>
-          <form class="questions__form" action="post">
-            <input class="questions__input" placeholder="Name * " type="text">
-            <input class="questions__input" placeholder="Position *" type="text">
-            <input class="questions__input" placeholder="E-mail *" type="email">
-            <input class="questions__input" placeholder="Contact Number *" type="number">
+          <form class="questions__form questions__form-dark" action="post">
+            <input class="questions__input questions__input-dark" placeholder="Name * " type="text">
+            <input class="questions__input questions__input-dark" placeholder="Position *" type="text">
+            <input class="questions__input questions__input-dark" placeholder="E-mail *" type="email">
+            <input class="questions__input questions__input-dark" placeholder="Contact Number *" type="number">
             <div class="g-recaptcha" data-sitekey="6LftBEIrAAAAAEwYzTulwsh1ms8MkJygUMqc_4s7"></div>
             <div class="questions__bottom">
-              <button class="questions__form-btn" type="submit">
+              <button class="questions__form-btn questions__form-btn--dark" type="submit">
                 Отправить
               </button>
-              <p class="questions__bottom-text">
+              <p class="questions__bottom-text questions__form-text--dark">
                 Нажимая на кнопку вы соглашаетесь
                 с <a href="#"><span>политикой конфиденциальности</span></a>
               </p>

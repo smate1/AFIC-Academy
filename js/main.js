@@ -18,6 +18,35 @@ document.querySelectorAll('.accordion__header').forEach(header => {
 		}
 	})
 })
+document.querySelectorAll('.tab-button').forEach(button => {
+	button.addEventListener('click', () => {
+		if (button.classList.contains('buy')) {
+			alert('Переход на покупку') // або window.location.href = '/buy';
+			return
+		}
+
+		// активна кнопка
+		document
+			.querySelectorAll('.tab-button')
+			.forEach(btn => btn.classList.remove('active'))
+		button.classList.add('active')
+
+		// відкриття акордеону
+		const index = button.getAttribute('data-index')
+		const allItems = document.querySelectorAll('.accordion__item')
+
+		allItems.forEach((item, i) => {
+			const content = item.querySelector('.accordion__content')
+			if (i == index) {
+				item.classList.add('active')
+				content.style.maxHeight = content.scrollHeight + 'px'
+			} else {
+				item.classList.remove('active')
+				content.style.maxHeight = null
+			}
+		})
+	})
+})
 
 document.addEventListener('DOMContentLoaded', function () {
 	const burger = document.getElementById('burger')
