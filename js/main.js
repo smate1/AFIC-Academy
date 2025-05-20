@@ -1,3 +1,24 @@
+document.querySelectorAll('.accordion__header').forEach(header => {
+	header.addEventListener('click', () => {
+		const item = header.parentElement
+		const content = item.querySelector('.accordion__content')
+		const isActive = item.classList.contains('active')
+
+		// Закриваємо всі
+		document.querySelectorAll('.accordion__item').forEach(i => {
+			i.classList.remove('active')
+			const c = i.querySelector('.accordion__content')
+			c.style.maxHeight = null
+		})
+
+		// Відкриваємо, якщо не було активне
+		if (!isActive) {
+			item.classList.add('active')
+			content.style.maxHeight = content.scrollHeight + 'px'
+		}
+	})
+})
+
 document.addEventListener('DOMContentLoaded', function () {
 	const burger = document.getElementById('burger')
 	const header = document.getElementById('header') // змінено з querySelector('.header')
@@ -88,7 +109,6 @@ $(document).ready(function () {
 		adaptiveHeight: true,
 
 		responsive: [
-
 			{
 				breakpoint: 768,
 				settings: {
@@ -163,9 +183,4 @@ $(document).ready(function () {
 			},
 		],
 	})
-	
 })
-
-
-
-
