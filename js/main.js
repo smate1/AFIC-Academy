@@ -87,7 +87,6 @@ $(document).ready(function () {
 		autoplaySpeed: 4000,
 		adaptiveHeight: true,
 
-
 		responsive: [
 			{
 				breakpoint: 1024,
@@ -115,6 +114,21 @@ $(document).ready(function () {
 })
 
 $(document).ready(function () {
+	$('.news__slider').on(
+		'init reInit afterChange',
+		function (event, slick, currentSlide) {
+			let current = currentSlide || 0
+
+			$('.news__slider .slick-slide').removeClass('is-visible')
+
+			for (let i = current; i < current + slick.options.slidesToShow; i++) {
+				$('.news__slider .slick-slide[data-slick-index="' + i + '"]').addClass(
+					'is-visible'
+				)
+			}
+		}
+	)
+
 	$('.news__slider').slick({
 		slidesToShow: 3,
 		slidesToScroll: 1,
@@ -122,13 +136,12 @@ $(document).ready(function () {
 		arrows: true,
 		infinite: true,
 		autoplay: false,
-		autoplaySpeed: 4000,
 		adaptiveHeight: true,
-
-		// Кастомні стрілки
 		prevArrow:
 			'<button type="button" class="news-arrow news-arrow--prev"><img src="./images/news-arrow.svg"></button>',
 		nextArrow:
 			'<button type="button" class="news-arrow news-arrow--next"><img src="./images/news-arrow.svg"></button>',
 	})
 })
+
+
