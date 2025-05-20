@@ -916,6 +916,30 @@ body {
 	display: none;
 }
 @media (max-width: 1400px) {
+	.news{
+		position: relative;
+	}
+	.news-arrow{
+		position: absolute;
+		transform: none;
+		top: auto;
+	}
+
+	.news-arrow--next{
+		transform: rotate(180deg);
+		bottom: -50px;
+		right: 45%;
+	}
+	.news-arrow--prev{
+		bottom: -50px;
+		left: 45%;
+	}
+	.news-arrow{
+	}
+	.news-arrow img{
+		max-width: 45px;
+		max-height: 45px;
+	}
 	.results__item-num {
 		font-size: 60px;
 	}
@@ -1055,6 +1079,23 @@ body {
 }
 
 @media (max-width: 1350px) {
+	.news__item{
+		height: 100px !important;
+	}
+	.news-arrow--next{
+		right: 40%;
+		top: auto !important;
+	}
+	.news-arrow--prev{
+		left: 40%;
+		top: auto !important;
+	}
+	.news__item-title{
+		font-size: 16px;
+	}
+	.news__item-img{
+		max-width: 250px;
+	}
 	.feedbacks__text,
 	.feedbacks__position,
 	.feedbacks__description{
@@ -1090,6 +1131,13 @@ body {
 	}
 }
 @media (max-width: 968px) {
+	.news__top{
+		margin-bottom: 0;
+	}
+	.trust__img{
+		width: auto !important;
+		height: 40px;
+	}
 	.how__btn{
 		font-size: 12px;
 		padding: 10px 22px;
@@ -1105,10 +1153,12 @@ body {
 		grid-gap: 20px;
 	}
 	.title,
+	.news__title span,
 	.how__title {
 		font-size: 28px;
 	}
-	.upcoming__btn {
+	.upcoming__btn,
+	.news__btn {
 		font-size: 16px;
 		padding: 8px 20px;
 	}
@@ -1130,6 +1180,13 @@ body {
 		width: 200px;
 		height: 180px;
 	}
+	.feedbacks__img-mobile{
+		width: 150px;
+		height: 100px;
+	}
+	.feedbacks__item-start{
+		align-items: center;
+	}
 }
 @media (max-width: 830px) {
 	.upcoming__items {
@@ -1140,6 +1197,9 @@ body {
 	}
 	.main__items {
 		grid-template-columns: 1fr 1fr;
+	}
+	.news__item{
+		min-height: 330px;
 	}
 }
 
@@ -1196,14 +1256,22 @@ body {
 	.how__inner{
 		padding: 60px 20px;
 	}
+	.news__item::before {
+		font-size: 12px;
+	}
 }
 
 @media (max-width: 565px) {
+	.news__title span{
+		margin-left: 8px;
+	}
 	.title,
-	.how__title {
+	.how__title,
+	.news__title span {
 		font-size: 22px;
 	}
-	.upcoming__btn {
+	.upcoming__btn,
+	.news__btn {
 		font-size: 12px;
 		padding: 6px 10px;
 	}
@@ -1232,7 +1300,16 @@ body {
 }
 
 @media (max-width: 450px) {
-	.upcoming__btn {
+	.news-arrow--next{
+		right: 35%;
+		top: auto !important;
+	}
+	.news-arrow--prev{
+		left: 35%;
+		top: auto !important;
+	}
+	.upcoming__btn,
+	.news__btn {
 		white-space: nowrap;
 	}
 	.upcoming__items {

@@ -88,24 +88,18 @@ $(document).ready(function () {
 		adaptiveHeight: true,
 
 		responsive: [
+
 			{
-				breakpoint: 1024,
+				breakpoint: 768,
 				settings: {
 					slidesToShow: 3,
 					slidesToScroll: 1,
 				},
 			},
 			{
-				breakpoint: 768,
-				settings: {
-					slidesToShow: 2,
-					slidesToScroll: 1,
-				},
-			},
-			{
 				breakpoint: 480,
 				settings: {
-					slidesToShow: 1,
+					slidesToShow: 2,
 					slidesToScroll: 1,
 				},
 			},
@@ -141,7 +135,23 @@ $(document).ready(function () {
 			'<button type="button" class="news-arrow news-arrow--prev"><img src="./images/news-arrow.svg"></button>',
 		nextArrow:
 			'<button type="button" class="news-arrow news-arrow--next"><img src="./images/news-arrow.svg"></button>',
+
+		responsive: [
+			{
+				breakpoint: 968,
+				settings: {
+					slidesToShow: 2,
+				},
+			},
+			{
+				breakpoint: 576,
+				settings: {
+					slidesToShow: 1,
+				},
+			},
+		],
 	})
+	
 })
 
 
