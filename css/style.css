@@ -2243,7 +2243,7 @@ body {
 	.employees__items {
 		column-gap: 30px;
 	}
-	.news {
+	.news__slider {
 		position: relative;
 	}
 	.news-arrow {
@@ -2253,15 +2253,22 @@ body {
 	}
 
 	.news-arrow--next {
+		position: absolute;
 		transform: rotate(180deg);
-		bottom: -50px;
+		bottom: -50px !important;
 		right: 45%;
 	}
 	.news-arrow--prev {
+		position: absolute;
 		bottom: -50px;
 		left: 45%;
 	}
-
+	@supports (-webkit-touch-callout: none) {
+		.news-arrow--next {
+			bottom: -50px;
+		}
+	}
+	
 	.news-arrow img {
 		max-width: 45px;
 		max-height: 45px;
