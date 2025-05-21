@@ -3208,15 +3208,12 @@ body {
 }
 
 @media (max-width: 450px) {
-	.news-wrapper {
-		position: relative; /* обов'язково для абсолютного позиціонування стрілок */
+	.news {
+		position: relative; 
 	}
 
-	/* Базовий стиль стрілки */
 	.news-arrow {
 		position: absolute;
-		width: 30px; /* або інше значення, яке вам підходить */
-		height: 30px;
 		z-index: 10;
 	}
 	.news-arrow--next {
