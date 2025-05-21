@@ -3209,7 +3209,7 @@ body {
 
 @media (max-width: 450px) {
 	.news {
-		position: relative; 
+		position: relative;
 	}
 
 	.news-arrow {
@@ -3218,8 +3218,7 @@ body {
 	}
 	.news-arrow--next {
 		right: 35%;
-		top: auto !important;
-		margin-top: 50px;
+		top: 105% !important;
 	}
 	.news-arrow--prev {
 		left: 35%;
@@ -3230,12 +3229,10 @@ body {
 			position: absolute;
 			z-index: 10;
 		}
-	
+
 		.news-arrow--next {
 			right: 35%;
-			top: auto !important;
-		margin-top: 50px;
-
+			top: 105% !important;
 		}
 		.news-arrow--prev {
 			left: 35%;
