@@ -3211,34 +3211,38 @@ body {
 	.news {
 		position: relative;
 	}
-
+	
+	/* Базовий стиль стрілки */
 	.news-arrow {
 		position: absolute;
 		z-index: 10;
+		width: 30px; /* або інше значення */
+		height: 30px;
 	}
+	
+	/* Стрілка вперед */
 	.news-arrow--next {
 		right: 35%;
-		top: 105% !important;
+		top: calc(100% + 10px); /* Безпечна альтернатива top: 105% */
+		transform: rotate(180deg);
 	}
+	
+	/* Стрілка назад */
 	.news-arrow--prev {
 		left: 35%;
-		top: auto !important;
+		top: calc(100% + 10px); /* Постав замість top: auto для Safari */
 	}
+	
+	/* Safari/iOS підтримка */
 	@supports (-webkit-touch-callout: none) {
-		.news-arrow {
-			position: absolute;
-			z-index: 10;
-		}
-
 		.news-arrow--next {
-			right: 35%;
-			top: 105% !important;
+			top: calc(100% + 10px);
 		}
 		.news-arrow--prev {
-			left: 35%;
-			top: auto !important;
+			top: calc(100% + 10px);
 		}
 	}
+	
 	.employees__item {
 		gap: 12px;
 	}
