@@ -1,63 +1,3 @@
-document.querySelectorAll('.accordion__header').forEach(header => {
-	header.addEventListener('click', () => {
-		const item = header.parentElement
-		const content = item.querySelector('.accordion__content')
-		const isActive = item.classList.contains('active')
-
-		// Закриваємо всі
-		document.querySelectorAll('.accordion__item').forEach(i => {
-			i.classList.remove('active')
-			const c = i.querySelector('.accordion__content')
-			c.style.maxHeight = null
-		})
-
-		// Відкриваємо, якщо не було активне
-		if (!isActive) {
-			item.classList.add('active')
-			content.style.maxHeight = content.scrollHeight + 'px'
-		}
-	})
-})
-
-
-
-
-document
-	.getElementById('professional-btn')
-	.addEventListener('click', function () {
-		this.classList.toggle('active')
-	})
-
-document.querySelectorAll('.tab-button').forEach(button => {
-	button.addEventListener('click', () => {
-		if (button.classList.contains('buy')) {
-			alert('Переход на покупку') // або window.location.href = '/buy';
-			return
-		}
-
-		// активна кнопка
-		document
-			.querySelectorAll('.tab-button')
-			.forEach(btn => btn.classList.remove('active'))
-		button.classList.add('active')
-
-		// відкриття акордеону
-		const index = button.getAttribute('data-index')
-		const allItems = document.querySelectorAll('.accordion__item')
-
-		allItems.forEach((item, i) => {
-			const content = item.querySelector('.accordion__content')
-			if (i == index) {
-				item.classList.add('active')
-				content.style.maxHeight = content.scrollHeight + 'px'
-			} else {
-				item.classList.remove('active')
-				content.style.maxHeight = null
-			}
-		})
-	})
-})
-
 document.addEventListener('DOMContentLoaded', function () {
 	const burger = document.getElementById('burger')
 	const header = document.getElementById('header') // змінено з querySelector('.header')
@@ -121,6 +61,61 @@ const observer = new IntersectionObserver(
 	},
 	{ threshold: 0.5 }
 ) // половина елемента у вікні
+
+document.querySelectorAll('.accordion__header').forEach(header => {
+	header.addEventListener('click', () => {
+		const item = header.parentElement
+		const content = item.querySelector('.accordion__content')
+		const isActive = item.classList.contains('active')
+
+		// Закриваємо всі
+		document.querySelectorAll('.accordion__item').forEach(i => {
+			i.classList.remove('active')
+			const c = i.querySelector('.accordion__content')
+			c.style.maxHeight = null
+		})
+
+		// Відкриваємо, якщо не було активне
+		if (!isActive) {
+			item.classList.add('active')
+			content.style.maxHeight = content.scrollHeight + 'px'
+		}
+	})
+})
+document
+	.getElementById('professional-btn')
+	.addEventListener('click', function () {
+		this.classList.toggle('active')
+	})
+document.querySelectorAll('.tab-button').forEach(button => {
+	button.addEventListener('click', () => {
+		if (button.classList.contains('buy')) {
+			alert('Переход на покупку') // або window.location.href = '/buy';
+			return
+		}
+
+		// активна кнопка
+		document
+			.querySelectorAll('.tab-button')
+			.forEach(btn => btn.classList.remove('active'))
+		button.classList.add('active')
+
+		// відкриття акордеону
+		const index = button.getAttribute('data-index')
+		const allItems = document.querySelectorAll('.accordion__item')
+
+		allItems.forEach((item, i) => {
+			const content = item.querySelector('.accordion__content')
+			if (i == index) {
+				item.classList.add('active')
+				content.style.maxHeight = content.scrollHeight + 'px'
+			} else {
+				item.classList.remove('active')
+				content.style.maxHeight = null
+			}
+		})
+	})
+})
 
 observer.observe(document.querySelector('.results'))
 
@@ -223,3 +218,6 @@ $(document).ready(function () {
 		],
 	})
 })
+
+
+

@@ -2209,6 +2209,9 @@ body {
 }
 
 @media (max-width: 565px) {
+	.professional-block{
+		padding-bottom: 60px;
+	}
 	.professional__img{
 		margin-bottom: 6px;
 	}
