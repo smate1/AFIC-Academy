@@ -547,7 +547,6 @@ body {
 
 .feedbacks__item {
 	display: flex !important;
-	align-items: center;
 	justify-content: space-between;
 	gap: 35px;
 }
@@ -1625,7 +1624,7 @@ body {
 .welcome__video {
 	margin-bottom: 50px;
 	width: 690px;
-	height: 390px;
+	min-height: 390px;
 }
 .welcome__text {
 	color: #000;
@@ -1747,6 +1746,9 @@ body {
 	position: relative;
 	height: 430px;
 }
+.welcome__video-feedback{
+	max-width: 500px;
+}
 .map__iframe {
 	width: 100%;
 }
@@ -1839,6 +1841,7 @@ body {
 }
 /* === Десктоп (мінімум 768px) показує оригінальний блок */
 @media (min-width: 768px) {
+
 	.answers__wrapper {
 		display: flex;
 		gap: 40px;
@@ -1863,6 +1866,7 @@ body {
 	.answers__accordion-mobile {
 		display: none;
 	}
+	
 }
 
 /* === Мобілка (до 767px) показуємо мобільний акордеон, ховаємо оригінальні таби */
@@ -2455,10 +2459,14 @@ body {
 	.news-arrow--next {
 		right: 40%;
 		top: auto !important;
+		margin: 0;
+		padding: 0;
 	}
 	.news-arrow--prev {
 		left: 40%;
 		top: auto !important;
+		margin: 0;
+		padding: 0;
 	}
 	.news__item-title {
 		font-size: 16px;
@@ -2550,6 +2558,16 @@ body {
 	}
 }
 @media (max-width: 968px) {
+	.welcome__video-feedback{
+		min-height: 200px;
+		padding-top: 0;
+		margin-top: 0;
+	}
+	.feedbacks__item {
+		flex-direction: column;
+		margin-top: -20px;
+		gap: 0;
+	}
 	.post__img {
 		width: 100%;
 	}
@@ -2698,9 +2716,7 @@ body {
 	.feedbacks__name {
 		font-size: 18px;
 	}
-	.feedbacks__item {
-		gap: 20px;
-	}
+
 	.feedbacks__img {
 		width: 200px;
 		height: 180px;
@@ -2708,6 +2724,7 @@ body {
 	.feedbacks__img-mobile {
 		width: 150px;
 		height: 100px;
+		margin-bottom: 20px;
 	}
 	.feedbacks__item-start {
 		align-items: center;
@@ -2925,9 +2942,7 @@ body {
 	.feedbacks__img {
 		align-self: start;
 	}
-	.feedbacks__item {
-		flex-direction: column;
-	}
+
 	.header__title {
 		font-size: 42px;
 		padding-top: 65px;
@@ -3015,6 +3030,9 @@ body {
 }
 
 @media (max-width: 565px) {
+	.feedbacks__slider .slick-track{
+		gap: 10px;
+	}
 	.news__wrapper .professional__title{
 		font-size: 14px;
 	}
@@ -3166,10 +3184,7 @@ body {
 	.employees__item .questions__name {
 		font-size: 19px;
 	}
-	.questions__img {
-		max-width: 225px;
-		max-height: 198px;
-	}
+
 	.news__item-title {
 		font-size: 12px;
 	}
@@ -3184,11 +3199,11 @@ body {
 	}
 	.news-arrow--next {
 		right: 35%;
-		top: auto !important;
+		bottom: 0;
 	}
 	.news-arrow--prev {
 		left: 35%;
-		top: auto !important;
+		bottom: 0;
 	}
 	.upcoming__btn,
 	.news__btn {
@@ -3202,8 +3217,8 @@ body {
 		min-width: 100% !important;
 	}
 	.upcoming__img {
-		min-width: 70%;
-		min-height: 70%;
+		min-width: 100%;
+		min-height: 250px;
 	}
 	.upcoming__item:nth-child(1)::after,
 	.upcoming__item:nth-child(2)::after,
