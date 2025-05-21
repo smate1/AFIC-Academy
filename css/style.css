@@ -1705,7 +1705,14 @@ body {
 	margin-bottom: 30px;
 }
 
-.employees {
+.employees__item .questions__link {
+	color: #3b0000;
+}
+.employees__item .questions__link:nth-child(2) {
+	margin-top: 3.5px;
+}
+.employees__item .questions__link::after {
+	color: #3b0000;
 }
 
 .employees__items {
@@ -1740,7 +1747,7 @@ body {
 	position: relative;
 	height: 430px;
 }
-.map__iframe{
+.map__iframe {
 	width: 100%;
 }
 .map__iframe-wrapper::after {
@@ -1756,11 +1763,17 @@ body {
 	transform: translateX(50%);
 }
 
-@media (max-width: 1500px) {
-	.header__top-inner {
-		gap: 30px;
-	}
+.education__items {
+	margin-bottom: 60px;
+	grid-template-columns: repeat(5, 1fr);
 }
+.education__item {
+	background-image: url('../images/education-item.png');
+	max-width: 230px;
+	padding: 50px 20px 45px !important;
+	height: auto;
+}
+
 .header {
 	overflow: hidden;
 }
@@ -1769,8 +1782,193 @@ body {
 	display: none;
 }
 
+.answers {
+	padding: 75px 0 100px;
+}
+
+.answers__title {
+	text-transform: capitalize;
+	color: #000;
+	font-family: Geologica;
+	font-size: 32px;
+	font-style: normal;
+	font-weight: 500;
+	line-height: 150%; /* 48px */
+	margin-bottom: 30px;
+}
+
+.answers__tabs {
+	color: #000;
+	font-family: Geologica;
+	font-size: 20px;
+	font-style: normal;
+	font-weight: 600;
+	line-height: 150%; /* 30px */
+}
+
+.answers__block ul {
+	margin-left: 65px;
+	max-width: 620px;
+}
+.answers__block ul li,
+.answers__block p {
+	color: #000;
+	font-family: Geologica;
+	font-size: 20px;
+	font-style: normal;
+	font-weight: 400;
+	line-height: 150%; /* 30px */
+	list-style: disc;
+}
+
+.answers__tab {
+	padding: 15px 0;
+	cursor: pointer;
+	border-left: 3px solid transparent;
+}
+.answers__tab.active {
+	font-weight: bold;
+	color: #e50051;
+	border-right: 2px solid #e50051;
+}
+.answers__block {
+	display: none;
+}
+.answers__block.active {
+	display: block;
+}
+/* === Десктоп (мінімум 768px) показує оригінальний блок */
+@media (min-width: 768px) {
+	.answers__wrapper {
+		display: flex;
+		gap: 40px;
+	}
+	.answers__tabs {
+		flex: 1;
+		border-right: 1px solid #ddd;
+		display: block;
+	}
+	.answers__content {
+		flex: 2;
+		display: block;
+	}
+	.answers__block {
+		display: none;
+	}
+	.answers__block.active {
+		display: block;
+	}
+
+	/* Мобільний акордеон ховаємо */
+	.answers__accordion-mobile {
+		display: none;
+	}
+}
+
+/* === Мобілка (до 767px) показуємо мобільний акордеон, ховаємо оригінальні таби */
+@media (max-width: 767px) {
+	.answers__wrapper {
+		display: none;
+	}
+	.answers {
+		display: none;
+	}
+
+	.answers__accordion-mobile {
+		display: block;
+	}
+	.answers__block-mobile ul li,
+	.answers__block-mobile p {
+		font-size: 14px;
+	}
+
+	.answers__item-mobile {
+		border-bottom: 1px solid #ddd;
+		background-color: #f9f9f9;
+	}
+
+	.answers__tab-mobile {
+		transition: all .3s;
+
+		padding: 15px;
+		cursor: pointer;
+		font-weight: 600;
+		color: #000;
+	}
+
+	.answers__tab-mobile.active {
+		color: #e50051;
+	}
+
+	.answers__block-mobile {
+		display: none;
+		padding: 10px 15px;
+		background: #fff;
+		color: #000;
+		font-family: Geologica, sans-serif;
+		font-size: 20px;
+		line-height: 1.5;
+	}
+
+	.answers__block-mobile ul li {
+		margin-left: 25px;
+		list-style: disc;
+	}
+}
+
+.answers__wrapper {
+	margin-top: 30px;
+	display: flex;
+	gap: 40px;
+}
+.corporate__questions {
+	height: 680px;
+	background-image: url('../images/corporate-bg.png');
+	background-repeat: no-repeat;
+	background-size: cover;
+	background-position: top center;
+}
+.corporate__text {
+	width: 455px;
+}
+.corporate__input {
+	border-bottom: 1.5px solid #6a6a6a;
+}
+.corporate__bottom-text a {
+	color: #da0032;
+	border-bottom: 0.5px solid #d1003f;
+}
+.corporate__inner {
+	gap: 66px;
+}
+.corporate__form {
+	padding: 0;
+	background: transparent;
+}
+
+.corporate__questions {
+	color: #000;
+	font-family: Geologica;
+	font-size: 18px;
+	font-style: normal;
+	font-weight: 400;
+	line-height: 150%; /* 27px */
+}
+
+.corporate__form-btn {
+	border-radius: 60px;
+	background: #f6bfcc;
+	color: #da0032;
+}
+
+@media (max-width: 1500px) {
+	.header__top-inner {
+		gap: 30px;
+	}
+}
+
 @media (max-width: 1400px) {
-	.employees__items{
+	.employees__items {
 		column-gap: 30px;
 	}
 	.news {
@@ -2067,23 +2265,36 @@ body {
 .footer__contacts-mobile {
 	display: none;
 }
-@media (max-width: 1150px){
+@media (max-width: 1150px) {
 	.employees__item > .questions__img {
 		max-width: 205px;
 		max-height: 278px;
 	}
-	.employees__item .questions__name{
+	.employees__item .questions__name {
 		font-size: 25px;
 	}
-	.employees__item .questions__text{
+	.employees__item .questions__text {
 		font-size: 14px;
 	}
-	.employees__item .questions__link{
+	.employees__item .questions__link {
 		font-size: 14px;
 	}
 }
 @media (max-width: 968px) {
-	.map{
+	.answers__block ul {
+		margin-left: 0;
+	}
+	.answers__tab {
+		text-wrap: nowrap;
+
+		font-size: 16px;
+		padding: 8px 5px;
+	}
+	.answers__block ul li,
+	.answers__block p {
+		font-size: 16px;
+	}
+	.map {
 		padding-bottom: 100px;
 	}
 	.audit-reverse {
@@ -2231,7 +2442,10 @@ body {
 }
 
 @media (max-width: 830px) {
-	.employees__items{
+	.header__buttons-education {
+		flex-wrap: wrap;
+	}
+	.employees__items {
 		grid-template-columns: repeat(1, 1fr);
 		justify-items: center;
 	}
@@ -2268,6 +2482,13 @@ body {
 }
 
 @media (max-width: 768px) {
+	.answers__tab {
+		padding: 8px 10px;
+	}
+
+	.answers__wrapper {
+		gap: 25px;
+	}
 	.audit__title {
 		font-size: 20px;
 	}
@@ -2436,20 +2657,26 @@ body {
 	.professional-btn {
 		margin-bottom: 20px;
 	}
-	.map__text{
+	.map__text {
 		font-size: 14px;
 	}
 	.map__iframe,
-	.map__iframe-wrapper{
+	.map__iframe-wrapper {
 		height: 300px;
+	}
+	.education__items {
+		margin-bottom: 30px;
 	}
 }
 
 @media (max-width: 565px) {
-	.map{
+	.header__education-content > .container {
+		padding-top: 18px;
+	}
+	.map {
 		padding-bottom: 60px;
 	}
-	.employees__items{
+	.employees__items {
 		padding: 30px 0 60px;
 	}
 	.header__contacts-links {
@@ -2578,13 +2805,13 @@ body {
 }
 
 @media (max-width: 450px) {
-	.employees__item{
+	.employees__item {
 		gap: 12px;
 	}
-	.employees__item .questions__text{
+	.employees__item .questions__text {
 		font-size: 10px;
 	}
-	.employees__item .questions__name{
+	.employees__item .questions__name {
 		font-size: 19px;
 	}
 	.questions__img {
