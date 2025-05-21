@@ -146,6 +146,7 @@ document.addEventListener('DOMContentLoaded', function () {
 	}
 })
 
+
 // Accordion toggle
 
 document.querySelectorAll('.tab-button').forEach(button => {
