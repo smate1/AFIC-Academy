@@ -1888,7 +1888,7 @@ body {
 	}
 
 	.answers__tab-mobile {
-		transition: all .3s;
+		transition: all 0.3s;
 
 		padding: 15px;
 		cursor: pointer;
@@ -1922,7 +1922,7 @@ body {
 	gap: 40px;
 }
 .corporate__questions {
-	height: 680px;
+	min-height: 680px;
 	background-image: url('../images/corporate-bg.png');
 	background-repeat: no-repeat;
 	background-size: cover;
@@ -1959,6 +1959,275 @@ body {
 	border-radius: 60px;
 	background: #f6bfcc;
 	color: #da0032;
+}
+.types {
+	padding: 50px 0 70px;
+}
+
+.types__title {
+	margin-bottom: 35px;
+}
+
+.types__items {
+	display: grid;
+	grid-template-columns: repeat(3, 1fr);
+	gap: 20px;
+}
+
+.service__item-img,
+.jalinga__item-img {
+	margin-bottom: 10px;
+	object-fit: cover;
+	width: 100%;
+}
+.service__text,
+.jalinga__item-text {
+	color: #000;
+	font-family: Geologica;
+	font-size: 21px;
+	font-style: normal;
+	font-weight: 300;
+	line-height: 150%; /* 31.5px */
+}
+.services {
+	margin-bottom: 155px;
+}
+.trust-services {
+	background-color: lightgray;
+	padding: 50px 0;
+}
+.services__title {
+	margin-bottom: 40px;
+}
+.services__items {
+	display: grid;
+	grid-template-columns: repeat(3, 1fr);
+	gap: 20px;
+}
+.jalinga__wrapper {
+}
+.jalinga__items {
+	display: grid;
+	grid-template-columns: repeat(3, 1fr);
+	gap: 25px;
+}
+.jalinga__item {
+}
+.jalinga__item-img {
+}
+.jalinga__item-title {
+	margin-bottom: 14px;
+	color: #000;
+	font-family: Geologica;
+	font-size: 22px;
+	font-style: normal;
+	font-weight: 600;
+	line-height: 150%; /* 33px */
+}
+.jalinga__item-text {
+	color: #000;
+	font-family: Geologica;
+	font-size: 16px;
+	font-style: normal;
+	font-weight: 300;
+	line-height: 150%; /* 24px */
+}
+.formats {
+}
+.formats__wrapper {
+	padding: 100px 0;
+}
+.jalinga__title {
+	margin: 30px 0 30px;
+	color: #000;
+	text-align: justify;
+	font-family: Geologica;
+	font-size: 23px;
+	font-weight: 700;
+	line-height: 149.008%; /* 26.821px */
+	letter-spacing: -0.18px;
+}
+
+.jalinga__list li {
+	margin-left: 18px;
+	color: #000;
+	font-family: Geologica;
+	font-size: 17px;
+	font-weight: 300;
+	line-height: 149.008%;
+	letter-spacing: -0.23px;
+	list-style-type: disc;
+}
+
+.post {
+	padding: 20px 0 60px;
+}
+
+.post__title {
+	color: #000;
+	font-family: Geologica;
+	font-size: 35px;
+	font-style: normal;
+	font-weight: 500;
+	line-height: 150%; /* 54px */
+	letter-spacing: 0.1px;
+	margin-bottom: 7px;
+	text-transform: none;
+}
+
+.post__descr {
+	display: flex;
+	align-items: center;
+	gap: 22px;
+}
+.post__news {
+	color: #fff;
+	font-family: Geologica;
+	font-size: 19.844px;
+	font-style: normal;
+	font-weight: 400;
+	line-height: 30px; /* 151.181% */
+	padding: 12px 24px;
+	background: #ce940c;
+}
+.post__date {
+	color: rgba(0, 0, 0, 0.6);
+	font-family: Geologica;
+	font-size: 20px;
+	font-style: normal;
+	font-weight: 300;
+	line-height: 150%; /* 30px */
+	letter-spacing: -0.6px;
+}
+
+.post__texts > .post__text + .post__text {
+	margin-top: 20px;
+}
+.post__text {
+	color: #000;
+	text-align: justify;
+	font-family: Geologica;
+	font-size: 16px;
+	font-style: normal;
+	font-weight: 400;
+	line-height: 150%; /* 24px */
+	letter-spacing: -0.6px;
+}
+.post__img {
+	padding: 20px 0 35px;
+}
+.post__items {
+	display: flex;
+	flex-direction: column;
+	gap: 45px;
+	margin-bottom: 45px;
+}
+
+.post__item-title {
+	color: #000;
+	text-align: justify;
+	font-family: Geologica;
+	font-size: 20px;
+	font-style: normal;
+	font-weight: 700;
+	line-height: 150%; /* 30px */
+	letter-spacing: -0.6px;
+	margin-bottom: 20px;
+}
+.post__item-content {
+	display: flex;
+	align-items: start;
+	gap: 35px;
+}
+
+.post__item-text {
+	color: #000;
+	text-align: justify;
+	font-family: 'Open Sans';
+	font-size: 16px;
+	font-style: normal;
+	font-weight: 400;
+	line-height: 150%; /* 24px */
+	letter-spacing: -0.6px;
+}
+.post__reference-title {
+	color: #000;
+	text-align: justify;
+	font-family: Geologica;
+	font-size: 20px;
+	font-style: normal;
+	font-weight: 700;
+	line-height: 150%; /* 30px */
+	letter-spacing: -0.6px;
+	margin-bottom: 20px;
+}
+.post__links {
+	display: flex;
+	flex-direction: column;
+	gap: 20px;
+}
+.post__link {
+	color: #270001;
+	font-family: Geologica;
+	font-size: 16px;
+	font-style: normal;
+	font-weight: 400;
+	line-height: 150%;
+	letter-spacing: -0.6px;
+	text-decoration-line: underline;
+	text-decoration-style: solid;
+	text-decoration-skip-ink: none;
+	text-decoration-thickness: auto;
+	text-underline-offset: auto;
+	text-underline-position: from-font;
+}
+
+.how-event {
+	padding-top: 0;
+}
+
+.questions-events {
+	padding-top: 60px;
+}
+
+.header__content-link-event {
+	color: #730010;
+}
+
+.news__wrapper {
+	margin-bottom: 115px;
+}
+
+.news__wrapper .professional__price {
+	display: none;
+}
+.news__wrapper .professional__item{
+	position: relative;
+}
+
+.news__wrapper .professional__item::before {
+	content: 'News';
+	position: absolute;
+	left: 0;
+	top: 18.5px;
+	color: #fff;
+	font-family: Geologica;
+	font-size: 16px;
+	font-weight: 400;
+	background: #730010;
+	padding: 5px 18px;
+	line-height: 150%; /* 24px */
+	text-transform: capitalize;
+}
+
+.news__wrapper .professional__title {
+	color: #730010;
+	font-family: 'Open Sans';
+	font-size: 18px;
+	font-style: normal;
+	font-weight: 600;
+	line-height: 150%; /* 27px */
+	letter-spacing: -0.18px;
 }
 
 @media (max-width: 1500px) {
@@ -2281,6 +2550,22 @@ body {
 	}
 }
 @media (max-width: 968px) {
+	.post__img {
+		width: 100%;
+	}
+	.post__date {
+		font-size: 14px;
+	}
+	.services {
+		margin-bottom: 80px;
+	}
+	.trust-services {
+		margin: 40px 0;
+	}
+	.service__text,
+	.jalinga__item-text {
+		font-size: 16px;
+	}
 	.answers__block ul {
 		margin-left: 0;
 	}
@@ -2442,6 +2727,13 @@ body {
 }
 
 @media (max-width: 830px) {
+	.jalinga__list li,
+	.jalinga__item-text {
+		font-size: 14px;
+	}
+	.jalinga__title {
+		margin: 20px 0;
+	}
 	.header__buttons-education {
 		flex-wrap: wrap;
 	}
@@ -2482,6 +2774,51 @@ body {
 }
 
 @media (max-width: 768px) {
+	.news__wrapper .professional__title{
+		font-size: 16px;
+	}
+	.post__text,
+	.post__item-text,
+	.post__link {
+		font-size: 12px;
+	}
+	.post__item-content {
+		flex-direction: column;
+		gap: 15px;
+	}
+	.post__item-title {
+		font-size: 18px;
+	}
+	.post__texts > .post__text + .post__text {
+		margin-top: 10px;
+	}
+	.jalinga__item-img {
+		display: none;
+	}
+	.jalinga__item {
+		padding: 18px 28px 68px;
+		background-image: url('../images/jalinga-bg.png');
+		background-repeat: no-repeat;
+		background-size: cover;
+		background-position: top center;
+		max-height: 255px;
+	}
+	.jalinga__items {
+		grid-template-columns: repeat(1, 1fr);
+	}
+	.formats__wrapper {
+		padding: 30px 0 40px;
+	}
+	.types__items,
+	.services__items {
+		grid-template-columns: repeat(2, 1fr);
+	}
+	.corporate__form {
+		padding: 0 !important;
+	}
+	.corporate__inner {
+		gap: 40px;
+	}
 	.answers__tab {
 		padding: 8px 10px;
 	}
@@ -2667,9 +3004,24 @@ body {
 	.education__items {
 		margin-bottom: 30px;
 	}
+	.news__wrapper{
+		margin-bottom: 80px;
+	}
+	.news__wrapper .professional__item::before {
+		font-size: 14px;
+		padding: 2px 10px;
+		top: 7px;
+	}
 }
 
 @media (max-width: 565px) {
+	.news__wrapper .professional__title{
+		font-size: 14px;
+	}
+	.service__text,
+	.jalinga__item-text {
+		font-size: 14px;
+	}
 	.header__education-content > .container {
 		padding-top: 18px;
 	}
