@@ -3208,7 +3208,7 @@ body {
 }
 
 @media (max-width: 450px) {
-	.news {
+	/* .news {
 		position: relative; 
 	}
 
@@ -3227,8 +3227,6 @@ body {
 	@supports (-webkit-touch-callout: none) {
 		.news-arrow {
 			position: absolute;
-			width: 30px; /* або інше значення, яке вам підходить */
-			height: 30px;
 			z-index: 10;
 		}
 	
@@ -3240,7 +3238,7 @@ body {
 			left: 35%;
 			top: auto !important;
 		}
-	}
+	} */
 	.employees__item {
 		gap: 12px;
 	}
