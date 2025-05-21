@@ -3311,7 +3311,7 @@ body {
 	@supports (-webkit-touch-callout: none) {
 		.news-arrow--next {
 			right: 35%;
-			top: calc(100% + 37px);
+			top: calc(100% + 35px);
 			transform: rotate(180deg);
 			transform-origin: center center; /* Центрує обертання */
 		}
