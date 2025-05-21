@@ -3223,9 +3223,11 @@ body {
 	/* Стрілка вперед */
 	.news-arrow--next {
 		right: 35%;
-		top: calc(100% + 10px); /* Безпечна альтернатива top: 105% */
+		top: calc(100% + 10px);
 		transform: rotate(180deg);
+		transform-origin: center center; /* Центрує обертання */
 	}
+	
 	
 	/* Стрілка назад */
 	.news-arrow--prev {
@@ -3236,8 +3238,12 @@ body {
 	/* Safari/iOS підтримка */
 	@supports (-webkit-touch-callout: none) {
 		.news-arrow--next {
+			right: 35%;
 			top: calc(100% + 10px);
+			transform: rotate(180deg);
+			transform-origin: center center; /* Центрує обертання */
 		}
+		
 		.news-arrow--prev {
 			top: calc(100% + 10px);
 		}
