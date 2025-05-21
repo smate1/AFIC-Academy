@@ -1,6 +1,81 @@
+$(document).ready(function () {
+	$('.trust__slider-partners').slick({
+		slidesToShow: 4,
+		slidesToScroll: 1,
+		dots: false,
+		arrows: true,
+		infinite: true,
+		autoplay: false,
+		autoplaySpeed: 4000,
+		adaptiveHeight: true,
+		responsive: [
+			{
+				breakpoint: 768,
+				settings: {
+					slidesToShow: 3,
+					slidesToScroll: 1,
+				},
+			},
+			{
+				breakpoint: 480,
+				settings: {
+					slidesToShow: 2,
+					slidesToScroll: 1,
+				},
+			},
+		],
+	})
+
+	$('.feedbacks__slider').slick({
+		slidesToShow: 1,
+		slidesToScroll: 1,
+		dots: true,
+		arrows: true,
+		infinite: true,
+		autoplay: false,
+		autoplaySpeed: 4000,
+		adaptiveHeight: true,
+	})
+
+	$('.news__slider').on(
+		'init reInit afterChange',
+		function (event, slick, currentSlide) {
+			let current = currentSlide || 0
+			$('.news__slider .slick-slide').removeClass('is-visible')
+			for (let i = current; i < current + slick.options.slidesToShow; i++) {
+				$('.news__slider .slick-slide[data-slick-index="' + i + '"]').addClass(
+					'is-visible'
+				)
+			}
+		}
+	)
+
+	$('.news__slider').slick({
+		slidesToShow: 3,
+		slidesToScroll: 1,
+		dots: false,
+		arrows: true,
+		infinite: true,
+		autoplay: false,
+		adaptiveHeight: true,
+		prevArrow:
+			'<button type="button" class="news-arrow news-arrow--prev"><img src="./images/news-arrow.svg"></button>',
+		nextArrow:
+			'<button type="button" class="news-arrow news-arrow--next"><img src="./images/news-arrow.svg"></button>',
+		responsive: [
+			{ breakpoint: 1350, settings: { slidesToShow: 4 } },
+			{ breakpoint: 968, settings: { slidesToShow: 3 } },
+			{ breakpoint: 768, settings: { slidesToShow: 2 } },
+			{ breakpoint: 490, settings: { slidesToShow: 1 } },
+		],
+	})
+})
+
+// Burger menu toggle
+
 document.addEventListener('DOMContentLoaded', function () {
 	const burger = document.getElementById('burger')
-	const header = document.getElementById('header') // змінено з querySelector('.header')
+	const header = document.getElementById('header')
 	const closeBtn = document.getElementById('burger-menu')
 	const menuLinks = document.querySelectorAll('.mobile__menu a')
 	const body = document.body
@@ -27,80 +102,64 @@ document.addEventListener('DOMContentLoaded', function () {
 	})
 })
 
-const counters = document.querySelectorAll('.results__item-num')
-let hasAnimated = false
+// Counter animation
 
-const animateCounter = counter => {
-	const target = +counter.getAttribute('data-target')
-	let current = 0
-	const duration = 2000
-	const step = Math.ceil(target / (duration / 20))
+document.addEventListener('DOMContentLoaded', function () {
+	const counters = document.querySelectorAll('.results__item-num')
+	let hasAnimated = false
 
-	const update = () => {
-		current += step
-		if (current >= target) {
-			counter.innerText = `${target}+`
-		} else {
-			counter.innerText = `${current}+`
-			requestAnimationFrame(update)
+	const animateCounter = counter => {
+		const target = +counter.getAttribute('data-target')
+		let current = 0
+		const duration = 2000
+		const step = Math.ceil(target / (duration / 20))
+
+		const update = () => {
+			current += step
+			if (current >= target) {
+				counter.innerText = `${target}+`
+			} else {
+				counter.innerText = `${current}+`
+				requestAnimationFrame(update)
+			}
 		}
+
+		update()
 	}
 
-	update()
-}
+	const observer = new IntersectionObserver(
+		entries => {
+			entries.forEach(entry => {
+				if (entry.isIntersecting && !hasAnimated) {
+					counters.forEach(counter => animateCounter(counter))
+					hasAnimated = true
+					observer.disconnect()
+				}
+			})
+		},
+		{ threshold: 0.5 }
+	)
 
-const observer = new IntersectionObserver(
-	entries => {
-		entries.forEach(entry => {
-			if (entry.isIntersecting && !hasAnimated) {
-				counters.forEach(counter => animateCounter(counter))
-				hasAnimated = true
-				observer.disconnect() // зупиняємо спостереження
-			}
-		})
-	},
-	{ threshold: 0.5 }
-) // половина елемента у вікні
-
-document.querySelectorAll('.accordion__header').forEach(header => {
-	header.addEventListener('click', () => {
-		const item = header.parentElement
-		const content = item.querySelector('.accordion__content')
-		const isActive = item.classList.contains('active')
-
-		// Закриваємо всі
-		document.querySelectorAll('.accordion__item').forEach(i => {
-			i.classList.remove('active')
-			const c = i.querySelector('.accordion__content')
-			c.style.maxHeight = null
-		})
-
-		// Відкриваємо, якщо не було активне
-		if (!isActive) {
-			item.classList.add('active')
-			content.style.maxHeight = content.scrollHeight + 'px'
-		}
-	})
+	const resultsSection = document.querySelector('.results')
+	if (resultsSection) {
+		observer.observe(resultsSection)
+	}
 })
-document
-	.getElementById('professional-btn')
-	.addEventListener('click', function () {
-		this.classList.toggle('active')
-	})
+
+// Accordion toggle
+
 document.querySelectorAll('.tab-button').forEach(button => {
 	button.addEventListener('click', () => {
 		if (button.classList.contains('buy')) {
-			alert('Переход на покупку') // або window.location.href = '/buy';
+			alert('Переход на покупку')
 			return
 		}
 
-		// активна кнопка
 		document
 			.querySelectorAll('.tab-button')
 			.forEach(btn => btn.classList.remove('active'))
 		button.classList.add('active')
 
-		// відкриття акордеону
 		const index = button.getAttribute('data-index')
 		const allItems = document.querySelectorAll('.accordion__item')
 
@@ -117,107 +176,29 @@ document.querySelectorAll('.tab-button').forEach(button => {
 	})
 })
 
-observer.observe(document.querySelector('.results'))
+document.querySelectorAll('.accordion__header').forEach(header => {
+	header.addEventListener('click', () => {
+		const item = header.parentElement
+		const content = item.querySelector('.accordion__content')
+		const isActive = item.classList.contains('active')
 
-$(document).ready(function () {
-	$('.feedbacks__slider').slick({
-		slidesToShow: 1,
-		slidesToScroll: 1,
-		dots: true,
-		arrows: true,
-		infinite: true,
-		autoplay: false,
-		autoplaySpeed: 4000,
-		adaptiveHeight: true,
-	})
-})
-$(document).ready(function () {
-	$('.trust__slider-partners').slick({
-		slidesToShow: 4,
-		slidesToScroll: 1,
-		dots: false,
-		arrows: true,
-		infinite: true,
-		autoplay: false,
-		autoplaySpeed: 4000,
-		adaptiveHeight: true,
+		document.querySelectorAll('.accordion__item').forEach(i => {
+			i.classList.remove('active')
+			const c = i.querySelector('.accordion__content')
+			c.style.maxHeight = null
+		})
 
-		responsive: [
-			{
-				breakpoint: 768,
-				settings: {
-					slidesToShow: 3,
-					slidesToScroll: 1,
-				},
-			},
-			{
-				breakpoint: 480,
-				settings: {
-					slidesToShow: 2,
-					slidesToScroll: 1,
-				},
-			},
-		],
-	})
-})
-
-$(document).ready(function () {
-	$('.news__slider').on(
-		'init reInit afterChange',
-		function (event, slick, currentSlide) {
-			let current = currentSlide || 0
-
-			$('.news__slider .slick-slide').removeClass('is-visible')
-
-			for (let i = current; i < current + slick.options.slidesToShow; i++) {
-				$('.news__slider .slick-slide[data-slick-index="' + i + '"]').addClass(
-					'is-visible'
-				)
-			}
+		if (!isActive) {
+			item.classList.add('active')
+			content.style.maxHeight = content.scrollHeight + 'px'
 		}
-	)
-
-	$('.news__slider').slick({
-		slidesToShow: 3,
-		slidesToScroll: 1,
-		dots: false,
-		arrows: true,
-		infinite: true,
-		autoplay: false,
-		adaptiveHeight: true,
-		prevArrow:
-			'<button type="button" class="news-arrow news-arrow--prev"><img src="./images/news-arrow.svg"></button>',
-		nextArrow:
-			'<button type="button" class="news-arrow news-arrow--next"><img src="./images/news-arrow.svg"></button>',
-
-		responsive: [
-			{
-				breakpoint: 1350,
-				settings: {
-					slidesToShow: 4,
-				},
-			},
-			{
-				breakpoint: 968,
-				settings: {
-					slidesToShow: 3,
-				},
-			},
-			{
-				breakpoint: 768,
-				settings: {
-					slidesToShow: 2,
-				},
-			},
-			{
-				breakpoint: 490,
-				settings: {
-					slidesToShow: 1,
-				},
-			},
-		],
 	})
 })
 
+// Professional button toggle
 
-
+document
+	.getElementById('professional-btn')
+	?.addEventListener('click', function () {
+		this.classList.toggle('active')
+	})
