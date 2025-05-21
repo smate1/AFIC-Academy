@@ -419,37 +419,31 @@
             </a>
           </div>
           <div class="footer__inner-wrapper">
-            <nav class="footer__nav">
-              <h6 class="footer__title">
-                about us
-              </h6>
+            <nav class="footer__dropdown" id="aboutDropdown">
+              <button class="footer__dropdown-toggle">
+                About us
+                <img class="footer__arrow" src="./images/dropdown-arrow-white.png" alt="">
+              </button>
               <ul class="footer__menu">
                 <li class="footer__menu-item">
-                  <a class="footer__menu-link" href="#">
-                    About us
-                  </a>
+                  <a class="footer__menu-link" href="#">About us</a>
                 </li>
                 <li class="footer__menu-item">
-                  <a class="footer__menu-link" href="#">
-                    Contacts
-                  </a>
+                  <a class="footer__menu-link" href="#">Contacts</a>
                 </li>
                 <li class="footer__menu-item">
-                  <a class="footer__menu-link" href="#">
-                    News
-                  </a>
+                  <a class="footer__menu-link" href="#">News</a>
                 </li>
                 <li class="footer__menu-item">
-                  <a class="footer__menu-link" href="#">
-                    Events
-                  </a>
+                  <a class="footer__menu-link" href="#">Events</a>
                 </li>
               </ul>
             </nav>
-            <nav class="footer__nav">
-              <h6 class="footer__title">
-                SERVICES
-              </h6>
+            <nav class="footer__dropdown" id="servicesDropdown">
+              <button class="footer__dropdown-toggle">
+                Services
+                <img class="footer__arrow" src="./images/dropdown-arrow-white.png" alt="">
+              </button>
               <ul class="footer__menu">
                 <li class="footer__menu-item">
                   <a class="footer__menu-link" href="#">
@@ -483,10 +477,11 @@
                 </li>
               </ul>
             </nav>
-            <nav class="footer__nav">
-              <h6 class="footer__title">
+            <nav class="footer__dropdown" id="marketpaceDropdown">
+              <button class="footer__dropdown-toggle">
                 Marketplace
-              </h6>
+                <img class="footer__arrow" src="./images/dropdown-arrow-white.png" alt="">
+              </button>
               <ul class="footer__menu">
                 <li class="footer__menu-item">
                   <a class="footer__menu-link" href="#">
@@ -564,7 +559,27 @@
     </footer>
   </main>
 
+  <script>
+    document.addEventListener("DOMContentLoaded", function () {
+      const dropdowns = document.querySelectorAll(".footer__dropdown");
 
+      dropdowns.forEach(dropdown => {
+        const toggleBtn = dropdown.querySelector(".footer__dropdown-toggle");
+
+        toggleBtn.addEventListener("click", function () {
+          const isOpen = dropdown.classList.contains("open");
+
+          // Закриваємо всі
+          dropdowns.forEach(d => d.classList.remove("open"));
+
+          // Відкриваємо тільки поточний, якщо він був закритий
+          if (!isOpen) {
+            dropdown.classList.add("open");
+          }
+        });
+      });
+    });
+  </script>
 
 
 
