@@ -804,8 +804,13 @@ body {
 	gap: 80px;
 }
 
-.footer__title {
+.footer__title,
+.footer__dropdown-toggle {
+	display: flex;
+	align-items: center;
+	cursor: pointer;
 	color: #fff;
+	padding: 0;
 	font-family: Geologica;
 	font-size: 17px;
 	font-weight: 600;
@@ -2679,6 +2684,8 @@ body {
 		flex-wrap: wrap;
 	}
 	.footer__contacts-mobile {
+		margin: 0 auto;
+		text-align: center;
 		display: block;
 		margin-top: 20px;
 	}
@@ -2933,9 +2940,7 @@ body {
 	.footer__inner {
 		margin-bottom: 40px;
 	}
-	.footer__input {
-		width: 250px;
-	}
+
 	.subscription__email-text {
 		font-size: 14px;
 	}
@@ -3061,8 +3066,76 @@ body {
 		top: 7px;
 	}
 }
-
+.footer__arrow {
+	display: none;
+}
 @media (max-width: 565px) {
+	.footer__dropdown {
+		position: relative;
+		width: max-content;
+		font-family: sans-serif;
+		margin: 0 auto;
+	}
+
+	.footer__arrow {
+		display: block;
+		margin-left: 0.5rem;
+		transition: transform 0.3s ease;
+		width: 15px;
+		height: 15px;
+	}
+	.footer__inner-wrapper {
+		grid-template-columns: 1fr;
+		margin: 40px 0 40px;
+	}
+	.footer__inner {
+		display: block;
+	}
+	.footer__dropdown.open .footer__arrow {
+		transform: rotate(-180deg);
+	}
+	.footer__dropdown-toggle {
+		margin-bottom: 0;
+		font-size: 18px;
+		text-align: center;
+		margin: 0 auto;
+	}
+	.footer__menu {
+		max-height: 0;
+		overflow: hidden;
+		transition: max-height 0.4s ease;
+		margin-top: 10px;
+	}
+	
+	.footer__dropdown.open .footer__menu {
+		max-height: 500px; /* достатньо велике значення для найбільшого списку */
+	}
+	
+	.footer__dropdown.open .footer__menu {
+		display: block;
+	}
+	.footer__dropdown.open .footer__menu-link{
+		text-align: center;
+	}
+	.footer__dropdown.open .footer__dropdown-toggle{
+		margin: 0 auto;
+	}
+
+	.footer__menu-item {
+		margin-bottom: 0.5rem;
+		text-align: center;
+	}
+
+
+	.footer__menu-link {
+		color: #fff;
+		text-decoration: none;
+		transition: color 0.3s;
+	}
+
+	.footer__menu-link:hover {
+		color: #007bff;
+	}
 	.feedbacks__slider .slick-track {
 		gap: 10px;
 	}
@@ -3211,7 +3284,7 @@ body {
 	.news {
 		position: relative;
 	}
-	
+
 	/* Базовий стиль стрілки */
 	.news-arrow {
 		position: absolute;
@@ -3219,7 +3292,7 @@ body {
 		width: 30px; /* або інше значення */
 		height: 30px;
 	}
-	
+
 	/* Стрілка вперед */
 	.news-arrow--next {
 		right: 35%;
@@ -3227,28 +3300,27 @@ body {
 		transform: rotate(180deg);
 		transform-origin: center center; /* Центрує обертання */
 	}
-	
-	
+
 	/* Стрілка назад */
 	.news-arrow--prev {
 		left: 35%;
-		top: auto !important; 
+		top: auto !important;
 	}
-	
+
 	/* Safari/iOS підтримка */
 	@supports (-webkit-touch-callout: none) {
 		.news-arrow--next {
 			right: 35%;
-			top: calc(100% + 38px);
+			top: calc(100% + 37px);
 			transform: rotate(180deg);
 			transform-origin: center center; /* Центрує обертання */
 		}
-		
+
 		.news-arrow--prev {
 			top: auto !important;
 		}
 	}
-	
+
 	.employees__item {
 		gap: 12px;
 	}

@@ -218,8 +218,9 @@
         <div class="feedbacks__slider">
           <div class="feedbacks__item">
             <div class="feedbacks__img-wrapper">
-              <iframe class="welcome__video welcome__video-feedback" src="https://www.youtube.com/embed/YZ84iQrbYjw?si=LEQk4SNKBP5UKWir"
-                title="YouTube video player" frameborder="0"
+              <iframe class="welcome__video welcome__video-feedback"
+                src="https://www.youtube.com/embed/YZ84iQrbYjw?si=LEQk4SNKBP5UKWir" title="YouTube video player"
+                frameborder="0"
                 allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
                 referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
             </div>
@@ -245,8 +246,9 @@
           </div>
           <div class="feedbacks__item">
             <div class="feedbacks__img-wrapper">
-              <iframe class="welcome__video welcome__video-feedback" src="https://www.youtube.com/embed/YZ84iQrbYjw?si=LEQk4SNKBP5UKWir"
-                title="YouTube video player" frameborder="0"
+              <iframe class="welcome__video welcome__video-feedback"
+                src="https://www.youtube.com/embed/YZ84iQrbYjw?si=LEQk4SNKBP5UKWir" title="YouTube video player"
+                frameborder="0"
                 allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
                 referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
             </div>
@@ -272,8 +274,9 @@
           </div>
           <div class="feedbacks__item">
             <div class="feedbacks__img-wrapper">
-              <iframe class="welcome__video welcome__video-feedback" src="https://www.youtube.com/embed/YZ84iQrbYjw?si=LEQk4SNKBP5UKWir"
-                title="YouTube video player" frameborder="0"
+              <iframe class="welcome__video welcome__video-feedback"
+                src="https://www.youtube.com/embed/YZ84iQrbYjw?si=LEQk4SNKBP5UKWir" title="YouTube video player"
+                frameborder="0"
                 allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
                 referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
             </div>
@@ -299,8 +302,9 @@
           </div>
           <div class="feedbacks__item">
             <div class="feedbacks__img-wrapper">
-              <iframe class="welcome__video welcome__video-feedback" src="https://www.youtube.com/embed/YZ84iQrbYjw?si=LEQk4SNKBP5UKWir"
-                title="YouTube video player" frameborder="0"
+              <iframe class="welcome__video welcome__video-feedback"
+                src="https://www.youtube.com/embed/YZ84iQrbYjw?si=LEQk4SNKBP5UKWir" title="YouTube video player"
+                frameborder="0"
                 allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
                 referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
             </div>
@@ -714,37 +718,31 @@
             </a>
           </div>
           <div class="footer__inner-wrapper">
-            <nav class="footer__nav">
-              <h6 class="footer__title">
-                about us
-              </h6>
+            <nav class="footer__dropdown" id="aboutDropdown">
+              <button class="footer__dropdown-toggle">
+                About us
+                <img class="footer__arrow" src="./images/dropdown-arrow-white.png" alt="">
+              </button>
               <ul class="footer__menu">
                 <li class="footer__menu-item">
-                  <a class="footer__menu-link" href="#">
-                    About us
-                  </a>
+                  <a class="footer__menu-link" href="#">About us</a>
                 </li>
                 <li class="footer__menu-item">
-                  <a class="footer__menu-link" href="#">
-                    Contacts
-                  </a>
+                  <a class="footer__menu-link" href="#">Contacts</a>
                 </li>
                 <li class="footer__menu-item">
-                  <a class="footer__menu-link" href="#">
-                    News
-                  </a>
+                  <a class="footer__menu-link" href="#">News</a>
                 </li>
                 <li class="footer__menu-item">
-                  <a class="footer__menu-link" href="#">
-                    Events
-                  </a>
+                  <a class="footer__menu-link" href="#">Events</a>
                 </li>
               </ul>
             </nav>
-            <nav class="footer__nav">
-              <h6 class="footer__title">
-                SERVICES
-              </h6>
+            <nav class="footer__dropdown" id="servicesDropdown">
+              <button class="footer__dropdown-toggle">
+                Services
+                <img class="footer__arrow" src="./images/dropdown-arrow-white.png" alt="">
+              </button>
               <ul class="footer__menu">
                 <li class="footer__menu-item">
                   <a class="footer__menu-link" href="#">
@@ -778,10 +776,11 @@
                 </li>
               </ul>
             </nav>
-            <nav class="footer__nav">
-              <h6 class="footer__title">
+            <nav class="footer__dropdown" id="marketpaceDropdown">
+              <button class="footer__dropdown-toggle">
                 Marketplace
-              </h6>
+                <img class="footer__arrow" src="./images/dropdown-arrow-white.png" alt="">
+              </button>
               <ul class="footer__menu">
                 <li class="footer__menu-item">
                   <a class="footer__menu-link" href="#">
@@ -866,7 +865,28 @@
 
 
 
+  <script>
+    document.addEventListener("DOMContentLoaded", function () {
+      const dropdowns = document.querySelectorAll(".footer__dropdown");
 
+      dropdowns.forEach(dropdown => {
+        const toggleBtn = dropdown.querySelector(".footer__dropdown-toggle");
+
+        toggleBtn.addEventListener("click", function () {
+          const isOpen = dropdown.classList.contains("open");
+
+          // Закриваємо всі
+          dropdowns.forEach(d => d.classList.remove("open"));
+
+          // Відкриваємо тільки поточний, якщо він був закритий
+          if (!isOpen) {
+            dropdown.classList.add("open");
+          }
+        });
+      });
+    });
+  </script>
+  
 
 
 
