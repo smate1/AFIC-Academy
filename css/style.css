@@ -3232,7 +3232,7 @@ body {
 	/* Стрілка назад */
 	.news-arrow--prev {
 		left: 35%;
-		top: calc(100% + 10px); /* Постав замість top: auto для Safari */
+		top: auto !important; 
 	}
 	
 	/* Safari/iOS підтримка */
@@ -3245,7 +3245,7 @@ body {
 		}
 		
 		.news-arrow--prev {
-			top: calc(100% + 10px);
+			top: auto !important;
 		}
 	}
 	
