@@ -3234,6 +3234,8 @@ body {
 		.news-arrow--next {
 			right: 35%;
 			top: auto !important;
+		margin-top: 50px;
+
 		}
 		.news-arrow--prev {
 			left: 35%;
