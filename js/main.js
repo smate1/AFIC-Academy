@@ -148,6 +148,7 @@ document.addEventListener('DOMContentLoaded', function () {
 
 // Accordion toggle
 
+// Обробка кліку по таб-кнопках
 document.querySelectorAll('.tab-button').forEach(button => {
 	button.addEventListener('click', () => {
 		if (button.classList.contains('buy')) {
@@ -176,12 +177,10 @@ document.querySelectorAll('.tab-button').forEach(button => {
 	})
 })
 
-// Додаємо можливість відкривати/закривати вручну по кнопці .accordion__toggle
-document.querySelectorAll('.accordion__toggle').forEach((toggle, index) => {
-	toggle.addEventListener('click', e => {
-		e.stopPropagation() // Щоб не заважати іншим подіям, якщо буде потрібно
-
-		const item = toggle.closest('.accordion__item')
+// Додаємо можливість відкривати/закривати при кліку на .accordion__header
+document.querySelectorAll('.accordion__header').forEach((header) => {
+	header.addEventListener('click', () => {
+		const item = header.closest('.accordion__item')
 		const content = item.querySelector('.accordion__content')
 		const isActive = item.classList.contains('active')
 
@@ -201,6 +200,7 @@ document.querySelectorAll('.accordion__toggle').forEach((toggle, index) => {
 		}
 	})
 })
+
 
 
 
