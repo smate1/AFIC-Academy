@@ -146,7 +146,6 @@ document.addEventListener('DOMContentLoaded', function () {
 	}
 })
 
-
 // Accordion toggle
 
 document.querySelectorAll('.tab-button').forEach(button => {
@@ -176,6 +175,33 @@ document.querySelectorAll('.tab-button').forEach(button => {
 		})
 	})
 })
+
+// Додаємо можливість відкривати/закривати вручну по кнопці .accordion__toggle
+document.querySelectorAll('.accordion__toggle').forEach((toggle, index) => {
+	toggle.addEventListener('click', e => {
+		e.stopPropagation() // Щоб не заважати іншим подіям, якщо буде потрібно
+
+		const item = toggle.closest('.accordion__item')
+		const content = item.querySelector('.accordion__content')
+		const isActive = item.classList.contains('active')
+
+		if (isActive) {
+			item.classList.remove('active')
+			content.style.maxHeight = null
+		} else {
+			// Закриваємо всі інші
+			document.querySelectorAll('.accordion__item').forEach(i => {
+				i.classList.remove('active')
+				i.querySelector('.accordion__content').style.maxHeight = null
+			})
+
+			// Відкриваємо поточний
+			item.classList.add('active')
+			content.style.maxHeight = content.scrollHeight + 'px'
+		}
+	})
+})
+
 
 
 // Professional button toggle
