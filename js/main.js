@@ -211,3 +211,6 @@ document
 	?.addEventListener('click', function () {
 		this.classList.toggle('active')
 	})
+	body.classList.toggle('no-scroll') // під час відкриття
+	body.classList.remove('no-scroll') // під час закриття
+	

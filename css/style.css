@@ -2,6 +2,10 @@
 html {
 	box-sizing: border-box;
 }
+.no-scroll {
+  overflow: hidden;
+  height: 100vh;
+}
 
 body {
 	color: #000;
@@ -99,7 +103,7 @@ body {
 	align-items: center;
 	justify-content: space-between;
 	padding: 21px 40px;
-	overflow-x: hidden;
+	/* overflow-x: hidden; */
 }
 
 .header__top-inner {
@@ -956,7 +960,6 @@ body {
 	background: #e0e6ed;
 	margin-bottom: 20px;
 }
-
 
 .tab-button {
 	flex: 1;
@@ -2245,6 +2248,9 @@ body {
 }
 
 @media (max-width: 1400px) {
+	.custom-dropdowns {
+		gap: 30px !important;
+	}
 	.employees__items {
 		column-gap: 30px;
 	}
@@ -2259,7 +2265,7 @@ body {
 	.news-arrow--next {
 		position: absolute;
 		transform: rotate(180deg);
-		/* bottom: -50px !important; */
+		bottom: -50px !important;
 		right: 45%;
 	}
 	.news-arrow--prev {
@@ -2274,7 +2280,7 @@ body {
 		.news-arrow--next {
 			position: absolute;
 			transform: rotate(180deg);
-			/* bottom: -50px !important; */
+			bottom: -50px !important;
 			right: 45%;
 		}
 		.news-arrow--prev {
@@ -2294,6 +2300,83 @@ body {
 	.results__item-text,
 	.how__text {
 		font-size: 14px;
+	}
+
+	.main__items-wrapper {
+		padding: 40px 0 40px;
+	}
+	.upcoming,
+	.feedbacks {
+		padding: 40px 0 40px;
+	}
+	.how {
+		padding-top: 0;
+	}
+	.feedbacks {
+		padding-top: 20px;
+		margin-top: 40px;
+	}
+}
+
+@media (max-width: 1280px) {
+	.header__dropdown {
+		position: relative;
+		width: max-content;
+		font-family: sans-serif;
+		margin: 0 auto;
+	}
+
+	.header__arrow {
+		display: block !important;
+		margin-left: 0.5rem;
+		transition: transform 0.3s ease;
+		width: 15px;
+		height: 15px;
+	}
+
+	.header__dropdown.open .header__arrow {
+		transform: rotate(-180deg);
+	}
+	.header__dropdown-toggle {
+		margin-bottom: 0;
+		font-size: 18px;
+		text-align: center;
+		margin: 0 auto;
+	}
+	.header__mobile-menu {
+		max-height: 0;
+		overflow: hidden;
+		transition: max-height 0.4s ease;
+		margin-top: 10px;
+	}
+
+	.header__dropdown.open .header__mobile-menu {
+		max-height: 500px; /* достатньо велике значення для найбільшого списку */
+	}
+	.header__menu-item{
+		text-align: center;
+		margin-bottom: 0.5rem;
+	}
+
+	.header__dropdown.open .header__mobile-menu {
+		display: block;
+	}
+	.header__dropdown.open .header__menu-link {
+		text-align: center;
+	}
+	.header__dropdown.open .header__dropdown-toggle {
+		margin: 0 auto;
+	}
+
+	.header__dropdown {
+		display: block;
+	}
+	.header__dropdown-toggle,
+	.header__menu-link {
+		color: #000 !important;
+	}
+	.custom-dropdowns {
+		display: none !important;
 	}
 	.header__languages,
 	.header__search {
@@ -2410,23 +2493,6 @@ body {
 	.header__language {
 		display: none;
 	}
-	.main__items-wrapper {
-		padding: 40px 0 40px;
-	}
-	.upcoming,
-	.feedbacks {
-		padding: 40px 0 40px;
-	}
-	.how {
-		padding-top: 0;
-	}
-	.feedbacks {
-		padding-top: 20px;
-		margin-top: 40px;
-	}
-}
-
-@media (max-width: 1350px) {
 	.tab-button,
 	.tab-button.active {
 		font-size: 16px;
@@ -2703,7 +2769,7 @@ body {
 	}
 
 	.footer__menu-link {
-		font-size: 12px;
+		font-size: 14px;
 	}
 
 	.footer__input,
@@ -3107,18 +3173,18 @@ body {
 		transition: max-height 0.4s ease;
 		margin-top: 10px;
 	}
-	
+
 	.footer__dropdown.open .footer__menu {
 		max-height: 500px; /* достатньо велике значення для найбільшого списку */
 	}
-	
+
 	.footer__dropdown.open .footer__menu {
 		display: block;
 	}
-	.footer__dropdown.open .footer__menu-link{
+	.footer__dropdown.open .footer__menu-link {
 		text-align: center;
 	}
-	.footer__dropdown.open .footer__dropdown-toggle{
+	.footer__dropdown.open .footer__dropdown-toggle {
 		margin: 0 auto;
 	}
 
@@ -3126,7 +3192,6 @@ body {
 		margin-bottom: 0.5rem;
 		text-align: center;
 	}
-
 
 	.footer__menu-link {
 		color: #fff;

@@ -20,6 +20,95 @@
   <link rel="stylesheet" href="css/jquery.fancybox.css">
   <link rel="stylesheet" href="css/style.css">
 </head>
+<style>
+  .custom-dropdowns {
+    display: flex;
+    gap: 62px;
+    flex-wrap: wrap;
+  }
+
+  .dropdown {
+    position: relative;
+    transition: opacity .3s;
+  }
+
+  .dropdown-button {
+    display: flex;
+    align-content: center;
+    gap: 8px;
+    cursor: pointer;
+    user-select: none;
+    font-family: Geologica;
+    font-size: 18px;
+    font-weight: 500;
+    line-height: 150%;
+    text-transform: uppercase;
+    transition: opacity  .4s;
+
+  }
+
+  .dropdown-options {
+    position: absolute;
+    top: 100%;
+    left: 0;
+    z-index: -2;
+    /* display: none; */
+    opacity: 0;
+    background: white;
+    border-radius: 6px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    flex-direction: column;
+    font-family: Geologica;
+    font-size: 14px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 150%;
+    min-width: 100%;
+    transition: opacity .4s;
+  }
+
+
+  .dropdown-options a {
+    text-wrap: nowrap;
+    position: relative;
+    padding: 10px 14px;
+    text-decoration: none;
+    color: black;
+    display: block;
+    border-radius: 6px;
+
+  }
+
+  .dropdown-options a::after {
+    content: '';
+    position: absolute;
+    background: #c5c5c5;
+    height: 0.3px;
+    width: 100%;
+    bottom: 0;
+    left: 0;
+  }
+  .dropdown-options a:last-child::after{
+    display: none;
+  }
+  .dropdown-button img{
+    transition: all .4s;
+  }
+  .dropdown-options a:hover {
+    background: #f5f5f5;
+  }
+  .dropdown:hover{
+    transition: opacity .4s;
+
+  }
+  .dropdown:hover .dropdown-options {
+    opacity: 1;
+    z-index: 10;
+  }
+  .dropdown:hover .dropdown-button img{
+    transform: rotate(-180deg);
+  }
+</style>
 
 <body>
   <main class="main">
@@ -30,14 +119,99 @@
             <input class="header__mobile-input" type="text" placeholder="Search">
             <img src="./images/search.svg" alt="">
           </label>
-          <nav class="header__nav header__nav-mobile">
-            <ul>
-              <li><a href="#about">About us</a></li>
-              <li><a href="#courses">Services</a></li>
-              <li><a href="#contact">Marketplace</a></li>
-              <li><a href="#contact">NEWS</a></li>
-              <li><a href="#contact">Contacts</a></li>
+          <nav class="header__dropdown footer__dropdown" id="aboutDropdown">
+            <button class="header__dropdown-toggle footer__dropdown-toggle">
+              About us
+              <img class="header__arrow footer__arrow" src="./images/dropdown-arrow.svg" alt="">
+            </button>
+            <ul class="header__mobile-menu footer__menu">
+              <li class="header__menu-item footer__menu-item">
+                <a class="footer__menu-link header__menu-link" href="about.html">About us</a>
+              </li>
+              <li class="header__menu-item footer__menu-item">
+                <a class="footer__menu-link header__menu-link" href="contacts.html">Contacts</a>
+              </li>
+              <li class="header__menu-item footer__menu-item">
+                <a class="footer__menu-link header__menu-link" href="news.html">News</a>
+              </li>
+              <li class="header__menu-item footer__menu-item">
+                <a class="footer__menu-link header__menu-link" href="events-in.html">Events</a>
+              </li>
             </ul>
+          </nav>
+          <nav class="header__dropdown footer__dropdown" id="servicesDropdown">
+            <button class="header__dropdown-toggle footer__dropdown-toggle">
+              Services
+              <img class="header__arrow footer__arrow" src="./images/dropdown-arrow.svg" alt="">
+            </button>
+            <ul class="header__mobile-menu footer__menu">
+              <li class="header__menu-item footer__menu-item">
+                <a class="footer__menu-link header__menu-link " href="#">
+                  Trainings
+                </a>
+              </li>
+              <li class="header__menu-item footer__menu-item">
+                <a class="footer__menu-link header__menu-link " href="#">
+                  Corporate Solutions
+                </a>
+              </li>
+              <li class="header__menu-item footer__menu-item">
+                <a class="footer__menu-link header__menu-link  " href="#">
+                  Higher education
+                </a>
+              </li>
+              <li class="header__menu-item footer__menu-item">
+                <a class="footer__menu-link header__menu-link " href="#">
+                  Events
+                </a>
+              </li>
+              <li class="header__menu-item footer__menu-item">
+                <a class="footer__menu-link header__menu-link " href="#">
+                  Professional certifications
+                </a>
+              </li>
+            </ul>
+          </nav>
+          <nav class="header__dropdown footer__dropdown" id="marketpaceDropdown">
+            <button class="header__dropdown-toggle footer__dropdown-toggle">
+              Marketplace
+              <img class="header__arrow footer__arrow" src="./images/dropdown-arrow.svg" alt="">
+            </button>
+            <ul class="header__mobile-menu footer__menu">
+              <li class="header__menu-item footer__menu-item">
+                <a class="header__menu-link footer__menu-link" href="#">
+                  Trainings
+                </a>
+              </li>
+              <li class="header__menu-item footer__menu-item">
+                <a class="header__menu-link footer__menu-link" href="#">
+                  Events
+                </a>
+              </li>
+            </ul>
+          </nav>
+          <nav class="header__dropdown footer__dropdown" id="marketpaceDropdown">
+            <button class="header__dropdown-toggle footer__dropdown-toggle">
+              Media Centre
+              <img class="header__arrow footer__arrow" src="./images/dropdown-arrow.svg" alt="">
+            </button>
+            <ul class="header__mobile-menu footer__menu">
+              <li class="header__menu-item footer__menu-item">
+                <a class="header__menu-link footer__menu-link" href="#">
+                  News
+                </a>
+              </li>
+              <li class="header__menu-item footer__menu-item">
+                <a class="header__menu-link footer__menu-link" href="#">
+                  Events-In
+                </a>
+              </li>
+            </ul>
+          </nav>
+          <nav class="header__dropdown footer__dropdown" id="marketpaceDropdown">
+            <a href="./contacts.html" class="header__dropdown-toggle footer__dropdown-toggle">
+              Contacts
+            </a>
           </nav>
         </div>
         <div class="header__languages header__languages-mobile">
@@ -58,14 +232,52 @@
             <div class="header__logo">
               <a href="index.html"><img src="./images/logo.svg" alt="AFIC Academy"></a>
             </div>
-            <nav class="header__nav">
-              <ul>
-                <li><a href="#about">About us</a></li>
-                <li><a href="#courses">Services</a></li>
-                <li><a href="#contact">Marketplace</a></li>
-                <li><a href="#contact">NEWS</a></li>
-                <li><a href="#contact">Contacts</a></li>
-              </ul>
+            <nav class="custom-dropdowns">
+              <div class="dropdown">
+                <div class="dropdown-button">About us
+                  <img src="./images/dropdown-arrow.svg" alt="">
+                </div>
+                <div class="dropdown-options">
+                  <a href="./about.html">About us</a>
+                  <a href="./contacts.html">Contacts</a>
+                  <a href="./news.html">News</a>
+                  <a href="./events-in.html">Events</a>
+                </div>
+              </div>
+              <div class="dropdown">
+                <div class="dropdown-button">Services
+                  <img src="./images/dropdown-arrow.svg" alt="">
+                </div>
+                <div class="dropdown-options">
+                  <a href="#trainings">Trainings</a>
+                  <a href="#corporate">Corporate Solutions</a>
+                  <a href="#education">Higher Education</a>
+                  <a href="#events">Events</a>
+                  <a href="#certifications">Professional Certifications</a>
+                </div>
+              </div>
+              <div class="dropdown">
+                <div class="dropdown-button">Marketplace
+                  <img src="./images/dropdown-arrow.svg" alt="">
+                </div>
+                <div class="dropdown-options">
+                  <a href="#trainings">Trainings</a>
+                  <a href="#events">Events</a>
+                </div>
+              </div>
+              <div class="dropdown">
+                <div class="dropdown-button">Media centre
+                  <img src="./images/dropdown-arrow.svg" alt="">
+                </div>
+                <div class="dropdown-options">
+                  <a href="#trainings">News</a>
+                  <a href="#corporate">Events-In</a>
+                </div>
+              </div>
+              <div class="dropdown">
+                <a class="dropdown-button" href="./contacts.html">Contacts
+                </a>
+              </div>
             </nav>
             <a class="header__search" href="#">
               <img src="./images/search.svg" alt="">
@@ -751,12 +963,7 @@
                 </li>
                 <li class="footer__menu-item">
                   <a class="footer__menu-link" href="#">
-                    Corporate
-                  </a>
-                </li>
-                <li class="footer__menu-item">
-                  <a class="footer__menu-link" href="#">
-                    Solutions
+                    Corporate Solutions
                   </a>
                 </li>
                 <li class="footer__menu-item">
@@ -885,8 +1092,34 @@
 
 
 
+  <script>
+    document.querySelectorAll('.dropdown-button').forEach(button => {
+      button.addEventListener('click', () => {
+        const dropdown = button.parentElement
+        dropdown.classList.toggle('active')
 
-  
+        // Закриваємо інші dropdown-и
+        document.querySelectorAll('.dropdown').forEach(d => {
+          if (d !== dropdown) d.classList.remove('active')
+        })
+      })
+    })
+
+    // Закриває меню при кліку поза ним
+    document.addEventListener('click', e => {
+      if (!e.target.closest('.dropdown')) {
+        document.querySelectorAll('.dropdown').forEach(d => d.classList.remove('active'))
+      }
+    })
+
+    // Опціонально: Дія при виборі опції
+    document.querySelectorAll('.dropdown-options button').forEach(option => {
+      option.addEventListener('click', () => {
+        alert(`You selected: ${option.textContent}`)
+      })
+    })
+  </script>
+
 
 
 
