@@ -45,7 +45,8 @@
     text-transform: uppercase;
     transition: all .3s;
   }
-  .dropdown-button:hover{
+
+  .dropdown-button:hover {
     color: #da0032;
   }
 
@@ -91,22 +92,26 @@
     bottom: 0;
     left: 0;
   }
-  .dropdown-options a:last-child::after{
+
+  .dropdown-options a:last-child::after {
     display: none;
   }
-  .dropdown-button img{
+
+  .dropdown-button img {
     transition: all .4s;
   }
 
-  .dropdown:hover{
+  .dropdown:hover {
     transition: opacity .4s;
 
   }
+
   .dropdown:hover .dropdown-options {
     opacity: 1;
     z-index: 10;
   }
-  .dropdown:hover .dropdown-button img{
+
+  .dropdown:hover .dropdown-button img {
     transform: rotate(-180deg);
   }
 </style>
@@ -125,7 +130,7 @@
                 d="M39.5556 13.295C39.5556 13.295 31.4946 25.5901 20.7778 25.5901C10.061 25.5901 2 13.295 2 13.295C2 13.295 10.061 1 20.7778 1C31.4946 1 39.5556 13.295 39.5556 13.295Z"
                 stroke="black" stroke-width="2" stroke-miterlimit="10"></path>
             </svg>
-            </a>
+          </a>
           <label class="header__mobile-label" for="">
             <input class="header__mobile-input" type="text" placeholder="Search">
             <img src="./images/search.svg" alt="">
@@ -241,7 +246,7 @@
             <path
               d="M39.5556 13.295C39.5556 13.295 31.4946 25.5901 20.7778 25.5901C10.061 25.5901 2 13.295 2 13.295C2 13.295 10.061 1 20.7778 1C31.4946 1 39.5556 13.295 39.5556 13.295Z"
               stroke="black" stroke-width="2" stroke-miterlimit="10"></path>
-            </svg>
+          </svg>
         </a>
         <button class="burger" id="burger">
           <span></span>
@@ -301,7 +306,11 @@
               </div>
             </nav>
             <a class="header__search" href="#">
-              <img src="./images/search.svg" alt="">
+              <svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" viewBox="0 0 22 22" fill="none">
+                <path
+                  d="M17.2439 17.3429L21 21M20.161 10.3524C20.161 15.5175 15.8716 19.7047 10.5805 19.7047C5.28933 19.7047 1 15.5175 1 10.3524C1 5.18719 5.28933 1 10.5805 1C15.8716 1 20.161 5.18719 20.161 10.3524Z"
+                  stroke="black" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+              </svg>
             </a>
           </div>
         </div>
