@@ -578,7 +578,7 @@ body {
 	height: 51px;
 	transform: rotate(180deg);
 }
-.slick-prev:hover{
+.slick-prev:hover {
 	background-image: url('../images/arrow-next-red.svg');
 }
 .slick-next {
@@ -589,7 +589,7 @@ body {
 	width: 51px;
 	height: 51px;
 }
-.slick-next:hover{
+.slick-next:hover {
 	background-image: url('../images/arrow-next-red.svg');
 }
 
@@ -1985,6 +1985,7 @@ input[type='number']:focus {
 		display: flex;
 		gap: 40px;
 	}
+
 	.answers__tabs {
 		flex: 1;
 		border-right: 1px solid #ddd;
@@ -2338,6 +2339,7 @@ input[type='number']:focus {
 
 .news__wrapper {
 	margin-bottom: 115px;
+	margin-top: 30px;
 }
 
 .news__wrapper .professional__price {
@@ -2372,20 +2374,45 @@ input[type='number']:focus {
 	letter-spacing: -0.18px;
 }
 
-.header__eye svg path{
-	transition: stroke .3s;
+.header__eye svg path {
+	transition: stroke 0.3s;
 }
 
-.header__eye:hover svg path{ 
+.header__eye:hover svg path {
 	stroke: #da0032;
 }
-.header__search svg path{
-	transition: stroke .3s;
+.header__search svg path {
+	transition: stroke 0.3s;
 }
 
-.header__search:hover svg path{
+.header__search:hover svg path {
 	stroke: #da0032;
 }
+
+.label__search{
+	position: relative;
+}
+.button__search{
+	right: 5px;
+	position: absolute;
+	top: -1px;
+}
+
+.input__search {
+	width: 40%;
+	list-style: none;
+	color: #000;
+	font-family: Geologica;
+	font-size: 18px;
+	font-weight: 500;
+	line-height: 150%; /* 27px */
+	padding: 10px;
+	border: 1px solid #000;
+	border-radius: 10px;
+}
+
+
+
 
 @media (max-width: 1500px) {
 	.header__top-inner {
@@ -2465,7 +2492,10 @@ input[type='number']:focus {
 }
 
 @media (max-width: 1280px) {
-	.header__eye-mobile svg{
+	.label__search{
+		display: none;
+	}
+	.header__eye-mobile svg {
 		width: 36px;
 		height: 23px;
 	}
@@ -3058,6 +3088,18 @@ input[type='number']:focus {
 }
 
 @media (max-width: 768px) {
+	.input__search{
+		width: 100% !important;
+		padding: 8px;
+		font-size: 14px;
+	}
+	.button__search{
+		top: 3px;
+	}
+	.button__search img{
+		width: 15px;
+		height: 15px;
+	}
 	.news__item-title {
 		font-size: 14px;
 	}
