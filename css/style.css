@@ -578,9 +578,7 @@ body {
 	height: 51px;
 	transform: rotate(180deg);
 }
-.slick-prev:hover {
-	background-image: url('../images/arrow-next-red.svg');
-}
+
 .slick-next {
 	z-index: 100;
 	background-image: url('../images/arrow-next.svg');
@@ -589,9 +587,7 @@ body {
 	width: 51px;
 	height: 51px;
 }
-.slick-next:hover {
-	background-image: url('../images/arrow-next-red.svg');
-}
+
 
 .feedbacks__item {
 	display: flex !important;
@@ -2007,10 +2003,17 @@ input[type='number']:focus {
 	.answers__accordion-mobile {
 		display: none;
 	}
+	.slick-prev:hover {
+		background-image: url('../images/arrow-next-red.svg');
+	}
+	.slick-next:hover {
+		background-image: url('../images/arrow-next-red.svg');
+	}
 }
 
 /* === Мобілка (до 767px) показуємо мобільний акордеон, ховаємо оригінальні таби */
 @media (max-width: 767px) {
+
 	.answers__wrapper {
 		display: none;
 	}
