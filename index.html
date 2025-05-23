@@ -43,9 +43,12 @@
     font-weight: 500;
     line-height: 150%;
     text-transform: uppercase;
-    transition: opacity  .4s;
-
+    transition: all .3s;
   }
+  .dropdown-button:hover{
+    color: #da0032;
+  }
+
 
   .dropdown-options {
     position: absolute;
@@ -76,7 +79,7 @@
     color: black;
     display: block;
     border-radius: 6px;
-
+    transition: all .3s;
   }
 
   .dropdown-options a::after {
@@ -94,9 +97,7 @@
   .dropdown-button img{
     transition: all .4s;
   }
-  .dropdown-options a:hover {
-    background: #f5f5f5;
-  }
+
   .dropdown:hover{
     transition: opacity .4s;
 
@@ -115,6 +116,16 @@
     <header class="header" id="header">
       <div class="header__top-mobile">
         <div class="header__top-inner header__top-inner--mobile">
+          <a class="header__eye header__eye-mobile" href="#">
+            <svg xmlns="http://www.w3.org/2000/svg" width="41" height="27" viewBox="0 0 41 27" fill="none">
+              <path
+                d="M27.2459 13.295C27.2459 16.6902 24.35 19.4425 20.7778 19.4425C17.2055 19.4425 14.3097 16.6902 14.3097 13.295C14.3097 9.89984 17.2055 7.14752 20.7778 7.14752C24.35 7.14752 27.2459 9.89984 27.2459 13.295Z"
+                stroke="black" stroke-width="2" stroke-miterlimit="10"></path>
+              <path
+                d="M39.5556 13.295C39.5556 13.295 31.4946 25.5901 20.7778 25.5901C10.061 25.5901 2 13.295 2 13.295C2 13.295 10.061 1 20.7778 1C31.4946 1 39.5556 13.295 39.5556 13.295Z"
+                stroke="black" stroke-width="2" stroke-miterlimit="10"></path>
+            </svg>
+            </a>
           <label class="header__mobile-label" for="">
             <input class="header__mobile-input" type="text" placeholder="Search">
             <img src="./images/search.svg" alt="">
@@ -135,7 +146,7 @@
                 <a class="footer__menu-link header__menu-link" href="news.html">News</a>
               </li>
               <li class="header__menu-item footer__menu-item">
-                <a class="footer__menu-link header__menu-link" href="events-in.html">Events</a>
+                <a class="footer__menu-link header__menu-link" href="services.html">Events</a>
               </li>
             </ul>
           </nav>
@@ -146,27 +157,27 @@
             </button>
             <ul class="header__mobile-menu footer__menu">
               <li class="header__menu-item footer__menu-item">
-                <a class="footer__menu-link header__menu-link " href="#">
+                <a class="footer__menu-link header__menu-link " href="./corporate.html">
                   Trainings
                 </a>
               </li>
               <li class="header__menu-item footer__menu-item">
-                <a class="footer__menu-link header__menu-link " href="#">
+                <a class="footer__menu-link header__menu-link " href="./consulting.html">
                   Corporate Solutions
                 </a>
               </li>
               <li class="header__menu-item footer__menu-item">
-                <a class="footer__menu-link header__menu-link  " href="#">
+                <a class="footer__menu-link header__menu-link  " href="./education.html">
                   Higher education
                 </a>
               </li>
               <li class="header__menu-item footer__menu-item">
-                <a class="footer__menu-link header__menu-link " href="#">
+                <a class="footer__menu-link header__menu-link " href="./services.html">
                   Events
                 </a>
               </li>
               <li class="header__menu-item footer__menu-item">
-                <a class="footer__menu-link header__menu-link " href="#">
+                <a class="footer__menu-link header__menu-link " href="./certification.html">
                   Professional certifications
                 </a>
               </li>
@@ -179,12 +190,12 @@
             </button>
             <ul class="header__mobile-menu footer__menu">
               <li class="header__menu-item footer__menu-item">
-                <a class="header__menu-link footer__menu-link" href="#">
+                <a class="header__menu-link footer__menu-link" href="./corporate.html">
                   Trainings
                 </a>
               </li>
               <li class="header__menu-item footer__menu-item">
-                <a class="header__menu-link footer__menu-link" href="#">
+                <a class="header__menu-link footer__menu-link" href="./services.html">
                   Events
                 </a>
               </li>
@@ -197,12 +208,12 @@
             </button>
             <ul class="header__mobile-menu footer__menu">
               <li class="header__menu-item footer__menu-item">
-                <a class="header__menu-link footer__menu-link" href="#">
+                <a class="header__menu-link footer__menu-link" href="./news.html">
                   News
                 </a>
               </li>
               <li class="header__menu-item footer__menu-item">
-                <a class="header__menu-link footer__menu-link" href="#">
+                <a class="header__menu-link footer__menu-link" href="./events-in.html">
                   Events-In
                 </a>
               </li>
@@ -222,6 +233,16 @@
       </div>
       <div class="overlay"></div>
       <div class="header__top">
+        <a class="header__eye header__eye-desktop" href="#">
+          <svg xmlns="http://www.w3.org/2000/svg" width="41" height="27" viewBox="0 0 41 27" fill="none">
+            <path
+              d="M27.2459 13.295C27.2459 16.6902 24.35 19.4425 20.7778 19.4425C17.2055 19.4425 14.3097 16.6902 14.3097 13.295C14.3097 9.89984 17.2055 7.14752 20.7778 7.14752C24.35 7.14752 27.2459 9.89984 27.2459 13.295Z"
+              stroke="black" stroke-width="2" stroke-miterlimit="10"></path>
+            <path
+              d="M39.5556 13.295C39.5556 13.295 31.4946 25.5901 20.7778 25.5901C10.061 25.5901 2 13.295 2 13.295C2 13.295 10.061 1 20.7778 1C31.4946 1 39.5556 13.295 39.5556 13.295Z"
+              stroke="black" stroke-width="2" stroke-miterlimit="10"></path>
+            </svg>
+        </a>
         <button class="burger" id="burger">
           <span></span>
           <span></span>
@@ -241,7 +262,7 @@
                   <a href="./about.html">About us</a>
                   <a href="./contacts.html">Contacts</a>
                   <a href="./news.html">News</a>
-                  <a href="./events-in.html">Events</a>
+                  <a href="./services.html">Events</a>
                 </div>
               </div>
               <div class="dropdown">
@@ -249,11 +270,11 @@
                   <img src="./images/dropdown-arrow.svg" alt="">
                 </div>
                 <div class="dropdown-options">
-                  <a href="#trainings">Trainings</a>
-                  <a href="#corporate">Corporate Solutions</a>
-                  <a href="#education">Higher Education</a>
-                  <a href="#events">Events</a>
-                  <a href="#certifications">Professional Certifications</a>
+                  <a href="./corporate.html">Trainings</a>
+                  <a href="./consulting.html">Corporate Solutions</a>
+                  <a href="./education.html">Higher Education</a>
+                  <a href="./services.html">Events</a>
+                  <a href="./certification.html">Professional Certifications</a>
                 </div>
               </div>
               <div class="dropdown">
@@ -261,8 +282,8 @@
                   <img src="./images/dropdown-arrow.svg" alt="">
                 </div>
                 <div class="dropdown-options">
-                  <a href="#trainings">Trainings</a>
-                  <a href="#events">Events</a>
+                  <a href="./corporate.html">Trainings</a>
+                  <a href="./services.html">Events</a>
                 </div>
               </div>
               <div class="dropdown">
@@ -270,8 +291,8 @@
                   <img src="./images/dropdown-arrow.svg" alt="">
                 </div>
                 <div class="dropdown-options">
-                  <a href="#trainings">News</a>
-                  <a href="#corporate">Events-In</a>
+                  <a href="./news.html">News</a>
+                  <a href="./events-in.html">Events-In</a>
                 </div>
               </div>
               <div class="dropdown">
@@ -370,10 +391,10 @@
       <div class="container">
         <div class="upcoming__top">
           <h2 class="upcoming__title title">Upcoming events</h2>
-          <a href="#" class="upcoming__btn">learn more</a>
+          <a href="./services.html" class="upcoming__btn">learn more</a>
         </div>
         <div class="upcoming__items">
-          <a href="#" class="upcoming__item">
+          <a href="./post.html" class="upcoming__item">
             <div class="upcoming__img-wrapper"><img class="upcoming__img" src="./images/upcoming-1.png" alt=""></div>
             <div class="upcoming__price">250 000 ₸</div>
             <div class="upcoming__date">22 October 2024</div>
@@ -381,7 +402,7 @@
               English Contract Law
             </div>
           </a>
-          <a href="#" class="upcoming__item">
+          <a href="./post.html" class="upcoming__item">
             <div class="upcoming__img-wrapper"><img class="upcoming__img" src="./images/upcoming-2.png" alt=""></div>
             <div class="upcoming__price">250 000 ₸</div>
             <div class="upcoming__date">22 October 2024</div>
@@ -389,7 +410,7 @@
               AI Governance: Legal Challenges and Ethical Standards for Using AI
             </div>
           </a>
-          <a href="#" class="upcoming__item">
+          <a href="./post.html" class="upcoming__item">
             <div class="upcoming__img-wrapper"><img class="upcoming__img" src="./images/upcoming-3.png" alt=""></div>
             <div class="upcoming__price">250 000 ₸</div>
             <div class="upcoming__date">22 October 2024</div>
@@ -397,7 +418,7 @@
               English Contract Law
             </div>
           </a>
-          <a href="#" class="upcoming__item">
+          <a href="./post.html" class="upcoming__item">
             <div class="upcoming__img-wrapper"><img class="upcoming__img" src="./images/upcoming-1.png" alt=""></div>
             <div class="upcoming__price">250 000 ₸</div>
             <div class="upcoming__date">22 October 2024</div>
@@ -416,7 +437,7 @@
             <p class="how__text">
               Ответим на все вопросы и поможем выбрать нужное направление
             </p>
-            <a href="#" class="how__btn">связаться</a>
+            <a href="./contacts.html" class="how__btn">связаться</a>
           </div>
           <img class="how__img" src="./images/how.svg" alt="">
         </div>
@@ -773,11 +794,11 @@
           <h2 class="news__title title">
             News<span>Events</span>
           </h2>
-          <a href="#" class="news__btn">learn more</a>
+          <a href="./services.html" class="news__btn">learn more</a>
         </div>
 
         <div class="news__slider">
-          <a class="news__item" href="#">
+          <a class="news__item" href="./post.html">
             <div class="news__item-wrapper">
               <img class="news__item-img" src="./images/news-1.png" alt="">
             </div>
@@ -788,7 +809,7 @@
               22 October 2024
             </div>
           </a>
-          <a class="news__item" href="#">
+          <a class="news__item" href="./post.html">
             <div class="news__item-wrapper">
               <img class="news__item-img" src="./images/news-1.png" alt="">
             </div>
@@ -799,7 +820,7 @@
               22 October 2024
             </div>
           </a>
-          <a class="news__item" href="#">
+          <a class="news__item" href="./post.html">
             <div class="news__item-wrapper">
               <img class="news__item-img" src="./images/news-2.png" alt="">
             </div>
@@ -810,7 +831,7 @@
               26 September 2024
             </div>
           </a>
-          <a class="news__item" href="#">
+          <a class="news__item" href="./post.html">
             <div class="news__item-wrapper">
               <img class="news__item-img" src="./images/news-3.png" alt="">
             </div>
@@ -821,7 +842,7 @@
               26 September 2024
             </div>
           </a>
-          <a class="news__item" href="#">
+          <a class="news__item" href="./post.html">
             <div class="news__item-wrapper">
               <img class="news__item-img" src="./images/news-3.png" alt="">
             </div>
@@ -832,7 +853,7 @@
               26 September 2024
             </div>
           </a>
-          <a class="news__item" href="#">
+          <a class="news__item" href="./post.html">
             <div class="news__item-wrapper">
               <img class="news__item-img" src="./images/news-2.png" alt="">
             </div>
@@ -843,7 +864,7 @@
               26 September 2024
             </div>
           </a>
-          <a class="news__item" href="#">
+          <a class="news__item" href="./post.html">
             <div class="news__item-wrapper">
               <img class="news__item-img" src="./images/news-3.png" alt="">
             </div>
@@ -854,7 +875,7 @@
               26 September 2024
             </div>
           </a>
-          <a class="news__item" href="#">
+          <a class="news__item" href="./post.html">
             <div class="news__item-wrapper">
               <img class="news__item-img" src="./images/news-3.png" alt="">
             </div>
@@ -877,14 +898,12 @@
               Stay current with our latest insights, news and
               important updates within one click!
             </h3>
-            <div class="subscription__email">
-              <p class="subscription__email-text">
-                Email address
-              </p>
+            <from class="subscription__email">
+              <input class="subscription__email-input" placeholder="Email address">
               <button class="subscription__email-btn">
                 Subscribe
               </button>
-            </div>
+            </from>
             <hr class="subscription__hr">
             <p class="subscription__policy">
               By submitting this form, you agree to our <a href="#"><span>Privacy Policy</span></a>.
@@ -937,16 +956,16 @@
               </button>
               <ul class="footer__menu">
                 <li class="footer__menu-item">
-                  <a class="footer__menu-link" href="#">About us</a>
+                  <a class="footer__menu-link" href="./about.html">About us</a>
                 </li>
                 <li class="footer__menu-item">
-                  <a class="footer__menu-link" href="#">Contacts</a>
+                  <a class="footer__menu-link" href="./contacts.html">Contacts</a>
                 </li>
                 <li class="footer__menu-item">
-                  <a class="footer__menu-link" href="#">News</a>
+                  <a class="footer__menu-link" href="./news.html">News</a>
                 </li>
                 <li class="footer__menu-item">
-                  <a class="footer__menu-link" href="#">Events</a>
+                  <a class="footer__menu-link" href="./services.html">Events</a>
                 </li>
               </ul>
             </nav>
@@ -957,27 +976,27 @@
               </button>
               <ul class="footer__menu">
                 <li class="footer__menu-item">
-                  <a class="footer__menu-link" href="#">
+                  <a class="footer__menu-link" href="./corporate.html">
                     Trainings
                   </a>
                 </li>
                 <li class="footer__menu-item">
-                  <a class="footer__menu-link" href="#">
+                  <a class="footer__menu-link" href="./consulting.html">
                     Corporate Solutions
                   </a>
                 </li>
                 <li class="footer__menu-item">
-                  <a class="footer__menu-link" href="#">
+                  <a class="footer__menu-link" href="./education.html">
                     Higher education
                   </a>
                 </li>
                 <li class="footer__menu-item">
-                  <a class="footer__menu-link" href="#">
+                  <a class="footer__menu-link" href="./services.html">
                     Events
                   </a>
                 </li>
                 <li class="footer__menu-item">
-                  <a class="footer__menu-link" href="#">
+                  <a class="footer__menu-link" href="./certification.html">
                     Professional certifications
                   </a>
                 </li>
@@ -990,12 +1009,12 @@
               </button>
               <ul class="footer__menu">
                 <li class="footer__menu-item">
-                  <a class="footer__menu-link" href="#">
+                  <a class="footer__menu-link" href="./corporate.html">
                     Trainings
                   </a>
                 </li>
                 <li class="footer__menu-item">
-                  <a class="footer__menu-link" href="#">
+                  <a class="footer__menu-link" href="./services.html">
                     Events
                   </a>
                 </li>
