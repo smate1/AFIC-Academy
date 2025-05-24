@@ -113,10 +113,128 @@
 </style>
 <body>
 
-  <header class="header-post header" id="header">
-    <div class="header__top-mobile">
-      <div class="header__top-inner header__top-inner--mobile">
-        <a class="header__eye header__eye-mobile" href="#">
+  <main class="main">
+    <header class="header-post" id="header">
+      <div class="header__top-mobile">
+        <div class="header__top-inner header__top-inner--mobile">
+          <a class="header__eye header__eye-mobile" href="#">
+            <svg xmlns="http://www.w3.org/2000/svg" width="41" height="27" viewBox="0 0 41 27" fill="none">
+              <path
+                d="M27.2459 13.295C27.2459 16.6902 24.35 19.4425 20.7778 19.4425C17.2055 19.4425 14.3097 16.6902 14.3097 13.295C14.3097 9.89984 17.2055 7.14752 20.7778 7.14752C24.35 7.14752 27.2459 9.89984 27.2459 13.295Z"
+                stroke="black" stroke-width="2" stroke-miterlimit="10"></path>
+              <path
+                d="M39.5556 13.295C39.5556 13.295 31.4946 25.5901 20.7778 25.5901C10.061 25.5901 2 13.295 2 13.295C2 13.295 10.061 1 20.7778 1C31.4946 1 39.5556 13.295 39.5556 13.295Z"
+                stroke="black" stroke-width="2" stroke-miterlimit="10"></path>
+            </svg>
+          </a>
+          <label class="header__mobile-label" for="">
+            <input class="header__mobile-input" type="text" placeholder="Search">
+            <img src="./images/search.svg" alt="">
+          </label>
+          <nav class="header__dropdown footer__dropdown" id="aboutDropdown">
+            <button class="header__dropdown-toggle footer__dropdown-toggle">
+              About us
+              <img class="header__arrow footer__arrow" src="./images/dropdown-arrow.svg" alt="">
+            </button>
+            <ul class="header__mobile-menu footer__menu">
+              <li class="header__menu-item footer__menu-item">
+                <a class="footer__menu-link header__menu-link" href="about.html">About us</a>
+              </li>
+              <li class="header__menu-item footer__menu-item">
+                <a class="footer__menu-link header__menu-link" href="contacts.html">Contacts</a>
+              </li>
+              <li class="header__menu-item footer__menu-item">
+                <a class="footer__menu-link header__menu-link" href="news.html">News</a>
+              </li>
+              <li class="header__menu-item footer__menu-item">
+                <a class="footer__menu-link header__menu-link" href="services.html">Events</a>
+              </li>
+            </ul>
+          </nav>
+          <nav class="header__dropdown footer__dropdown" id="servicesDropdown">
+            <button class="header__dropdown-toggle footer__dropdown-toggle">
+              Services
+              <img class="header__arrow footer__arrow" src="./images/dropdown-arrow.svg" alt="">
+            </button>
+            <ul class="header__mobile-menu footer__menu">
+              <li class="header__menu-item footer__menu-item">
+                <a class="footer__menu-link header__menu-link " href="./corporate.html">
+                  Trainings
+                </a>
+              </li>
+              <li class="header__menu-item footer__menu-item">
+                <a class="footer__menu-link header__menu-link " href="./consulting.html">
+                  Corporate Solutions
+                </a>
+              </li>
+              <li class="header__menu-item footer__menu-item">
+                <a class="footer__menu-link header__menu-link  " href="./education.html">
+                  Higher education
+                </a>
+              </li>
+              <li class="header__menu-item footer__menu-item">
+                <a class="footer__menu-link header__menu-link " href="./services.html">
+                  Events
+                </a>
+              </li>
+              <li class="header__menu-item footer__menu-item">
+                <a class="footer__menu-link header__menu-link " href="./certification.html">
+                  Professional certifications
+                </a>
+              </li>
+            </ul>
+          </nav>
+          <nav class="header__dropdown footer__dropdown" id="marketpaceDropdown">
+            <button class="header__dropdown-toggle footer__dropdown-toggle">
+              Marketplace
+              <img class="header__arrow footer__arrow" src="./images/dropdown-arrow.svg" alt="">
+            </button>
+            <ul class="header__mobile-menu footer__menu">
+              <li class="header__menu-item footer__menu-item">
+                <a class="header__menu-link footer__menu-link" href="./corporate.html">
+                  Trainings
+                </a>
+              </li>
+              <li class="header__menu-item footer__menu-item">
+                <a class="header__menu-link footer__menu-link" href="./services.html">
+                  Events
+                </a>
+              </li>
+            </ul>
+          </nav>
+          <nav class="header__dropdown footer__dropdown" id="marketpaceDropdown">
+            <button class="header__dropdown-toggle footer__dropdown-toggle">
+              Media Centre
+              <img class="header__arrow footer__arrow" src="./images/dropdown-arrow.svg" alt="">
+            </button>
+            <ul class="header__mobile-menu footer__menu">
+              <li class="header__menu-item footer__menu-item">
+                <a class="header__menu-link footer__menu-link" href="./news.html">
+                  News
+                </a>
+              </li>
+              <li class="header__menu-item footer__menu-item">
+                <a class="header__menu-link footer__menu-link" href="./events-in.html">
+                  Events-In
+                </a>
+              </li>
+            </ul>
+          </nav>
+          <nav class="header__dropdown footer__dropdown" id="marketpaceDropdown">
+            <a href="./contacts.html" class="header__dropdown-toggle footer__dropdown-toggle">
+              Contacts
+            </a>
+          </nav>
+        </div>
+        <div class="header__languages header__languages-mobile">
+          <a href="#" class="active">EN</a>
+          <a href="#">RU</a>
+          <a href="#">KZ</a>
+        </div>
+      </div>
+      <div class="overlay"></div>
+      <div class="header__top">
+        <a class="header__eye header__eye-desktop" href="#">
           <svg xmlns="http://www.w3.org/2000/svg" width="41" height="27" viewBox="0 0 41 27" fill="none">
             <path
               d="M27.2459 13.295C27.2459 16.6902 24.35 19.4425 20.7778 19.4425C17.2055 19.4425 14.3097 16.6902 14.3097 13.295C14.3097 9.89984 17.2055 7.14752 20.7778 7.14752C24.35 7.14752 27.2459 9.89984 27.2459 13.295Z"
@@ -126,531 +244,435 @@
               stroke="black" stroke-width="2" stroke-miterlimit="10"></path>
           </svg>
         </a>
-        <label class="header__mobile-label" for="">
-          <input class="header__mobile-input" type="text" placeholder="Search">
-          <img src="./images/search.svg" alt="">
-        </label>
-        <nav class="header__dropdown footer__dropdown" id="aboutDropdown">
-          <button class="header__dropdown-toggle footer__dropdown-toggle">
-            About us
-            <img class="header__arrow footer__arrow" src="./images/dropdown-arrow.svg" alt="">
-          </button>
-          <ul class="header__mobile-menu footer__menu">
-            <li class="header__menu-item footer__menu-item">
-              <a class="footer__menu-link header__menu-link" href="about.html">About us</a>
-            </li>
-            <li class="header__menu-item footer__menu-item">
-              <a class="footer__menu-link header__menu-link" href="contacts.html">Contacts</a>
-            </li>
-            <li class="header__menu-item footer__menu-item">
-              <a class="footer__menu-link header__menu-link" href="news.html">News</a>
-            </li>
-            <li class="header__menu-item footer__menu-item">
-              <a class="footer__menu-link header__menu-link" href="services.html">Events</a>
-            </li>
-          </ul>
-        </nav>
-        <nav class="header__dropdown footer__dropdown" id="servicesDropdown">
-          <button class="header__dropdown-toggle footer__dropdown-toggle">
-            Services
-            <img class="header__arrow footer__arrow" src="./images/dropdown-arrow.svg" alt="">
-          </button>
-          <ul class="header__mobile-menu footer__menu">
-            <li class="header__menu-item footer__menu-item">
-              <a class="footer__menu-link header__menu-link " href="./corporate.html">
-                Trainings
-              </a>
-            </li>
-            <li class="header__menu-item footer__menu-item">
-              <a class="footer__menu-link header__menu-link " href="./consulting.html">
-                Corporate Solutions
-              </a>
-            </li>
-            <li class="header__menu-item footer__menu-item">
-              <a class="footer__menu-link header__menu-link  " href="./education.html">
-                Higher education
-              </a>
-            </li>
-            <li class="header__menu-item footer__menu-item">
-              <a class="footer__menu-link header__menu-link " href="./services.html">
-                Events
-              </a>
-            </li>
-            <li class="header__menu-item footer__menu-item">
-              <a class="footer__menu-link header__menu-link " href="./certification.html">
-                Professional certifications
-              </a>
-            </li>
-          </ul>
-        </nav>
-        <nav class="header__dropdown footer__dropdown" id="marketpaceDropdown">
-          <button class="header__dropdown-toggle footer__dropdown-toggle">
-            Marketplace
-            <img class="header__arrow footer__arrow" src="./images/dropdown-arrow.svg" alt="">
-          </button>
-          <ul class="header__mobile-menu footer__menu">
-            <li class="header__menu-item footer__menu-item">
-              <a class="header__menu-link footer__menu-link" href="./corporate.html">
-                Trainings
-              </a>
-            </li>
-            <li class="header__menu-item footer__menu-item">
-              <a class="header__menu-link footer__menu-link" href="./services.html">
-                Events
-              </a>
-            </li>
-          </ul>
-        </nav>
-        <nav class="header__dropdown footer__dropdown" id="marketpaceDropdown">
-          <button class="header__dropdown-toggle footer__dropdown-toggle">
-            Media Centre
-            <img class="header__arrow footer__arrow" src="./images/dropdown-arrow.svg" alt="">
-          </button>
-          <ul class="header__mobile-menu footer__menu">
-            <li class="header__menu-item footer__menu-item">
-              <a class="header__menu-link footer__menu-link" href="./news.html">
-                News
-              </a>
-            </li>
-            <li class="header__menu-item footer__menu-item">
-              <a class="header__menu-link footer__menu-link" href="./events-in.html">
-                Events-In
-              </a>
-            </li>
-          </ul>
-        </nav>
-        <nav class="header__dropdown footer__dropdown" id="marketpaceDropdown">
-          <a href="./contacts.html" class="header__dropdown-toggle footer__dropdown-toggle">
-            Contacts
+        <button class="burger" id="burger">
+          <span></span>
+          <span></span>
+          <span></span>
+        </button>
+        <div class="container header__container">
+          <div class="header__top-inner">
+            <div class="header__logo">
+              <a href="index.html"><img src="./images/logo.svg" alt="AFIC Academy"></a>
+            </div>
+            <nav class="custom-dropdowns">
+              <div class="dropdown">
+                <div class="dropdown-button">About us
+                  <img src="./images/dropdown-arrow.svg" alt="">
+                </div>
+                <div class="dropdown-options">
+                  <a href="./about.html">About us</a>
+                  <a href="./contacts.html">Contacts</a>
+                  <a href="./news.html">News</a>
+                  <a href="./services.html">Events</a>
+                </div>
+              </div>
+              <div class="dropdown">
+                <div class="dropdown-button">Services
+                  <img src="./images/dropdown-arrow.svg" alt="">
+                </div>
+                <div class="dropdown-options">
+                  <a href="./corporate.html">Trainings</a>
+                  <a href="./consulting.html">Corporate Solutions</a>
+                  <a href="./education.html">Higher Education</a>
+                  <a href="./services.html">Events</a>
+                  <a href="./certification.html">Professional Certifications</a>
+                </div>
+              </div>
+              <div class="dropdown">
+                <div class="dropdown-button">Marketplace
+                  <img src="./images/dropdown-arrow.svg" alt="">
+                </div>
+                <div class="dropdown-options">
+                  <a href="./corporate.html">Trainings</a>
+                  <a href="./services.html">Events</a>
+                </div>
+              </div>
+              <div class="dropdown">
+                <div class="dropdown-button">Media centre
+                  <img src="./images/dropdown-arrow.svg" alt="">
+                </div>
+                <div class="dropdown-options">
+                  <a href="./news.html">News</a>
+                  <a href="./events-in.html">Events-In</a>
+                </div>
+              </div>
+              <div class="dropdown">
+                <a class="dropdown-button" href="./contacts.html">Contacts
+                </a>
+              </div>
+            </nav>
+            <a class="header__search" href="./news.html">
+              <svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" viewBox="0 0 22 22" fill="none">
+                <path
+                  d="M17.2439 17.3429L21 21M20.161 10.3524C20.161 15.5175 15.8716 19.7047 10.5805 19.7047C5.28933 19.7047 1 15.5175 1 10.3524C1 5.18719 5.28933 1 10.5805 1C15.8716 1 20.161 5.18719 20.161 10.3524Z"
+                  stroke="black" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+              </svg>
+            </a>
+          </div>
+        </div>
+        <div class="header__languages">
+          <a href="#" class="active">EN</a>
+          <a href="#">RU</a>
+          <a href="#">KZ</a>
+        </div>
+      </div>
+    </header>
+    <section class="post">
+      <div class="container">
+        <div class="header__content-links">
+          <a class="header__content-link header__content-link-event" href="./index.html">
+            <span>Home</span> /
           </a>
-        </nav>
+          <a class="header__content-link header__content-link-event" href="./news.html">
+            <span>Media Centre</span> /
+          </a>
+          <a class="header__content-link header__content-link-event" href="./news.html">
+            <span>News</span> /
+          </a>
+        </div>
+        <h2 class="post__title title">
+          Announcement: Change of Entrance to the AIFC Court and IAC Building
+        </h2>
+        <div class="post__descr">
+          <div class="post__date">
+            21 October 2023
+          </div>
+        </div>
+        <img class="post__img" src="./images/post-1.png" alt="">
+        <div class="post__texts">
+          <p class="post__text">
+            The AIFC Court and International Arbitration Centre (IAC) have completed more than 900 cases consisting of
+            Court judgments, arbitration awards, and mediation settlements, since their commencement of operations on 1
+            January 2018. These results are unprecedented for dispute resolution institutions at an international
+            financial centre which has only been operating for four years.
+          </p>
+          <p class="post__text">
+            The disputes involved a wide range of commercial and investment related matters, including finance,
+            construction, sales and services contracts, and employment. The applicable laws in the disputes included AIFC
+            law and the laws of Kazakhstan and Russia. All Court judgments and arbitration awards were enforced within the
+            Republic of Kazakhstan to 100% satisfaction of the parties using the AIFC Court’s special step by step
+            enforcement procedure that operates directly between the AIFC Court and the enforcement authorities without
+            involvement of the national courts.
+          </p>
+          <p class="post__text">
+            The AIFC Court and IAC gained significant international recognition in 2021. The parties in the cases came
+            from 19 countries, including most of the CIS countries, and globally from key Republic of Kazakhstan trading
+            partners including China, India, and 15 Belt and Road Initiative countries as a part of the ‘AIFC Court and
+            IAC BRI Initiative’. The AIFC Court and IAC model dispute resolution clauses were included in more than 5,700
+            business contracts of industry leaders, including Chevron Tengizchevroil LLP and North Caspian Operating
+            Company (NCOC), with combined contract value in excess of US $2 billion. 326 lawyers from 29 jurisdictions (27
+            countries) joined the AIFC Court for rights of audience to enable them to represent clients in cases at the
+            AIFC Court.
+          </p>
+          <p class="post__text">
+            The AIFC Court participated at the annual Standing International Forum of Commercial Courts which comprises
+            Chief Justices and Registrars from the senior courts of more than 40 jurisdictions. The AIFC Court and IAC
+            gave more than 60 lead speeches at local, regional and global conferences, including with key AIFC Court and
+            IAC MOU partners in Asia and Europe as a part of their enhanced promotions campaign. They also hosted the
+            first annual IAC-Vis Central Asia Pre-Moot competition with 22 teams from 17 countries and a Final that was
+            presided over by the IAC Chairman, Barbara Dohmann QC, and the fourth annual AIFC Court and IAC Moot
+            Competition and a Final that was presided over by three senior AIFC Court Justices and opening remarks by the
+            AIFC Court Chief Justice, The Rt. Hon. The Lord Mance.
+          </p>
+          <p class="post__text">
+            The AIFC Court and IAC continued, as independent self-managed institutions that give final decisions which
+            cannot be overturned by any court in the Republic of Kazakhstan, continued their close cooperation with the
+            Republic of Kazakhstan Supreme Court. The cooperation included continued meetings, lectures and training
+            webinars. Of particular note was the Transfer of Cases Scheme that was agreed between the Supreme Court and
+            the AIFC Court and IAC to enable quick and cost effective transfer of commercial disputes, with the written
+            consent of the parties in a dispute, from the national courts of the Republic of Kazakhstan to the AIFC Court
+            and IAC. One case was accepted for jurisdiction by the Chief Justice of the AIFC Court, Lord Mance, and is
+            currently being considered for judgment by one of the AIFC Court Justices.
+          </p>
+          <p class="post__text">
+            Engagement with the AIFC Court and IAC users’ community continued with three Users’ Committee meetings
+            comprising representation from the senior partners of more than 15 law firms and other organisations, enhanced
+            dispute resolution webinars and training programmes attended by more than 1000 people, and structured
+            internships for more than 20 law students.
+          </p>
+          <p class="post__text">
+            The AIFC Court and IAC developed their 2025 Vision with plans to further develop the AIFC Court and IAC to
+            global elite status. The plans focus on stability, growth and recognition. As a part of the plans to achieve
+            long term stability, all of the judges of the AIFC Court and the Registrar and Chief Executive of the AIFC
+            Court and IAC, Mr. Christopher Campbell-Holt, committed to continue in their roles at the AIFC Court for
+            another five years, securing the AIFC Court’s continued long term development as a world class independent and
+            impartial commercial court.
+          </p>
+          <p class="post__text">
+            To secure the long term future of the IAC, in addition to the continuation of Mr. Campbell-Holt as the IAC
+            Registrar and Chief Executive, Mr. Thomas Kruemmel was appointed to be the new IAC Chairman from 1 January
+            2023. Mr. Kruemmel is an IAC Arbitrator Panel member and has many years of international arbitration and
+            mediation experience as a global leader in the law with specific experience of commercial dispute resolution
+            from Europe, particularly in Germany, where he is a partner at the law firm Meyer-Koering in Berlin, Germany.
+            He is a member of numerous law committees and has law degrees from Bonn, Germany, and the University of
+            Glamorgan, Wales. He was awarded the Chevalier dans l'ordre national du mérite award from France. His
+            appointment as IAC Chairman from 2023 will enhance the IAC’s credentials as a world class international
+            arbitration centre. The first IAC Chairman, Ms. Barbara Dohmann QC, who has been instrumental to the
+            establishment and development of the IAC as the number one choice for arbitration and mediation disputes in
+            Eurasia, will retire from her IAC chairmanship on 31 December 2022.
+          </p>
+        </div>
+        <img class="post__img" src="./images/post-2.png" alt="">
+        <div class="post__items">
+          <div class="post__item">
+            <h4 class="post__item-title">
+              Ms. Barbara Dohmann QC, IAC Chairman, stated:
+            </h4>
+            <div class="post__item-content">
+              <img class="post__item-decor" src="./images/post-decor.svg" alt="">
+              <div class="post__item-text">
+                “2021 was another very successful year for the IAC. We had an unprecedented number of arbitration awards
+                and mediation
+                settlements for a new centre at this stage of its operations. We collaborated successfully with
+                arbitrators, mediators,
+                and partner ADR institutions from around the world. The IAC provided a large number of webinars and
+                training programmes
+                on current arbitration and mediation matters, and it generally contributed to the promotion and
+                development of
+                arbitration and mediation in Eurasia. Investors can take comfort that the long term future of the IAC as
+                an independent
+                world class arbitration and mediation institution is secure; continuity has been assured by the
+                appointment of RA Thomas
+                Kruemmel, IAC Arbitrator Panel member and Partner at the internationally focused law firm Meyer-Koering in
+                Berlin,
+                Germany; I am delighted to say that he will succeed me as IAC Chairman from 1 January 2023”.
+              </div>
+            </div>
+          </div>
+          <div class="post__item">
+            <h4 class="post__item-title">
+              Dr. Kairat Kelimbetov, AIFC Governor, commented:
+            </h4>
+            <div class="post__item-content">
+              <img class="post__item-decor" src="./images/post-decor.svg" alt="">
+              <div class="post__item-text">
+                “The AIFC Court and IAC have been playing a significant role in the recognition of the AIFC as a centre
+                for resolving
+                commercial disputes in the region and enhancing investors’ confidence both in the AIFC and mainland
+                Kazakhstan. In this
+                regard, I would like to thank all of the AIFC Court judges and the Registrar and Chief Executive of the
+                AIFC Court and
+                IAC for their continued commitment to the AIFC. I am also delighted to welcome Mr. Thomas Kruemmel as IAC
+                Chairman
+                starting from 2023. I strongly believe that having clarity on the long-term perspectives of the AIFC Court
+                and IAC will
+                enhance the positive impact they make on the AIFC and its investment climate.”
+              </div>
+            </div>
+          </div>
+          <div class="post__item">
+            <h4 class="post__item-title">
+              The Rt. Hon. The Lord Mance, Chief Justice of the AIFC Court, commented:
+            </h4>
+            <div class="post__item-content">
+              <img class="post__item-decor" src="./images/post-decor.svg" alt="">
+              <div class="post__item-text">
+                “I am delighted that the AIFC Court has become an active commercial court as it comes to the end of its
+                fourth year of
+                operations. The AIFC Court has given 21 judgments and has ongoing case work including a range of
+                contractual disputes in
+                the commercial field. I am particularly pleased that, despite the pandemic, the AIFC Court has not been
+                confined to
+                remote hearings but has recently heard its first case in its world class premises in Nur-Sultan,
+                Kazakhstan. I welcome
+                the constitutional arrangement under which the first case has, by consent of the parties to the case, been
+                transferred
+                from the national courts of the Republic of Kazakhstan to, and has so been dealt with by, the AIFC Court.
+                I am also
+                grateful to all the other Justices of the Court and to the Registrar and Chief Executive for recently
+                renewing their
+                commitment to the AIFC Court for another five years. International investors can be confident that the
+                world class
+                standards of justice provided by the AIFC Court are assured for the future.
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="post__reference">
+          <h4 class="post__reference-title">
+            Reference:
+          </h4>
+          <div class="post__links">
+            <a class="post__link" href="#">
+              The Astana International Financial Centre was established on the initiative of the First President of the
+              Republic of
+              Kazakhstan – Elbasy Nursultan Nazarbayev as part of the National Plan "100 steps to implement five
+              institutional
+              reforms". On July 2, 2020, as part of the meeting of the AIFC Management Council, the Center's Development
+              Strategy was
+              adopted until 2025. According to it, the vision of the AIFC is to become a leading international financial
+              centre in the
+              region, including Central Asia, the Caucasus, the EAEU countries, Western China, Mongolia and Eastern
+              Europe.
+            </a>
+            <a class="post__link" href="#">
+              The mission of AIFC is to promote the sustainable long-term development of the region. As the Head of State
+              noted,
+              K.Tokayev, "The AIFC with its unique capabilities can act as a universal platform connecting the countries
+              of the
+              region." aifc.kz
+            </a>
+            <a class="post__link" href="#">
+              The AIFC Court is an independent legal entity. It has its own procedural rules modelled on English common
+              law procedures
+              and leading international practice. The AIFC Court is separate and independent from the courts of the
+              Republic of
+              Kazakhstan. It consists of two tiers: a Court of First Instance, which includes a specialist division known
+              as the Small
+              Claims Court; and a Court of Appeal. It has exclusive jurisdiction over disputes arising out of the
+              activities and
+              operations of the AIFC and jurisdiction in the case of other disputes in which all parties agree in writing
+              to give the
+              AIFC Court jurisdiction. It does not have jurisdiction in relation to any disputes that are of a criminal or
+              administrative nature. It applies the most up to date and efficient case management practices.
+              https://court.aifc.kz/
+            </a>
+            <a class="post__link" href="#">
+              The International Arbitration Centre (IAC) is an independent legal entity. It has its own procedural rules
+              modelled on
+              best international practice. It has its own panel of leading international arbitrators and mediators having
+              many years
+              of arbitration and mediation experience in commercial law, including oil and gas, trade, construction,
+              energy, financial
+              services, banking, Islamic finance, insurance, and intellectual property. IAC arbitration awards are
+              recognised and
+              enforceable in Kazakhstan and internationally. https://iac.aifc.kz/
+            </a>
+          </div>
+        </div>
       </div>
-      <div class="header__languages header__languages-mobile">
-        <a href="#" class="active">EN</a>
-        <a href="#">RU</a>
-        <a href="#">KZ</a>
-      </div>
-    </div>
-    <div class="overlay"></div>
-    <div class="header__top">
-      <a class="header__eye header__eye-desktop" href="#">
-        <svg xmlns="http://www.w3.org/2000/svg" width="41" height="27" viewBox="0 0 41 27" fill="none">
-          <path
-            d="M27.2459 13.295C27.2459 16.6902 24.35 19.4425 20.7778 19.4425C17.2055 19.4425 14.3097 16.6902 14.3097 13.295C14.3097 9.89984 17.2055 7.14752 20.7778 7.14752C24.35 7.14752 27.2459 9.89984 27.2459 13.295Z"
-            stroke="black" stroke-width="2" stroke-miterlimit="10"></path>
-          <path
-            d="M39.5556 13.295C39.5556 13.295 31.4946 25.5901 20.7778 25.5901C10.061 25.5901 2 13.295 2 13.295C2 13.295 10.061 1 20.7778 1C31.4946 1 39.5556 13.295 39.5556 13.295Z"
-            stroke="black" stroke-width="2" stroke-miterlimit="10"></path>
-        </svg>
-      </a>
-      <button class="burger" id="burger">
-        <span></span>
-        <span></span>
-        <span></span>
-      </button>
-      <div class="container header__container">
-        <div class="header__top-inner">
+    </section>
+    <footer class="footer">
+      <div class="container">
+        <div class="footer__inner">
           <div class="header__logo">
-            <a href="index.html"><img src="./images/logo.svg" alt="AFIC Academy"></a>
+            <a href="index.html">
+              <svg xmlns="http://www.w3.org/2000/svg" width="196" height="48" viewBox="0 0 196 48" fill="none">
+                <path
+                  d="M14.0475 23.7261C14.0475 28.5448 17.9436 32.4659 22.7327 32.4659C27.5217 32.4659 31.4178 28.5448 31.4178 23.7261C31.4178 18.9074 27.5217 14.9863 22.7327 14.9863C17.9436 14.9863 14.0475 18.9074 14.0475 23.7261ZM28.8743 23.7261C28.8743 27.1343 26.1193 29.9062 22.7327 29.9062C19.346 29.9062 16.591 27.1343 16.591 23.7261C16.591 20.3179 19.347 17.546 22.7327 17.546C26.1184 17.546 28.8743 20.3188 28.8743 23.7261Z"
+                  fill="white" />
+                <path
+                  d="M32.5467 33.4983C32.5034 33.5426 32.4574 33.5841 32.4132 33.6274L32.4029 33.619C29.9186 36.0938 26.5019 37.624 22.7298 37.624C16.8486 37.624 11.8321 33.9065 9.86758 28.6796C9.84878 28.6287 9.82716 28.5778 9.80837 28.525C9.78675 28.4646 9.76795 28.4034 9.74633 28.3421C8.09578 23.5338 9.14382 17.9806 12.9187 14.1104L12.914 14.1048C14.2853 12.6981 15.9519 11.5828 17.8139 10.8653L17.8186 10.8851C22.6875 9.01832 28.4109 10.0215 32.3662 13.9275L33.3268 14.8769L37.6543 10.441C37.6609 10.4476 37.6675 10.4552 37.6741 10.4618L39.7204 8.36778C39.4684 8.09437 39.2109 7.82378 38.943 7.56074C33.9406 2.61855 27.2576 0.457636 20.7841 1.05915C15.5778 1.54375 10.5058 3.81497 6.55708 7.86338C2.58486 11.9354 0.429557 17.1151 0.0639172 22.3939H0.0498186L0.0150395 23.0463L0 23.8524V24.4521L0.025379 25.0753H0.030079C0.287625 30.6831 2.56324 36.2107 6.85787 40.4534C11.8603 45.3956 18.5433 47.5565 25.0167 46.955C30.2194 46.4722 35.2885 44.202 39.2363 40.1583L34.4679 35.3952L32.5467 33.4983ZM21.053 3.97902C26.3862 3.48404 31.6415 5.14527 35.7096 8.56766L33.2535 11.0859C29.4035 7.85584 24.4274 6.67827 19.7558 7.53717L18.9475 4.29486C19.6412 4.15438 20.3433 4.04501 21.053 3.97902ZM8.63531 9.91776C10.8085 7.6899 13.4582 6.02019 16.3504 5.0095L17.0986 8.01046L17.1606 8.25653C14.8202 9.10883 12.7278 10.4816 11.02 12.2333L10.9983 12.2125C8.21421 15.0664 6.66894 18.6887 6.35687 22.3939H2.9834C3.35186 17.6978 5.31729 13.3194 8.63531 9.91776ZM15.8767 42.8396C13.2975 41.8657 10.9156 40.3544 8.89849 38.3603C5.29755 34.8041 3.20617 30.1127 2.9458 25.0734L6.35123 25.0715C6.64356 28.9266 8.26403 32.696 11.2155 35.6111C12.8717 37.2469 14.7882 38.4546 16.8288 39.24L15.8767 42.8396ZM24.7479 44.0351C22.6142 44.2331 20.4937 44.0851 18.4559 43.6174L19.4128 39.998C19.9401 40.1064 20.4711 40.1913 21.005 40.2478C21.0821 40.2554 21.1601 40.262 21.2372 40.2686C21.412 40.2846 21.5869 40.2987 21.7617 40.3091C21.8707 40.3148 21.9798 40.3204 22.0888 40.3251C22.2307 40.3299 22.3727 40.3336 22.5137 40.3355C22.5926 40.3374 22.6706 40.3421 22.7505 40.3421C22.8041 40.3421 22.8567 40.3383 22.9112 40.3383C23.0146 40.3374 23.1171 40.3327 23.2205 40.3299C26.1155 40.2488 28.8216 39.4144 31.1546 38.0134C31.1574 38.0124 31.1593 38.0106 31.1612 38.0096C31.3501 37.8955 31.5362 37.7777 31.7204 37.657C31.7486 37.6382 31.7768 37.6202 31.805 37.6014C31.9808 37.4854 32.1528 37.3647 32.323 37.2412C32.3436 37.2261 32.3643 37.2129 32.385 37.1979L35.0808 39.9518C32.1002 42.2551 28.5171 43.6853 24.7479 44.0351Z"
+                  fill="#DA0032" />
+                <path
+                  d="M69.2718 34.4276L67.0151 29.642H55.7732L53.558 34.4276H48L60.997 7.96094H61.749L74.7461 34.4276H69.2718ZM57.3194 25.8553H65.4689L61.3734 16.9915L57.3194 25.8553Z"
+                  fill="white" />
+                <path
+                  d="M74.8218 25.6885C74.8218 19.9461 78.7921 16.658 84.1412 16.658C87.4425 16.658 89.6992 18.0729 89.9503 18.1976L89.2813 21.9843C89.2813 21.9843 87.2336 20.4026 84.4753 20.4026C81.6756 20.4026 79.3352 22.1924 79.3352 25.6464C79.3352 29.1005 81.6341 30.9728 84.3924 30.9728C86.9832 30.9728 88.7391 29.4745 88.9057 29.3498L90.8283 32.7205C88.5294 34.1767 86.3149 34.7183 84.142 34.7183C78.7084 34.719 74.8218 31.4318 74.8218 25.6885Z"
+                  fill="white" />
+                <path
+                  d="M103.441 34.4276V32.5132C102.856 33.3454 101.184 34.5944 98.6764 34.5944C94.3297 34.5944 92.1568 31.9312 92.1568 28.8511C92.1568 25.6051 94.8736 23.358 100.014 23.358C101.267 23.358 102.438 23.6074 103.441 23.8162C103.441 20.945 102.145 20.2375 100.349 20.2375C98.1757 20.2375 95.4589 21.2364 94.372 21.7771L93.2437 18.4064C94.2046 17.9904 97.214 16.7421 100.515 16.7421C105.739 16.7421 108.038 19.0726 108.038 24.3156V34.4276H103.441ZM99.847 31.057C101.979 31.057 103.441 29.5173 103.441 26.9788V26.6461C103.107 26.4794 102.062 26.1054 100.39 26.1054C97.9245 26.1054 96.8376 27.1043 96.8376 28.6026C96.8376 30.1414 98.0497 31.057 99.847 31.057Z"
+                  fill="white" />
+                <path
+                  d="M111 25.8965C111 20.8608 114.177 16.7826 119.359 16.7826C121.825 16.7826 123.915 17.9062 123.915 17.9062V8.24123L128.428 8.25235C128.469 8.29364 128.428 16.8668 128.428 34.4276H123.915V31.4317C123.204 32.7633 121.49 34.6778 118.566 34.6778C113.759 34.6778 111 31.0157 111 25.8965ZM119.526 30.8489C122.117 30.8489 123.915 28.4351 123.915 24.1489V21.7771C123.497 21.4857 122.201 20.4868 120.153 20.4868C117.227 20.4868 115.64 22.984 115.64 25.9386C115.64 28.6852 116.768 30.8489 119.526 30.8489Z"
+                  fill="white" />
+                <path
+                  d="M140.944 31.0157C143.159 31.0157 144.454 30.1835 145.5 29.3927L147.631 32.6387C145.207 34.303 143.118 34.7198 140.861 34.7198C135.011 34.7198 131.416 31.2245 131.416 25.6893C131.416 20.2796 135.135 16.7009 139.983 16.7009C144.497 16.7009 148.049 19.6967 148.049 24.8572C148.049 25.7727 147.965 26.7716 147.965 26.7716H135.929C136.013 29.6007 138.228 31.0157 140.944 31.0157ZM136.097 23.4001H144.037C143.787 21.2364 142.199 20.0707 140.109 20.0707C138.186 20.0707 136.682 21.2777 136.097 23.4001Z"
+                  fill="white" />
+                <path
+                  d="M171.72 24.4403C171.72 21.9018 170.8 20.4868 168.878 20.4868C166.37 20.4868 165.952 22.7339 165.952 26.3547V34.4276H161.396V24.1489C161.396 21.5691 160.393 20.4868 158.513 20.4868C156.214 20.4868 155.671 22.1511 155.671 26.3547V34.4276H151.115V17.0328H155.629V19.3212C156.423 17.9896 157.719 16.9494 159.557 16.7413C161.814 16.5746 163.862 17.6156 164.949 19.7372C165.784 18.1976 167.457 16.6993 170.006 16.6993C173.684 16.6993 176.317 18.8217 176.317 24.1481V34.4268H171.72V24.4403Z"
+                  fill="white" />
+                <path
+                  d="M184.174 31.057L176.986 17.0328H182.126L186.555 26.5207L190.985 17.0328H196L183.922 40.9609L179.2 40.1701L184.174 31.057Z"
+                  fill="white" />
+              </svg>
+            </a>
           </div>
-          <nav class="custom-dropdowns">
-            <div class="dropdown">
-              <div class="dropdown-button">About us
-                <img src="./images/dropdown-arrow.svg" alt="">
+          <div class="footer__inner-wrapper">
+            <nav class="footer__dropdown" id="aboutDropdown">
+              <button class="footer__dropdown-toggle">
+                About us
+                <img class="footer__arrow" src="./images/dropdown-arrow-white.png" alt="">
+              </button>
+              <ul class="footer__menu">
+                <li class="footer__menu-item">
+                  <a class="footer__menu-link" href="./about.html">About us</a>
+                </li>
+                <li class="footer__menu-item">
+                  <a class="footer__menu-link" href="./contacts.html">Contacts</a>
+                </li>
+                <li class="footer__menu-item">
+                  <a class="footer__menu-link" href="./news.html">News</a>
+                </li>
+                <li class="footer__menu-item">
+                  <a class="footer__menu-link" href="./services.html">Events</a>
+                </li>
+              </ul>
+            </nav>
+            <nav class="footer__dropdown" id="servicesDropdown">
+              <button class="footer__dropdown-toggle">
+                Services
+                <img class="footer__arrow" src="./images/dropdown-arrow-white.png" alt="">
+              </button>
+              <ul class="footer__menu">
+                <li class="footer__menu-item">
+                  <a class="footer__menu-link" href="./corporate.html">
+                    Trainings
+                  </a>
+                </li>
+                <li class="footer__menu-item">
+                  <a class="footer__menu-link" href="./consulting.html">
+                    Corporate Solutions
+                  </a>
+                </li>
+                <li class="footer__menu-item">
+                  <a class="footer__menu-link" href="./education.html">
+                    Higher education
+                  </a>
+                </li>
+                <li class="footer__menu-item">
+                  <a class="footer__menu-link" href="./services.html">
+                    Events
+                  </a>
+                </li>
+                <li class="footer__menu-item">
+                  <a class="footer__menu-link" href="./certification.html">
+                    Professional certifications
+                  </a>
+                </li>
+              </ul>
+            </nav>
+            <nav class="footer__dropdown" id="marketpaceDropdown">
+              <button class="footer__dropdown-toggle">
+                Marketplace
+                <img class="footer__arrow" src="./images/dropdown-arrow-white.png" alt="">
+              </button>
+              <ul class="footer__menu">
+                <li class="footer__menu-item">
+                  <a class="footer__menu-link" href="./corporate.html">
+                    Trainings
+                  </a>
+                </li>
+                <li class="footer__menu-item">
+                  <a class="footer__menu-link" href="./services.html">
+                    Events
+                  </a>
+                </li>
+              </ul>
+            </nav>
+            <div class="footer__contacts footer__contacts-desktop">
+              <div class="footer__contacts-links">
+                <a class="footer__contacts-phone" href="tel:77172647369">
+                  +7 717 264 73 69
+                </a>
+                <a class="footer__contacts-email" href="mailto:info@aifc-court.kz">
+                  info@aifc-court.kz
+                </a>
               </div>
-              <div class="dropdown-options">
-                <a href="./about.html">About us</a>
-                <a href="./contacts.html">Contacts</a>
-                <a href="./news.html">News</a>
-                <a href="./services.html">Events</a>
+              <div class="footer__request">
+                <h6 class="footer__request-title">
+                  request
+                </h6>
+                <form class="footer__form" for="">
+                  <input class="footer__input" type="email" placeholder="E-mail">
+                  <button class="footer__btn">
+                    send
+                  </button>
+                </form>
               </div>
-            </div>
-            <div class="dropdown">
-              <div class="dropdown-button">Services
-                <img src="./images/dropdown-arrow.svg" alt="">
-              </div>
-              <div class="dropdown-options">
-                <a href="./corporate.html">Trainings</a>
-                <a href="./consulting.html">Corporate Solutions</a>
-                <a href="./education.html">Higher Education</a>
-                <a href="./services.html">Events</a>
-                <a href="./certification.html">Professional Certifications</a>
-              </div>
-            </div>
-            <div class="dropdown">
-              <div class="dropdown-button">Marketplace
-                <img src="./images/dropdown-arrow.svg" alt="">
-              </div>
-              <div class="dropdown-options">
-                <a href="./corporate.html">Trainings</a>
-                <a href="./services.html">Events</a>
-              </div>
-            </div>
-            <div class="dropdown">
-              <div class="dropdown-button">Media centre
-                <img src="./images/dropdown-arrow.svg" alt="">
-              </div>
-              <div class="dropdown-options">
-                <a href="./news.html">News</a>
-                <a href="./events-in.html">Events-In</a>
-              </div>
-            </div>
-            <div class="dropdown">
-              <a class="dropdown-button" href="./contacts.html">Contacts
-              </a>
-            </div>
-          </nav>
-          <a class="header__search" href="./news.html">
-            <svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" viewBox="0 0 22 22" fill="none">
-              <path
-                d="M17.2439 17.3429L21 21M20.161 10.3524C20.161 15.5175 15.8716 19.7047 10.5805 19.7047C5.28933 19.7047 1 15.5175 1 10.3524C1 5.18719 5.28933 1 10.5805 1C15.8716 1 20.161 5.18719 20.161 10.3524Z"
-                stroke="black" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
-            </svg>
-          </a>
-        </div>
-      </div>
-      <div class="header__languages">
-        <a href="#" class="active">EN</a>
-        <a href="#">RU</a>
-        <a href="#">KZ</a>
-      </div>
-    </div>
-  </header>
-  <section class="post">
-    <div class="container">
-      <div class="header__content-links">
-        <a class="header__content-link header__content-link-event" href="./index.html">
-          <span>Home</span> /
-        </a>
-        <a class="header__content-link header__content-link-event" href="./news.html">
-          <span>Media Centre</span> /
-        </a>
-        <a class="header__content-link header__content-link-event" href="./news.html">
-          <span>News</span> /
-        </a>
-      </div>
-      <h2 class="post__title title">
-        Announcement: Change of Entrance to the AIFC Court and IAC Building
-      </h2>
-      <div class="post__descr">
-        <div class="post__date">
-          21 October 2023
-        </div>
-      </div>
-      <img class="post__img" src="./images/post-1.png" alt="">
-      <div class="post__texts">
-        <p class="post__text">
-          The AIFC Court and International Arbitration Centre (IAC) have completed more than 900 cases consisting of
-          Court judgments, arbitration awards, and mediation settlements, since their commencement of operations on 1
-          January 2018. These results are unprecedented for dispute resolution institutions at an international
-          financial centre which has only been operating for four years.
-        </p>
-        <p class="post__text">
-          The disputes involved a wide range of commercial and investment related matters, including finance,
-          construction, sales and services contracts, and employment. The applicable laws in the disputes included AIFC
-          law and the laws of Kazakhstan and Russia. All Court judgments and arbitration awards were enforced within the
-          Republic of Kazakhstan to 100% satisfaction of the parties using the AIFC Court’s special step by step
-          enforcement procedure that operates directly between the AIFC Court and the enforcement authorities without
-          involvement of the national courts.
-        </p>
-        <p class="post__text">
-          The AIFC Court and IAC gained significant international recognition in 2021. The parties in the cases came
-          from 19 countries, including most of the CIS countries, and globally from key Republic of Kazakhstan trading
-          partners including China, India, and 15 Belt and Road Initiative countries as a part of the ‘AIFC Court and
-          IAC BRI Initiative’. The AIFC Court and IAC model dispute resolution clauses were included in more than 5,700
-          business contracts of industry leaders, including Chevron Tengizchevroil LLP and North Caspian Operating
-          Company (NCOC), with combined contract value in excess of US $2 billion. 326 lawyers from 29 jurisdictions (27
-          countries) joined the AIFC Court for rights of audience to enable them to represent clients in cases at the
-          AIFC Court.
-        </p>
-        <p class="post__text">
-          The AIFC Court participated at the annual Standing International Forum of Commercial Courts which comprises
-          Chief Justices and Registrars from the senior courts of more than 40 jurisdictions. The AIFC Court and IAC
-          gave more than 60 lead speeches at local, regional and global conferences, including with key AIFC Court and
-          IAC MOU partners in Asia and Europe as a part of their enhanced promotions campaign. They also hosted the
-          first annual IAC-Vis Central Asia Pre-Moot competition with 22 teams from 17 countries and a Final that was
-          presided over by the IAC Chairman, Barbara Dohmann QC, and the fourth annual AIFC Court and IAC Moot
-          Competition and a Final that was presided over by three senior AIFC Court Justices and opening remarks by the
-          AIFC Court Chief Justice, The Rt. Hon. The Lord Mance.
-        </p>
-        <p class="post__text">
-          The AIFC Court and IAC continued, as independent self-managed institutions that give final decisions which
-          cannot be overturned by any court in the Republic of Kazakhstan, continued their close cooperation with the
-          Republic of Kazakhstan Supreme Court. The cooperation included continued meetings, lectures and training
-          webinars. Of particular note was the Transfer of Cases Scheme that was agreed between the Supreme Court and
-          the AIFC Court and IAC to enable quick and cost effective transfer of commercial disputes, with the written
-          consent of the parties in a dispute, from the national courts of the Republic of Kazakhstan to the AIFC Court
-          and IAC. One case was accepted for jurisdiction by the Chief Justice of the AIFC Court, Lord Mance, and is
-          currently being considered for judgment by one of the AIFC Court Justices.
-        </p>
-        <p class="post__text">
-          Engagement with the AIFC Court and IAC users’ community continued with three Users’ Committee meetings
-          comprising representation from the senior partners of more than 15 law firms and other organisations, enhanced
-          dispute resolution webinars and training programmes attended by more than 1000 people, and structured
-          internships for more than 20 law students.
-        </p>
-        <p class="post__text">
-          The AIFC Court and IAC developed their 2025 Vision with plans to further develop the AIFC Court and IAC to
-          global elite status. The plans focus on stability, growth and recognition. As a part of the plans to achieve
-          long term stability, all of the judges of the AIFC Court and the Registrar and Chief Executive of the AIFC
-          Court and IAC, Mr. Christopher Campbell-Holt, committed to continue in their roles at the AIFC Court for
-          another five years, securing the AIFC Court’s continued long term development as a world class independent and
-          impartial commercial court.
-        </p>
-        <p class="post__text">
-          To secure the long term future of the IAC, in addition to the continuation of Mr. Campbell-Holt as the IAC
-          Registrar and Chief Executive, Mr. Thomas Kruemmel was appointed to be the new IAC Chairman from 1 January
-          2023. Mr. Kruemmel is an IAC Arbitrator Panel member and has many years of international arbitration and
-          mediation experience as a global leader in the law with specific experience of commercial dispute resolution
-          from Europe, particularly in Germany, where he is a partner at the law firm Meyer-Koering in Berlin, Germany.
-          He is a member of numerous law committees and has law degrees from Bonn, Germany, and the University of
-          Glamorgan, Wales. He was awarded the Chevalier dans l'ordre national du mérite award from France. His
-          appointment as IAC Chairman from 2023 will enhance the IAC’s credentials as a world class international
-          arbitration centre. The first IAC Chairman, Ms. Barbara Dohmann QC, who has been instrumental to the
-          establishment and development of the IAC as the number one choice for arbitration and mediation disputes in
-          Eurasia, will retire from her IAC chairmanship on 31 December 2022.
-        </p>
-      </div>
-      <img class="post__img" src="./images/post-2.png" alt="">
-      <div class="post__items">
-        <div class="post__item">
-          <h4 class="post__item-title">
-            Ms. Barbara Dohmann QC, IAC Chairman, stated:
-          </h4>
-          <div class="post__item-content">
-            <img class="post__item-decor" src="./images/post-decor.svg" alt="">
-            <div class="post__item-text">
-              “2021 was another very successful year for the IAC. We had an unprecedented number of arbitration awards
-              and mediation
-              settlements for a new centre at this stage of its operations. We collaborated successfully with
-              arbitrators, mediators,
-              and partner ADR institutions from around the world. The IAC provided a large number of webinars and
-              training programmes
-              on current arbitration and mediation matters, and it generally contributed to the promotion and
-              development of
-              arbitration and mediation in Eurasia. Investors can take comfort that the long term future of the IAC as
-              an independent
-              world class arbitration and mediation institution is secure; continuity has been assured by the
-              appointment of RA Thomas
-              Kruemmel, IAC Arbitrator Panel member and Partner at the internationally focused law firm Meyer-Koering in
-              Berlin,
-              Germany; I am delighted to say that he will succeed me as IAC Chairman from 1 January 2023”.
             </div>
           </div>
-        </div>
-        <div class="post__item">
-          <h4 class="post__item-title">
-            Dr. Kairat Kelimbetov, AIFC Governor, commented:
-          </h4>
-          <div class="post__item-content">
-            <img class="post__item-decor" src="./images/post-decor.svg" alt="">
-            <div class="post__item-text">
-              “The AIFC Court and IAC have been playing a significant role in the recognition of the AIFC as a centre
-              for resolving
-              commercial disputes in the region and enhancing investors’ confidence both in the AIFC and mainland
-              Kazakhstan. In this
-              regard, I would like to thank all of the AIFC Court judges and the Registrar and Chief Executive of the
-              AIFC Court and
-              IAC for their continued commitment to the AIFC. I am also delighted to welcome Mr. Thomas Kruemmel as IAC
-              Chairman
-              starting from 2023. I strongly believe that having clarity on the long-term perspectives of the AIFC Court
-              and IAC will
-              enhance the positive impact they make on the AIFC and its investment climate.”
-            </div>
-          </div>
-        </div>
-        <div class="post__item">
-          <h4 class="post__item-title">
-            The Rt. Hon. The Lord Mance, Chief Justice of the AIFC Court, commented:
-          </h4>
-          <div class="post__item-content">
-            <img class="post__item-decor" src="./images/post-decor.svg" alt="">
-            <div class="post__item-text">
-              “I am delighted that the AIFC Court has become an active commercial court as it comes to the end of its
-              fourth year of
-              operations. The AIFC Court has given 21 judgments and has ongoing case work including a range of
-              contractual disputes in
-              the commercial field. I am particularly pleased that, despite the pandemic, the AIFC Court has not been
-              confined to
-              remote hearings but has recently heard its first case in its world class premises in Nur-Sultan,
-              Kazakhstan. I welcome
-              the constitutional arrangement under which the first case has, by consent of the parties to the case, been
-              transferred
-              from the national courts of the Republic of Kazakhstan to, and has so been dealt with by, the AIFC Court.
-              I am also
-              grateful to all the other Justices of the Court and to the Registrar and Chief Executive for recently
-              renewing their
-              commitment to the AIFC Court for another five years. International investors can be confident that the
-              world class
-              standards of justice provided by the AIFC Court are assured for the future.
-            </div>
-          </div>
-        </div>
-      </div>
-      <div class="post__reference">
-        <h4 class="post__reference-title">
-          Reference:
-        </h4>
-        <div class="post__links">
-          <a class="post__link" href="#">
-            The Astana International Financial Centre was established on the initiative of the First President of the
-            Republic of
-            Kazakhstan – Elbasy Nursultan Nazarbayev as part of the National Plan "100 steps to implement five
-            institutional
-            reforms". On July 2, 2020, as part of the meeting of the AIFC Management Council, the Center's Development
-            Strategy was
-            adopted until 2025. According to it, the vision of the AIFC is to become a leading international financial
-            centre in the
-            region, including Central Asia, the Caucasus, the EAEU countries, Western China, Mongolia and Eastern
-            Europe.
-          </a>
-          <a class="post__link" href="#">
-            The mission of AIFC is to promote the sustainable long-term development of the region. As the Head of State
-            noted,
-            K.Tokayev, "The AIFC with its unique capabilities can act as a universal platform connecting the countries
-            of the
-            region." aifc.kz
-          </a>
-          <a class="post__link" href="#">
-            The AIFC Court is an independent legal entity. It has its own procedural rules modelled on English common
-            law procedures
-            and leading international practice. The AIFC Court is separate and independent from the courts of the
-            Republic of
-            Kazakhstan. It consists of two tiers: a Court of First Instance, which includes a specialist division known
-            as the Small
-            Claims Court; and a Court of Appeal. It has exclusive jurisdiction over disputes arising out of the
-            activities and
-            operations of the AIFC and jurisdiction in the case of other disputes in which all parties agree in writing
-            to give the
-            AIFC Court jurisdiction. It does not have jurisdiction in relation to any disputes that are of a criminal or
-            administrative nature. It applies the most up to date and efficient case management practices.
-            https://court.aifc.kz/
-          </a>
-          <a class="post__link" href="#">
-            The International Arbitration Centre (IAC) is an independent legal entity. It has its own procedural rules
-            modelled on
-            best international practice. It has its own panel of leading international arbitrators and mediators having
-            many years
-            of arbitration and mediation experience in commercial law, including oil and gas, trade, construction,
-            energy, financial
-            services, banking, Islamic finance, insurance, and intellectual property. IAC arbitration awards are
-            recognised and
-            enforceable in Kazakhstan and internationally. https://iac.aifc.kz/
-          </a>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <footer class="footer">
-    <div class="container">
-      <div class="footer__inner">
-        <div class="header__logo">
-          <a href="index.html">
-            <svg xmlns="http://www.w3.org/2000/svg" width="196" height="48" viewBox="0 0 196 48" fill="none">
-              <path
-                d="M14.0475 23.7261C14.0475 28.5448 17.9436 32.4659 22.7327 32.4659C27.5217 32.4659 31.4178 28.5448 31.4178 23.7261C31.4178 18.9074 27.5217 14.9863 22.7327 14.9863C17.9436 14.9863 14.0475 18.9074 14.0475 23.7261ZM28.8743 23.7261C28.8743 27.1343 26.1193 29.9062 22.7327 29.9062C19.346 29.9062 16.591 27.1343 16.591 23.7261C16.591 20.3179 19.347 17.546 22.7327 17.546C26.1184 17.546 28.8743 20.3188 28.8743 23.7261Z"
-                fill="white" />
-              <path
-                d="M32.5467 33.4983C32.5034 33.5426 32.4574 33.5841 32.4132 33.6274L32.4029 33.619C29.9186 36.0938 26.5019 37.624 22.7298 37.624C16.8486 37.624 11.8321 33.9065 9.86758 28.6796C9.84878 28.6287 9.82716 28.5778 9.80837 28.525C9.78675 28.4646 9.76795 28.4034 9.74633 28.3421C8.09578 23.5338 9.14382 17.9806 12.9187 14.1104L12.914 14.1048C14.2853 12.6981 15.9519 11.5828 17.8139 10.8653L17.8186 10.8851C22.6875 9.01832 28.4109 10.0215 32.3662 13.9275L33.3268 14.8769L37.6543 10.441C37.6609 10.4476 37.6675 10.4552 37.6741 10.4618L39.7204 8.36778C39.4684 8.09437 39.2109 7.82378 38.943 7.56074C33.9406 2.61855 27.2576 0.457636 20.7841 1.05915C15.5778 1.54375 10.5058 3.81497 6.55708 7.86338C2.58486 11.9354 0.429557 17.1151 0.0639172 22.3939H0.0498186L0.0150395 23.0463L0 23.8524V24.4521L0.025379 25.0753H0.030079C0.287625 30.6831 2.56324 36.2107 6.85787 40.4534C11.8603 45.3956 18.5433 47.5565 25.0167 46.955C30.2194 46.4722 35.2885 44.202 39.2363 40.1583L34.4679 35.3952L32.5467 33.4983ZM21.053 3.97902C26.3862 3.48404 31.6415 5.14527 35.7096 8.56766L33.2535 11.0859C29.4035 7.85584 24.4274 6.67827 19.7558 7.53717L18.9475 4.29486C19.6412 4.15438 20.3433 4.04501 21.053 3.97902ZM8.63531 9.91776C10.8085 7.6899 13.4582 6.02019 16.3504 5.0095L17.0986 8.01046L17.1606 8.25653C14.8202 9.10883 12.7278 10.4816 11.02 12.2333L10.9983 12.2125C8.21421 15.0664 6.66894 18.6887 6.35687 22.3939H2.9834C3.35186 17.6978 5.31729 13.3194 8.63531 9.91776ZM15.8767 42.8396C13.2975 41.8657 10.9156 40.3544 8.89849 38.3603C5.29755 34.8041 3.20617 30.1127 2.9458 25.0734L6.35123 25.0715C6.64356 28.9266 8.26403 32.696 11.2155 35.6111C12.8717 37.2469 14.7882 38.4546 16.8288 39.24L15.8767 42.8396ZM24.7479 44.0351C22.6142 44.2331 20.4937 44.0851 18.4559 43.6174L19.4128 39.998C19.9401 40.1064 20.4711 40.1913 21.005 40.2478C21.0821 40.2554 21.1601 40.262 21.2372 40.2686C21.412 40.2846 21.5869 40.2987 21.7617 40.3091C21.8707 40.3148 21.9798 40.3204 22.0888 40.3251C22.2307 40.3299 22.3727 40.3336 22.5137 40.3355C22.5926 40.3374 22.6706 40.3421 22.7505 40.3421C22.8041 40.3421 22.8567 40.3383 22.9112 40.3383C23.0146 40.3374 23.1171 40.3327 23.2205 40.3299C26.1155 40.2488 28.8216 39.4144 31.1546 38.0134C31.1574 38.0124 31.1593 38.0106 31.1612 38.0096C31.3501 37.8955 31.5362 37.7777 31.7204 37.657C31.7486 37.6382 31.7768 37.6202 31.805 37.6014C31.9808 37.4854 32.1528 37.3647 32.323 37.2412C32.3436 37.2261 32.3643 37.2129 32.385 37.1979L35.0808 39.9518C32.1002 42.2551 28.5171 43.6853 24.7479 44.0351Z"
-                fill="#DA0032" />
-              <path
-                d="M69.2718 34.4276L67.0151 29.642H55.7732L53.558 34.4276H48L60.997 7.96094H61.749L74.7461 34.4276H69.2718ZM57.3194 25.8553H65.4689L61.3734 16.9915L57.3194 25.8553Z"
-                fill="white" />
-              <path
-                d="M74.8218 25.6885C74.8218 19.9461 78.7921 16.658 84.1412 16.658C87.4425 16.658 89.6992 18.0729 89.9503 18.1976L89.2813 21.9843C89.2813 21.9843 87.2336 20.4026 84.4753 20.4026C81.6756 20.4026 79.3352 22.1924 79.3352 25.6464C79.3352 29.1005 81.6341 30.9728 84.3924 30.9728C86.9832 30.9728 88.7391 29.4745 88.9057 29.3498L90.8283 32.7205C88.5294 34.1767 86.3149 34.7183 84.142 34.7183C78.7084 34.719 74.8218 31.4318 74.8218 25.6885Z"
-                fill="white" />
-              <path
-                d="M103.441 34.4276V32.5132C102.856 33.3454 101.184 34.5944 98.6764 34.5944C94.3297 34.5944 92.1568 31.9312 92.1568 28.8511C92.1568 25.6051 94.8736 23.358 100.014 23.358C101.267 23.358 102.438 23.6074 103.441 23.8162C103.441 20.945 102.145 20.2375 100.349 20.2375C98.1757 20.2375 95.4589 21.2364 94.372 21.7771L93.2437 18.4064C94.2046 17.9904 97.214 16.7421 100.515 16.7421C105.739 16.7421 108.038 19.0726 108.038 24.3156V34.4276H103.441ZM99.847 31.057C101.979 31.057 103.441 29.5173 103.441 26.9788V26.6461C103.107 26.4794 102.062 26.1054 100.39 26.1054C97.9245 26.1054 96.8376 27.1043 96.8376 28.6026C96.8376 30.1414 98.0497 31.057 99.847 31.057Z"
-                fill="white" />
-              <path
-                d="M111 25.8965C111 20.8608 114.177 16.7826 119.359 16.7826C121.825 16.7826 123.915 17.9062 123.915 17.9062V8.24123L128.428 8.25235C128.469 8.29364 128.428 16.8668 128.428 34.4276H123.915V31.4317C123.204 32.7633 121.49 34.6778 118.566 34.6778C113.759 34.6778 111 31.0157 111 25.8965ZM119.526 30.8489C122.117 30.8489 123.915 28.4351 123.915 24.1489V21.7771C123.497 21.4857 122.201 20.4868 120.153 20.4868C117.227 20.4868 115.64 22.984 115.64 25.9386C115.64 28.6852 116.768 30.8489 119.526 30.8489Z"
-                fill="white" />
-              <path
-                d="M140.944 31.0157C143.159 31.0157 144.454 30.1835 145.5 29.3927L147.631 32.6387C145.207 34.303 143.118 34.7198 140.861 34.7198C135.011 34.7198 131.416 31.2245 131.416 25.6893C131.416 20.2796 135.135 16.7009 139.983 16.7009C144.497 16.7009 148.049 19.6967 148.049 24.8572C148.049 25.7727 147.965 26.7716 147.965 26.7716H135.929C136.013 29.6007 138.228 31.0157 140.944 31.0157ZM136.097 23.4001H144.037C143.787 21.2364 142.199 20.0707 140.109 20.0707C138.186 20.0707 136.682 21.2777 136.097 23.4001Z"
-                fill="white" />
-              <path
-                d="M171.72 24.4403C171.72 21.9018 170.8 20.4868 168.878 20.4868C166.37 20.4868 165.952 22.7339 165.952 26.3547V34.4276H161.396V24.1489C161.396 21.5691 160.393 20.4868 158.513 20.4868C156.214 20.4868 155.671 22.1511 155.671 26.3547V34.4276H151.115V17.0328H155.629V19.3212C156.423 17.9896 157.719 16.9494 159.557 16.7413C161.814 16.5746 163.862 17.6156 164.949 19.7372C165.784 18.1976 167.457 16.6993 170.006 16.6993C173.684 16.6993 176.317 18.8217 176.317 24.1481V34.4268H171.72V24.4403Z"
-                fill="white" />
-              <path
-                d="M184.174 31.057L176.986 17.0328H182.126L186.555 26.5207L190.985 17.0328H196L183.922 40.9609L179.2 40.1701L184.174 31.057Z"
-                fill="white" />
-            </svg>
-          </a>
-        </div>
-        <div class="footer__inner-wrapper">
-          <nav class="footer__dropdown" id="aboutDropdown">
-            <button class="footer__dropdown-toggle">
-              About us
-              <img class="footer__arrow" src="./images/dropdown-arrow-white.png" alt="">
-            </button>
-            <ul class="footer__menu">
-              <li class="footer__menu-item">
-                <a class="footer__menu-link" href="./about.html">About us</a>
-              </li>
-              <li class="footer__menu-item">
-                <a class="footer__menu-link" href="./contacts.html">Contacts</a>
-              </li>
-              <li class="footer__menu-item">
-                <a class="footer__menu-link" href="./news.html">News</a>
-              </li>
-              <li class="footer__menu-item">
-                <a class="footer__menu-link" href="./services.html">Events</a>
-              </li>
-            </ul>
-          </nav>
-          <nav class="footer__dropdown" id="servicesDropdown">
-            <button class="footer__dropdown-toggle">
-              Services
-              <img class="footer__arrow" src="./images/dropdown-arrow-white.png" alt="">
-            </button>
-            <ul class="footer__menu">
-              <li class="footer__menu-item">
-                <a class="footer__menu-link" href="./corporate.html">
-                  Trainings
-                </a>
-              </li>
-              <li class="footer__menu-item">
-                <a class="footer__menu-link" href="./consulting.html">
-                  Corporate Solutions
-                </a>
-              </li>
-              <li class="footer__menu-item">
-                <a class="footer__menu-link" href="./education.html">
-                  Higher education
-                </a>
-              </li>
-              <li class="footer__menu-item">
-                <a class="footer__menu-link" href="./services.html">
-                  Events
-                </a>
-              </li>
-              <li class="footer__menu-item">
-                <a class="footer__menu-link" href="./certification.html">
-                  Professional certifications
-                </a>
-              </li>
-            </ul>
-          </nav>
-          <nav class="footer__dropdown" id="marketpaceDropdown">
-            <button class="footer__dropdown-toggle">
-              Marketplace
-              <img class="footer__arrow" src="./images/dropdown-arrow-white.png" alt="">
-            </button>
-            <ul class="footer__menu">
-              <li class="footer__menu-item">
-                <a class="footer__menu-link" href="./corporate.html">
-                  Trainings
-                </a>
-              </li>
-              <li class="footer__menu-item">
-                <a class="footer__menu-link" href="./services.html">
-                  Events
-                </a>
-              </li>
-            </ul>
-          </nav>
-          <div class="footer__contacts footer__contacts-desktop">
+          <div class="footer__contacts footer__contacts-mobile">
             <div class="footer__contacts-links">
               <a class="footer__contacts-phone" href="tel:77172647369">
                 +7 717 264 73 69
@@ -672,46 +694,25 @@
             </div>
           </div>
         </div>
-        <div class="footer__contacts footer__contacts-mobile">
-          <div class="footer__contacts-links">
-            <a class="footer__contacts-phone" href="tel:77172647369">
-              +7 717 264 73 69
+        <div class="footer__bottom">
+          <div class="footer__socials">
+            <a class="footer__social-link" href="#">
+              <img src="./images/facebook.png" alt="">
             </a>
-            <a class="footer__contacts-email" href="mailto:info@aifc-court.kz">
-              info@aifc-court.kz
+            <a class="footer__social-link" href="#">
+              <img src="./images/instagram.png" alt="">
+            </a>
+            <a class="footer__social-link" href="#">
+              <img src="./images/linkedin.png" alt="">
             </a>
           </div>
-          <div class="footer__request">
-            <h6 class="footer__request-title">
-              request
-            </h6>
-            <form class="footer__form" for="">
-              <input class="footer__input" type="email" placeholder="E-mail">
-              <button class="footer__btn">
-                send
-              </button>
-            </form>
-          </div>
+          <p class="footer__copy">
+            © 2025 AIFC. All rights reserved 2025
+          </p>
         </div>
       </div>
-      <div class="footer__bottom">
-        <div class="footer__socials">
-          <a class="footer__social-link" href="#">
-            <img src="./images/facebook.png" alt="">
-          </a>
-          <a class="footer__social-link" href="#">
-            <img src="./images/instagram.png" alt="">
-          </a>
-          <a class="footer__social-link" href="#">
-            <img src="./images/linkedin.png" alt="">
-          </a>
-        </div>
-        <p class="footer__copy">
-          © 2025 AIFC. All rights reserved 2025
-        </p>
-      </div>
-    </div>
-  </footer>
+    </footer>
+  </main>
 
 
 

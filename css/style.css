@@ -2651,6 +2651,14 @@ input[type='number']:focus {
 		opacity: 1;
 		visibility: visible;
 	}
+	.header-post.open .header__top-mobile,
+	.header-post.open .header__languages-mobile {
+		transform: translateX(0);
+	}
+	.header-post.open .overlay {
+		opacity: 1;
+		visibility: visible;
+	}
 	.overlay {
 		position: fixed;
 		top: 0;
