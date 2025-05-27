@@ -664,9 +664,6 @@ body {
 	text-underline-position: from-font;
 }
 
-.feedbacks__description {
-}
-
 .feedbacks__item-start {
 	align-items: start;
 	gap: 58px;
@@ -1787,6 +1784,7 @@ input[type='number']:focus {
 	padding: 40px 0;
 }
 .welcome__video-wrapper {
+	opacity: 1;
 	width: 100%;
 }
 .welcome__video {
