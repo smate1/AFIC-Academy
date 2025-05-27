@@ -145,6 +145,7 @@ body {
 	line-height: 150%;
 	text-transform: uppercase;
 	transition: all 0.3s;
+	z-index: 1000;
 }
 .dropdown-button:hover {
 	color: #da0032;
@@ -197,12 +198,28 @@ body {
 }
 
 .header__content {
-	background-image: url('../images/header-1.png');
-	background-size: cover;
-	background-repeat: no-repeat;
-	background-position: top center;
+	position: relative;
 	height: 440px;
+	/* overflow: hidden; */
+	color: white;
 }
+
+.video-background {
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	z-index: -1;
+	pointer-events: none;
+}
+
+.video-background video {
+	width: 100%;
+	height: 100%;
+	object-fit: cover;
+}
+
 .header__title {
 	color: #fff;
 	font-family: Geologica;
@@ -331,7 +348,7 @@ body {
 .upcoming__btn,
 .news__btn {
 	color: #4f0006;
-	font-family: 'Open Sans';
+	font-family: 'Geologica';
 	font-size: 20px;
 	font-weight: 700;
 	line-height: 150%; /* 30px */
@@ -401,7 +418,7 @@ body {
 	content: '8 hours';
 	position: absolute;
 	color: #fff;
-	font-family: 'Open Sans';
+	font-family: 'Geologica';
 	font-size: 16px;
 	font-style: normal;
 	font-weight: 600;
@@ -417,7 +434,7 @@ body {
 	content: '30 hours';
 	position: absolute;
 	color: #fff;
-	font-family: 'Open Sans';
+	font-family: 'Geologica';
 	font-size: 16px;
 	font-style: normal;
 	font-weight: 600;
@@ -433,7 +450,7 @@ body {
 	content: '2 weeks';
 	position: absolute;
 	color: #fff;
-	font-family: 'Open Sans';
+	font-family: 'Geologica';
 	font-size: 16px;
 	font-style: normal;
 	font-weight: 600;
@@ -449,7 +466,7 @@ body {
 	content: '4 hours';
 	position: absolute;
 	color: #fff;
-	font-family: 'Open Sans';
+	font-family: 'Geologica';
 	font-size: 16px;
 	font-style: normal;
 	font-weight: 600;
@@ -495,34 +512,38 @@ body {
 }
 .how__btn {
 	color: #000;
-	font-family: 'Open Sans';
+	font-family: 'Geologica';
 	font-size: 16px;
 	font-style: normal;
 	font-weight: 600;
 	line-height: 100%; /* 16px */
 	letter-spacing: 0.1px;
 	text-transform: uppercase;
-	padding: 13px 28px;
+	padding: 10px 28px;
 	border-radius: 90px 0px 0px 90px;
 	background: #fff;
 	position: relative;
 	transition: all 0.3s;
-	border: 2px solid #fff;
 }
 
 .how__btn:hover {
-	background: transparent;
+	background: #000;
 	color: #fff;
+	transition: all 0.3s;
 }
-
+.how__btn:hover::after {
+	background-image: url('../images/how-arrow-white.svg');
+	transition: all 0.3s;
+}
 .how__btn::after {
+	transition: all 0.3s;
 	position: absolute;
 	content: '';
 	background-image: url('../images/how-arrow.svg');
 	background-size: cover;
 	background-repeat: no-repeat;
 	right: -15px;
-	top: 9px;
+	top: 5.5px;
 	z-index: 5;
 	width: 30px;
 	height: 30px;
@@ -534,7 +555,15 @@ body {
 	background: url('../images/feedbacks-bg.png') #efeeee 0px -248.234px / 100% 194.046%
 		no-repeat;
 	margin-top: 80px;
+	background-repeat: no-repeat;
+	background-size: cover;
+	background-position: top center;
 }
+
+.feedbacks > .slick-slider{
+	gap: 0;
+}
+
 .trust {
 	position: relative;
 	margin: 80px 0 95px;
@@ -588,7 +617,6 @@ body {
 	height: 51px;
 }
 
-
 .feedbacks__item {
 	display: flex !important;
 	justify-content: space-between;
@@ -627,17 +655,29 @@ body {
 	font-size: 18px;
 	font-weight: 700;
 	line-height: 150%; /* 27px */
+	text-decoration-line: underline;
+	text-decoration-style: solid;
+	text-decoration-skip-ink: none;
+	text-decoration-color: #da0032;
+	text-decoration-thickness: 0.3px;
+	text-underline-offset: 5px;
+	text-underline-position: from-font;
+}
+
+.feedbacks__description {
 }
 
 .feedbacks__item-start {
 	align-items: start;
 	gap: 58px;
 }
+.news__slider .slick-track{
+	gap: 40px;
+}
 .slick-track {
 	display: flex;
 	justify-content: space-between;
 	align-items: center;
-	gap: 40px;
 	margin-top: 50px;
 }
 .feedbacks__slider-partners img {
@@ -927,9 +967,10 @@ body {
 	font-family: Geologica;
 	font-size: 14px;
 	margin-top: 7px;
-	display: block;
+	display: inline-block;
 	font-weight: 400;
 	line-height: 150%; /* 21px */
+	position: relative;
 }
 .footer__request {
 	margin-top: 38px;
@@ -1302,7 +1343,7 @@ body {
 .purchase__btn,
 .questions__form-btn {
 	color: #fff;
-	font-family: 'Open Sans';
+	font-family: 'Geologica';
 	font-size: 20px;
 	font-style: normal;
 	font-weight: 700;
@@ -1326,6 +1367,7 @@ body {
 }
 .questions__form-dark {
 	background: linear-gradient(0deg, #542d2f 0%, #542d2f 100%) !important;
+	max-width: 680px;
 }
 
 .questions__form-btn--dark {
@@ -1803,7 +1845,7 @@ input[type='number']:focus {
 
 .accordion__header h3 {
 	color: #000;
-	font-family: 'Open Sans';
+	font-family: 'Geologica';
 	font-size: 32px;
 	font-style: normal;
 	font-weight: 600;
@@ -1812,7 +1854,7 @@ input[type='number']:focus {
 }
 .accordion__content {
 	color: #000;
-	font-family: 'Open Sans';
+	font-family: 'Geologica';
 	font-size: 20px;
 	font-style: normal;
 	font-weight: 400;
@@ -2013,7 +2055,6 @@ input[type='number']:focus {
 
 /* === Мобілка (до 767px) показуємо мобільний акордеон, ховаємо оригінальні таби */
 @media (max-width: 767px) {
-
 	.answers__wrapper {
 		display: none;
 	}
@@ -2091,6 +2132,7 @@ input[type='number']:focus {
 .corporate__form {
 	padding: 0;
 	background: transparent;
+	max-width: 600px;
 }
 
 .corporate__questions {
@@ -2290,7 +2332,7 @@ input[type='number']:focus {
 .post__item-text {
 	color: #000;
 	text-align: justify;
-	font-family: 'Open Sans';
+	font-family: 'Geologica';
 	font-size: 16px;
 	font-style: normal;
 	font-weight: 400;
@@ -2322,11 +2364,16 @@ input[type='number']:focus {
 	line-height: 150%;
 	letter-spacing: -0.6px;
 	text-decoration-line: underline;
+	text-decoration-thickness: 0.3px;
 	text-decoration-style: solid;
 	text-decoration-skip-ink: none;
-	text-decoration-thickness: auto;
 	text-underline-offset: auto;
+	transition: all 0.3s;
 	text-underline-position: from-font;
+}
+
+.post__link:hover {
+	color: #da0032;
 }
 
 .how-event {
@@ -2370,7 +2417,7 @@ input[type='number']:focus {
 
 .news__wrapper .professional__title {
 	color: #730010;
-	font-family: 'Open Sans';
+	font-family: 'Geologica';
 	font-size: 18px;
 	font-style: normal;
 	font-weight: 600;
@@ -2389,34 +2436,94 @@ input[type='number']:focus {
 	transition: stroke 0.3s;
 }
 
+.search {
+	padding-top: 40px;
+}
+
+.search__item-date {
+	color: #000;
+	font-family: Geologica;
+	font-size: 14px;
+	font-style: normal;
+	font-weight: 300;
+	line-height: 149.008%; /* 20.861px */
+	letter-spacing: -0.14px;
+	margin-bottom: 10px;
+}
+.search__item + .search__item {
+	margin-top: 20px;
+}
+.search__item-link {
+	font-family: Geologica;
+	margin-bottom: 12px;
+	font-size: 22px;
+	color: #730010;
+	text-decoration: none;
+	text-decoration: underline;
+	display: inline;
+	text-decoration-thickness: 0.3px;
+	text-underline-offset: 6px;
+	transition: 0.5s;
+}
+.search__item-link:hover {
+	color: #000;
+}
+.search__list {
+	display: block;
+	margin-top: 20px;
+}
+.search__list a {
+	display: inline-block;
+}
+
+.search__item::before {
+	display: none;
+}
+
+.search-title {
+	text-wrap: wrap;
+	text-transform: initial;
+	color: #a20521;
+	margin-top: 10px;
+	margin-bottom: 20px;
+	font-weight: 600;
+}
+
+.search__link {
+	color: #730010;
+}
+
 .header__search:hover svg path {
 	stroke: #da0032;
 }
 
-.label__search{
+.label__search {
 	position: relative;
+	margin-bottom: 20px;
 }
-.button__search{
-	right: 5px;
+.button__search {
+	left: 5px;
 	position: absolute;
-	top: -1px;
+	top: -12px;
 }
 
 .input__search {
-	width: 40%;
+	margin-bottom: 20px;
+	width: 80%;
 	list-style: none;
 	color: #000;
 	font-family: Geologica;
 	font-size: 18px;
-	font-weight: 500;
+	font-weight: 400;
 	line-height: 150%; /* 27px */
-	padding: 10px;
+	padding: 20px 20px 20px 40px;
 	border: 1px solid #000;
-	border-radius: 10px;
+	border-radius: 5px;
 }
 
-
-
+.input__search:focus-visible {
+	outline: -webkit-focus-ring-color auto 1px;
+}
 
 @media (max-width: 1500px) {
 	.header__top-inner {
@@ -2496,9 +2603,6 @@ input[type='number']:focus {
 }
 
 @media (max-width: 1280px) {
-	.label__search{
-		display: none;
-	}
 	.header__eye-mobile svg {
 		width: 36px;
 		height: 23px;
@@ -2865,6 +2969,15 @@ input[type='number']:focus {
 	}
 }
 @media (max-width: 968px) {
+	.search-title {
+		font-size: 30px !important;
+	}
+	.feedbacks__description {
+		text-underline-offset: 3px;
+	}
+	.corporate__form {
+		max-width: 100%;
+	}
 	.welcome__video-feedback {
 		min-height: 200px;
 		padding-top: 0;
@@ -3100,15 +3213,33 @@ input[type='number']:focus {
 }
 
 @media (max-width: 768px) {
-	.input__search{
+	.search__wrapper{
+		margin-top: -25px;
+	}
+	.search__list{
+		margin-top: 0;
+	}
+	.search__item-link {
+		font-size: 18px;
+	}
+	.search__item-link {
+		text-underline-offset: 2px;
+	}
+	.search__item + .search__item {
+		margin-top: 10px;
+	}
+	.search__item-date{
+		margin-bottom: 5px;
+	}
+	.input__search {
 		width: 100% !important;
-		padding: 8px;
+		padding: 8px 8px 8px 30px;
 		font-size: 14px;
 	}
-	.button__search{
-		top: 3px;
+	.button__search {
+		top: -8px;
 	}
-	.button__search img{
+	.button__search img {
 		width: 15px;
 		height: 15px;
 	}
@@ -3190,6 +3321,7 @@ input[type='number']:focus {
 	}
 	.questions__form {
 		padding: 30px 20px 35px;
+		max-width: 680px;
 	}
 	.questions__bottom {
 		margin-top: 25px;
@@ -3354,6 +3486,9 @@ input[type='number']:focus {
 	display: none;
 }
 @media (max-width: 565px) {
+	.search-title{
+		font-size: 25px !important;
+	}
 	.footer__dropdown {
 		position: relative;
 		width: max-content;
