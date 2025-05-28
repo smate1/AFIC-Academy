@@ -2351,7 +2351,7 @@ input[type='number']:focus {
 .post__links {
 	display: flex;
 	flex-direction: column;
-	gap: 20px;
+	gap: 50px;
 }
 .post__link {
 	color: #270001;
