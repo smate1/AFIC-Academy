@@ -1281,11 +1281,35 @@ body {
 	transition: all 0.3s;
 	max-width: 1020px;
 }
-
+.accordion__content-padding{
+	padding-bottom: 60px;
+}
 .accordion__item.active .accordion__content {
-	padding: 16px 0 32px;
+	padding: 16px 0 0px;
 }
 
+.accordion__content-list ol{
+	color: #000;
+	font-family: Geologica;
+	font-size: 20px;
+	font-style: normal;
+	font-weight: 700;
+	line-height: 150%; /* 30px */
+	padding-top: 25px;
+}
+.accordion__content-first{
+	padding-top: 0 !important;
+}
+.accordion__content-list li{
+	color: #000;
+	font-family: Geologica;
+	font-size: 20px;
+	font-style: normal;
+	font-weight: 300;
+	line-height: 150%; /* 30px */
+	list-style-type: disc;
+	margin-left: 30px;
+}
 .purchase {
 	margin: 103px 0 87px;
 	border-radius: 15px;
@@ -2548,9 +2572,7 @@ input[type='number']:focus {
 	line-height: 150%; /* 30px */
 	margin-bottom: 24px;
 }
-.accordion__info-experience{
-	padding-bottom: 60px;
-}
+
 .accordion__info-experience p {
 	color: #000;
 	font-family: Geologica;
@@ -3282,6 +3304,13 @@ input[type='number']:focus {
 }
 
 @media (max-width: 768px) {
+	.accordion__content-list li{
+		margin-left: 20px;
+	}
+	.accordion__content-list ol,
+	.accordion__content-list li{
+		font-size: 14px;
+	}
 	.search__wrapper {
 		margin-top: -25px;
 	}
@@ -3571,8 +3600,11 @@ input[type='number']:focus {
 	.accordion__info-experience p + p{
 		margin-top: 10px;
 	}
-	.accordion__info-experience{
+	.accordion__content-padding{
 		padding-bottom: 30px;
+	}
+	.accordion__content-list ol{
+		padding-top: 15px;
 	}
 	.accordion__info-text{
 		margin-bottom: 10px;
