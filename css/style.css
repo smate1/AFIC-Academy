@@ -560,7 +560,7 @@ body {
 	background-position: top center;
 }
 
-.feedbacks > .slick-slider{
+.feedbacks > .slick-slider {
 	gap: 0;
 }
 
@@ -668,7 +668,7 @@ body {
 	align-items: start;
 	gap: 58px;
 }
-.news__slider .slick-track{
+.news__slider .slick-track {
 	gap: 40px;
 }
 .slick-track {
@@ -2523,6 +2523,50 @@ input[type='number']:focus {
 	outline: -webkit-focus-ring-color auto 1px;
 }
 
+.accordion__content-trainer {
+	display: flex;
+	align-items: start;
+	gap: 38px;
+}
+
+.accordion__info-title {
+	color: #000;
+	font-family: Geologica;
+	font-size: 32px;
+	font-style: normal;
+	font-weight: 600;
+	line-height: 50px;
+	text-transform: uppercase;
+	margin-bottom: 14px;
+}
+.accordion__info-text {
+	color: #000;
+	font-family: Geologica;
+	font-size: 20px;
+	font-style: normal;
+	font-weight: 300;
+	line-height: 150%; /* 30px */
+	margin-bottom: 24px;
+}
+.accordion__info-experience{
+	padding-bottom: 60px;
+}
+.accordion__info-experience p {
+	color: #000;
+	font-family: Geologica;
+	font-size: 20px;
+	font-style: normal;
+	font-weight: 600;
+	line-height: 150%; /* 30px */
+}
+.accordion__info-experience p span{
+	font-weight: 400;
+}
+
+.accordion__info-experience p + p{
+	margin-top: 30px;
+}
+
 @media (max-width: 1500px) {
 	.header__top-inner {
 		gap: 30px;
@@ -2966,7 +3010,34 @@ input[type='number']:focus {
 		font-size: 14px;
 	}
 }
+.accordion__trainer-img--mobile{
+	display: none !important;
+	width: 200px;
+	height: 200px;
+}
 @media (max-width: 968px) {
+	.accordion__info-title{
+		font-size: 24px;
+	}
+	.trainer__wrapper{
+		display: flex;
+		gap: 20px;
+		align-items: center;
+		margin-bottom: 15px;
+	}
+	.accordion__info-text,
+	.accordion__info-experience p{
+		font-size: 14px;
+	}
+	.accordion__content-trainer{
+		display: block;
+	}
+	.accordion__trainer-img{
+		display: none;
+	}
+	.accordion__trainer-img--mobile{
+		display: block !important;
+	}
 	.search-title {
 		font-size: 30px !important;
 	}
@@ -3211,10 +3282,10 @@ input[type='number']:focus {
 }
 
 @media (max-width: 768px) {
-	.search__wrapper{
+	.search__wrapper {
 		margin-top: -25px;
 	}
-	.search__list{
+	.search__list {
 		margin-top: 0;
 	}
 	.search__item-link {
@@ -3226,7 +3297,7 @@ input[type='number']:focus {
 	.search__item + .search__item {
 		margin-top: 10px;
 	}
-	.search__item-date{
+	.search__item-date {
 		margin-bottom: 5px;
 	}
 	.input__search {
@@ -3484,7 +3555,29 @@ input[type='number']:focus {
 	display: none;
 }
 @media (max-width: 565px) {
-	.search-title{
+	.trainer__wrapper{
+		display: block;
+	}
+	.accordion__trainer-img--mobile{
+		text-align: center;
+		margin: 0 auto;
+	}
+	.accordion__info-title{
+		margin-top: 10px;
+		font-size: 20px;
+		text-align: center;
+		line-height: 27px;
+	}
+	.accordion__info-experience p + p{
+		margin-top: 10px;
+	}
+	.accordion__info-experience{
+		padding-bottom: 30px;
+	}
+	.accordion__info-text{
+		margin-bottom: 10px;
+	}
+	.search-title {
 		font-size: 25px !important;
 	}
 	.footer__dropdown {
