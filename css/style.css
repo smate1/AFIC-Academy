@@ -662,6 +662,11 @@ body {
 	text-decoration-thickness: 0.3px;
 	text-underline-offset: 5px;
 	text-underline-position: from-font;
+	transition: all .3s;
+}
+
+.feedbacks__description:hover{
+	color: #000;
 }
 
 .feedbacks__item-start {
@@ -767,6 +772,10 @@ body {
 	font-weight: 600;
 	line-height: 150%; /* 27px */
 	letter-spacing: -0.18px;
+	transition: all .3s;
+}
+.news__item-title:hover{
+	color: #da0032;
 }
 .news__item-date {
 	color: #969696;
@@ -872,6 +881,11 @@ body {
 	text-decoration-thickness: auto;
 	text-underline-offset: auto;
 	text-underline-position: from-font;
+	transition: all .3s;
+}
+
+.subscription__policy span:hover{
+	color: #000;
 }
 
 .footer {
@@ -1168,6 +1182,11 @@ body {
 	margin-bottom: 32px;
 	text-wrap: nowrap;
 }
+.title-wrap{
+	text-wrap: wrap;
+}
+
+
 .header__market-text {
 	color: #fff;
 	font-family: Geologica;
@@ -1267,7 +1286,9 @@ body {
 .accordion__item.active .accordion__toggle > img {
 	transform: rotate(90deg);
 }
-
+.accordion__item.active .accordion__content{
+	margin-bottom: 32px;
+}
 .accordion__content {
 	color: #000;
 	font-family: Geologica;
@@ -1662,14 +1683,14 @@ input[type='number']:focus {
 }
 
 .pagination button {
-	color: #0e212a;
+	color: #730010;
 	font-family: Roboto, sans-serif;
 	font-size: 14px;
 	font-style: normal;
 	font-weight: 500;
 	line-height: 100%; /* 14px */
 	border-radius: 6px; /* було 4px — зробив плавніше */
-	border: 1px solid #0e212a;
+	border: 1px solid #730010;
 	background: #fff;
 	padding: 7px 10px;
 	cursor: pointer;
@@ -1680,7 +1701,7 @@ input[type='number']:focus {
 }
 
 .pagination button.active {
-	background-color: #0e212a;
+	background-color: #730010;
 	color: white;
 }
 
@@ -2046,7 +2067,9 @@ input[type='number']:focus {
 		display: flex;
 		gap: 40px;
 	}
-
+	.accordion__item.active .accordion__content{
+		margin-bottom: 20px;
+	}
 	.answers__tabs {
 		flex: 1;
 		border-right: 1px solid #ddd;
@@ -3302,7 +3325,9 @@ input[type='number']:focus {
 		min-height: 330px;
 	}
 }
-
+.trust__slider-partners .slick-list .slick-track{
+gap: 40px;
+}
 @media (max-width: 768px) {
 	.accordion__content-list li{
 		margin-left: 20px;
@@ -3768,6 +3793,9 @@ input[type='number']:focus {
 	}
 	.header__market-title {
 		font-size: 20px;
+	}
+	.title-smaller{
+		font-size: 18px;
 	}
 	.main__item-page {
 		padding: 30px 20px 30px !important;
