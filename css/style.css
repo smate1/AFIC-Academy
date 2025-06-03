@@ -694,6 +694,13 @@ body {
 	max-width: 400px;
 	margin-left: -30.5px;
 }
+/* .news__item-img{
+	overflow: hidden;
+	transition: all .3s;
+}
+.news__item:hover .news__item-img{
+	scale: 1.1;
+} */
 .news__slider > .slick-list > .slick-track {
 	width: auto !important;
 }
@@ -734,25 +741,26 @@ body {
 }
 
 .news-arrow--prev {
-	transform: translateY(-50%);
+	transform: translateY(-100%);
 	left: -70px;
 }
 
 .news-arrow--next {
 	position: absolute;
-	transform: translateY(-50%) rotate(180deg);
+	transform: translateY(-100%) rotate(180deg);
 	right: -70px;
 }
 
 .news__item::before {
 	content: 'Events';
 	position: absolute;
-	left: 0;
-	top: 18.5px;
+	left: 30.5px;
+	top: 35px;
 	color: #fff;
 	font-family: Geologica;
 	font-size: 16px;
 	font-weight: 400;
+	z-index: 1000;
 	background: #da0032;
 	padding: 5px 18px;
 	line-height: 150%; /* 24px */
@@ -791,8 +799,6 @@ body {
 	margin: 80px 0;
 }
 
-.header__certification-content {
-}
 
 .subscription__wrapper {
 	padding: 45px 10px 50px;
@@ -2933,11 +2939,11 @@ input[type='number']:focus {
 	}
 	.news__item {
 		height: 100px !important;
-		margin-left: 70px;
 	}
 	.footer__inner-wrapper {
 		gap: 50px;
 	}
+
 	.news-arrow--next {
 		position: absolute;
 		transform: rotate(180deg);
@@ -2968,9 +2974,13 @@ input[type='number']:focus {
 	.news__item-title {
 		font-size: 16px;
 	}
-	.news__item-img {
+	.news__item-wrapper {
 		max-width: 250px;
 	}
+	.news__item-content{
+    max-width: 250px;
+  }
+
 	.feedbacks__text,
 	.feedbacks__position,
 	.feedbacks__description {
@@ -3869,7 +3879,7 @@ input[type='number']:focus {
 	/* Стрілка назад */
 	.news-arrow--prev {
 		left: 35%;
-		top: auto !important;
+		top: 50%;
 	}
 
 	/* Safari/iOS підтримка */
@@ -3882,7 +3892,7 @@ input[type='number']:focus {
 		}
 
 		.news-arrow--prev {
-			top: auto !important;
+			top: 50%;
 		}
 	}
 
