@@ -3915,9 +3915,9 @@ input[type='number']:focus {
 	.news__item {
 		min-height: 300px;
 	}
-	.news__item {
+	/* .news__item {
 		margin-left: 70px;
-	}
+	} */
 
 	.upcoming__btn,
 	.news__btn {
